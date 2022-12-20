@@ -1,0 +1,18 @@
+#type:		writing
+#specification:	Cuneiform from the Ur III (ca. 2100-2000 BC) period of the Sumerian language (sum)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P142653 (last access: 26.02.2021); Full sign list: https://cdli.ucla.edu/tools/SignLists/Rosengarten.pdf (last access: 26.02.2021)
+#encoding:	utf-8
+#copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020).
+#comments:	Comments were removed. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html. In the original transliteration a number followed by parentheses with a sign name inside, e.g. 2(disz), means that this sign occurs the given number of times. This is here then rendered as "disz disz".
+
+<obverse>
+<line_1>	1(u) disz disz disz disz gurusz hun-ga2
+<line_2>	al disz disz disz disz disz disz sar-ta
+<line_3>	a-sza3 gi-apin-ku5#-ra2
+<line_4>	szuku ensi2-ka
+
+<reverse>
+<line_1>	ugula szu-ma-am3
+<line_2>	gurum2 u4 1(u) disz disz disz disz disz disz-kam
+<line_3>	iti min3-esz3

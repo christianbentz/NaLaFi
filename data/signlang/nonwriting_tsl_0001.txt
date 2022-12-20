@@ -1,0 +1,22 @@
+#type:		non-writing
+#specification:	Transcribed Sign Language (tsl)
+#scriptcode:	Latn
+#source:	Slobin et al. (1999). Sign language transcription at the morphological level: the Berkeley transcription system (BTS). Report to the European Science Foundation.
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Examples of the Berkeley Transcription System which was designed to be applicable to all sign languages and is based on data from interactions in American Sign Language (ASL) and Sign Language of the Netherlands (SLN).
+
+<line_1>	-clʼVP-clʼTL-golʼVP_TOP-pstʼSTR		
+<line_2>	(mount)-clʼVP-clʼTL-golʼVP_TOP-pstʼSTR		
+<line_3>	COWBOY (mount)-clʼVP-clʼTL-golʼVP_TOP-pstʼSTR		
+<line_4>	(be_mounted)-clʼVP-clʼTL-locʼVP_TOP-pstʼSTR		
+<line_5>	(ride_mounted)-clʼVP-clʼTL-locʼVP_TOP-pstʼSTR-mvtʼLEX(ride)		
+<line_6>	(give)-clʼLEX(give)-srcʼ1-golʼ2		
+<line_7>	(give)-clʼCYL-srcʼ1-golʼ2		
+<line_8>	{ CANDY PNT(nh)(on_book) }		
+<line_9>	^oprʼNEG WANT BOOK ^		
+<line_10>	HOUSE-^modʼAUG		
+<line_11>	^affʼWORRIED CAN PNT_1 ^		
+<line_12>	^oprʼYES CAR ^disʼCONF LIGHTSIGNALS ^ ^		
+<line_13>	DOG `RS(dog) EXCITE-^affʼINTENSE `		
+<line_14>	[%ges: donʼt know] WHERE [%act: looks around room]		

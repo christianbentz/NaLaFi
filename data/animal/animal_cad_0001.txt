@@ -1,0 +1,14 @@
+#type:		animal
+#specification:	(Mexican) Chickadee (cad)
+#scriptcode:	Latn
+#source:	Ficken et al. (1994), Fig. 1+2
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Structure of different recordings of Chickadee calls. "/" shows a contraction between two different call types.
+
+<line_1>	A D
+<line_2>	A A/D
+<line_3>	A/D D
+<line_4>	A CC
+<line_5>	B CCCCCC
+<line_6>	CC CC CC CC

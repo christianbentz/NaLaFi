@@ -1,7 +1,7 @@
 ---
 title: "Shuffled Text Generator"
 author: "Chris Bentz"
-date: "4/2/2020"
+date: "20/12/2022"
 output: pdf_document
 ---
 
@@ -19,7 +19,7 @@ library(gsubfn)
 ## List files
 Create list with all the files in the directory "writing". 
 ```{r}
-file.list <- list.files(path = "/home/chris/Github/StringBase/corpus/generated/test/original", 
+file.list <- list.files(path = "~/Github/NaLaFi/data/", 
                         recursive = T, full.names = T)
 #print(file.list)
 length(file.list)
@@ -29,7 +29,7 @@ length(file.list)
 Create shuffled texts.
 ```{r}
 # set the maximal number of units (n) to be used for analysis
-n = 10000
+n = 1000
 for (file in file.list)
   {
   # loading textfile
@@ -47,7 +47,7 @@ for (file in file.list)
   chars <- chars[1:n] # use only maximally n units
   chars <- chars[!is.na(chars)] # remove NAs for vectors which are 
   # already shorter than n
-  chars <- chars[chars != " "] # remove white spaces from character vector
+  #chars <- chars[chars != " "] # remove white spaces from character vector
   # collapse the character vector into a single string
   chars.collapsed <- paste(chars, collapse = "")
   chars.shuffled <- stri_rand_shuffle(chars.collapsed)
@@ -65,7 +65,7 @@ for (file in file.list)
   code <- substring(substring(filename, regexpr("_", filename) + 1), 1, 8)
   # write to file
   new.filename <- paste("shuffled_", code, sep = "")
-  write(full.vec, file = paste("~/Github/StringBase/corpus/generated/test/shuffled/", new.filename, 
+  write(full.vec, file = paste("~/Github/NaLaFi/data/shuffled/", new.filename, 
                                sep = ""), append = FALSE, sep = "\n")
 }
 ```

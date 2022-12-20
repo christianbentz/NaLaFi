@@ -1,0 +1,77 @@
+#type:		unclassified
+#specification:	Proto-Elamite (ela)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/pubs/cdlj/2015/cdlj2015_001.html (last access: 19.03.2019)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	The codes used for different signs are explained in Dahl, J. (2005) Complex Graphemes in Proto-Elamite. In: Cuneiform Digital Library Journal, Vol 3. The first line is a transliteration of the header, <ent_line_XX> are on the obverse and <sum_line_XX> on the reverse (sum) tablet side. "?" indicates questionable decipherments.
+
+<head_line_0>	M327+M342
+<ent_line_1>	M217h M59 M387c M218 M370?
+<ent_line_1a>	M317 1N1
+<ent_line_1b>	M54 2N2
+<ent_line_1c>	M72 1N1
+<ent_line_2>	M323 M124 M386a M240
+<ent_line_2a>	M72 2N1
+<ent_line_3>	M210d M111l M388 M32 M387 M218
+<ent_line_3a>	M317 1N1
+<ent_line_3b>	M54 2N2
+<ent_line_4>	M112n M388 M218 M386a
+<ent_line_4a>	M317 1N1
+<ent_line_4b>	M54 2N2
+<ent_line_5>	M93a M388 M285ba1
+<ent_line_5a>	M317 1N1
+<ent_line_5b>	M54 2N2
+<ent_line_5c>	M72 1N1
+<ent_line_6>	M387l M372a M388 M49c1 M230a1 M371
+<ent_line_6a>	M317 1N1
+<ent_line_6b>	M3b 1N1
+<ent_line_6c>	M54 1N1
+<ent_line_6d>	M373 1N1
+<ent_line_6e>	M72 1N1
+<ent_line_7>	M112o M388 M241 M33 M371
+<ent_line_7a>	M317 1N1
+<ent_line_7b>	M3b 1N1
+<ent_line_7c>	M373 M54 1N1
+<ent_line_7d>	M373 1N1
+<ent_line_7e>	M72 1N1
+<ent_line_8>	M51a M388 M218 M229e M371
+<ent_line_8a>	M317 1N1
+<ent_line_8b>	M54 1N1
+<ent_line_8c>	M46 1N1
+<ent_line_9>	x M388 x M295a? M218
+<ent_line_9a>	M317 1N1
+<ent_line_9b>	M54 1N1
+<ent_line_10>	M112p M66a M66a
+<ent_line_10a>	M317 1N1
+<ent_line_10b>	M3b 1N1
+<ent_line_10c>	M54 M372 x
+<ent_line_10d>	M72 1N1
+<ent_line_11>	M377e+M377e M388 M4 M4 M218
+<ent_line_11a>	M317 1N1
+<ent_line_11b>	M3b 1N1
+<ent_line_12>	M54 M370 M386a? M386a
+<ent_line_12a>	M373 1N1
+<ent_line_12b>	M72 1N1
+<ent_line_13>	M51a M388 M24 M33 M371
+<ent_line_13a>	M317 1N1
+<ent_line_14>	M218 M373? M387 M372a M388
+<ent_line_14a>	M317 1N1
+<ent_line_14b>	M54 1N1
+<ent_line_14c>	M72 1N1
+<sum_line_1>	M317 1N14 2N1
+<sum_line_2>	M54 1N14 7N1
+<sum_line_3>	M373 3N1
+<sum_line_4>	M72 9N1
+<sum_line_5>	M46 1N1
+<sum_line_6>	M139? M32 M387 M218
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,9 @@
+#type:		animal
+#specification:	Black-Headed Grosbeak (bhg)
+#scriptcode:	Latn
+#source:	http://taylor0.biology.ucla.edu/birdDBQuery/Files/Files_TextGrids/2013/Jun/GTNP13-34.TextGrid (last access: 13.07.2019), phrases appended in bhg_Phrases.pdf
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Each "unit" corresponds to a sound produced by the bird. White spaces indicate intervals of different durations between the units. These annotations resulted from a recording made in one piece from a specific bird. Comments that would sometimes follow the bird recording were removed.
+
+<line_1>	jh ru rv rw kh rh pm ry se rs ou ou jh ru rv rw kh rh pm an sa rx sb as jo sc cq rh jh ru rv rw kd an ir rx sb as jo sc jt sd jt jh ru rv rw jt sd jt an ir rw sb jh ru rv rw kh an ir rx sb as jo sc jh ru rv rw jt sd jt tz ir rx sb as jo sc jh ru rw kh rh pm ry se ou ou ou jh ru rv rw kh an jt rx sb as jo sc jt jh ru rv rw kh rh pm an jt rx sb as jo sc lw jt jh ru rv rw pm an pm rx sb as jh ru jh ru rv rw kd an jt rx sb as jo sc jh ru rv rw jt sd jt rw sb as jo jh ru rv rv rh tx an jt rw jh ru rw rw jt sd jt an pm rw sb jh ru rw rw kh rh tx an jt rx sb jh jh jh ru rv rw kd rh tx an jt rx sb jh ru rv rw jo an tx rx jt ou ou jh ru rv rw kd an ir rx jt rx sb as jo sc jt jh ru rv rw kh rh tx ua ua jh jh ru rv rw kh rh tx ou ou ou

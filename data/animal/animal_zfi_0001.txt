@@ -1,0 +1,11 @@
+#type:		animal
+#specification:	zebra finch (zfi)
+#scriptcode:	Latn
+#source:	Bolhuis et al. (2000), Fig. 2
+#encoding:	utf-8
+#copyright:	NA
+#comments:	The first line is a transcription of the sonogram of a tutor song, the second line is the transcription of a sonogram of an experimental bird that shared the smallest number of common elements with the tutor song, the third line is the transcription of a sonogram of an experimental bird that shared the biggest number of common elements with the tutor song.
+
+<line_1>	A B C D E F G H
+<line_2>	B H
+<line_3>	A D E F G H C

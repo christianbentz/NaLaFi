@@ -1,0 +1,28 @@
+#type:		writing
+#specification:	Cuneiform from the Ur III (ca. 2100-2000 BC) period of the Sumerian language (sum)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P499221 (last access: 26.02.2021); Full sign list: https://cdli.ucla.edu/tools/SignLists/Rosengarten.pdf (last access: 26.02.2021)
+#encoding:	utf-8
+#copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020).
+#comments:	Cuneiform of the Ur III (ca. 2100-2000 BC). A full sign list can be found on the above-mentioned link. Lines beginning with '#' are comments. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html. In the original transliteration a number followed by parentheses with a sign name inside, e.g. 2(disz), means that this sign occurs the given number of times. This is here then rendered as "disz disz".
+
+<obverse>
+<line_1>	disz gin2 ku3-babbar
+<line_2>	ki ur-{d}su4-an-na-ta
+<line_3>	ga-ga-mu
+<line_4>	szu ba-ti
+<line_5>	iti {d}li9-si4
+<line_6>	gi4-gi4-dam
+
+<reverse>
+<line_7>	tukumx(|SZU.NIG2.TUR|)-bi
+<line_8>	nu-ni-gi4
+<line_9>	en-na ku3 ib2-su-su
+<line_10>	disz gurusz in-na-du-e
+<line_11>	disz lu2-si4
+<line_12>	disz ur-{d}hal-mu-sza4
+<line_13>	disz ur-{d}nin-a-zu
+
+<left>
+<line_14>	lu2-dingir-ra
+<line_15>	lu2 inim-ma-m

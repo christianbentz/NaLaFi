@@ -1,0 +1,9 @@
+#type:		animal
+#specification:	Black-Headed Grosbeak (bhg)
+#scriptcode:	Latn
+#source:	http://taylor0.biology.ucla.edu/birdDBQuery/Files/Files_TextGrids/2013/Jun/AmadMyJn12-11.TextGrid (last access: 13.07.2019), phrases appended in bhg_Phrases.pdf
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Each "unit" corresponds to a sound produced by the bird. White spaces indicate intervals of different durations between the units. These annotations resulted from a recording made in one piece from a specific bird. Comments that would sometimes follow the bird recording were removed.
+
+<line_1>	ga gb ib gh hv hx ib ii hv gj gk gz hz go gp hp ia hq gb hr hs cs ar as gd gh ga gb id gh ip hx ib ar dn bt hw gq ii gw hu hv au gl gy hx ga gb gc ar dn gz hz go gp hp ia hq gb hr gi ii ib gh gj gk as gd ga gb ib gh gs ip hx hp il id io ht gb ik gq gr hp hr ie cy gw hu hv gj gl ai ig ar as ga hw gq gr gs ln ij gi ia hq io ht gb ik gq gr gs ip hx hr gz bt ge ib ij gi ia in in ll if hr cy gw hw ik ic es hz go gp hp im ie lm lm cd ii ij gi ia in il id hw gq gr gs ln ii ij gi ia io io ht gh id gh iq gs ca hx hp ia in in hr ie hw gq gr gs ca gw ib gb id gh if il im ii ij gi ia in in ll hr ke cd ii ib ij gi ia hq io io hw ik gq gr ii ib ij gi ia ln ln io io io hw gq gr gs ll ii ij gi ia hq gb ar dn km go gp hp il id im in in hw gq gr gs ip hx gz id ge kr cy hw ik gq gr hp hr ie aa ga gw ht gb gi ar dn go gp hp ia hq gw aa aa ga gb gc ar as gd ga hw ik id gh lf gj gk gz id gg ij gi ia hq gb hr hr cs ar as gd ga hw gq gr gs es hz go gp cd ib gw hu hw ik gz hz go gp hp il hs hr ie aa aa ga

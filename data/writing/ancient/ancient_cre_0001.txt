@@ -1,0 +1,52 @@
+﻿#type:		writing
+#specification:	Cretan Hieroglyphs (cre)
+#scriptcode:	Latn
+#source:	http://people.ku.edu/~jyounger/Hiero/misctexts.html (last access: 20.03.2019), for corresponding signs: http://people.ku.edu/~jyounger/Hiero/SignNotes.html (last access: 20.03.2019)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Transnumerated hieroglyphs used in early Bronze Age Crete; here: Miscellaneous documents. See a list of signs in the source. Line breaks used to delimite documents. ? indicates a doubtful reading.
+
+<line_1>	X 049-041-006-025
+<line_2>	042-057-010?-034-028-093?-065?
+<line_3>	051?-092-092
+<line_4>	]088?-087-070-027
+<line_5>	041-059-025
+<line_6>	]056-070
+<line_7>	008-068
+<line_8>	006[
+<line_9>	X 057-023-070-018
+<line_10>	028[
+<line_11>	]•-053
+<line_12>	049-041-006-057?
+<line_13>	062?-034-002-056-070-025-019-051-070-094-034-056-077-049-038-029
+<line_14>	X 049-042
+<line_15>	]029-064-•[	
+<line_16>	]042-028[
+<line_17>	023-025-003?
+<line_18>	X 042-091
+<line_19>	025-056
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

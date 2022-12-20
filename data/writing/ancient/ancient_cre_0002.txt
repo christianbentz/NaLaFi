@@ -1,0 +1,56 @@
+﻿#type:		writing
+#specification:	Cretan Hieroglyphs (cre)
+#scriptcode:	Latn
+#source:	http://people.ku.edu/~jyounger/Hiero/MAtexts.html (last access: 20.03.2019), for corresponding signs: http://people.ku.edu/~jyounger/Hiero/SignNotes.html (last access: 20.03.2019)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Transnumerated hieroglyphs used in early Bronze Age Crete; here: Administrative documents from Malia. See a list of signs in the source. Line breaks used to delimite documents. ? indicates a doubtful reading. Spaces indicate a new line or spaces on a document.
+
+<line_1>	042-034-007?-040
+<line_2>	X 022-056-070-061
+<line_3>	011-038-029?
+<line_4>	027-034-070
+<line_5>	042-070-060-044
+<line_6>	*175 044-060-070
+<line_7>	[[•]]060-009
+<line_8>	008-056-013
+<line_9>	031?-055-081
+<line_10>	083-047?-019-•[
+<line_11>	068-077?-015
+<line_12>	012-031?-082
+<line_13>	028-070
+<line_14>	020-016-041
+<line_15>	030-034
+<line_16>	]•-016-•[
+<line_17>	068-061
+<line_18>	068-016[
+<line_19>	064-096-•[
+<line_20>	]031-041
+<line_21>	044-049-023 034-041-084 051-051-051-041
+<line_22>	016-038-007-051
+<line_23>	042-013-009[ 070-031-034[
+<line_24>	]061-080-032[ 053[
+<line_25>	]038 ]019
+<line_26>	042-066-077-042 270[ 061-062-042 890[
+<line_27>	040-070-038
+<line_28>	X •-072?-038-007-016
+<line_29>	]049-060-•[
+<line_30>	*155 11?
+<line_31>	042-041-049 703[
+<line_32>	028-041[ ]30
+<line_33>	]070-055-057-056?[ ]*163[
+<line_34>	032-009-056 *168 100
+<line_35>	]•-016-038 ]•-013-035 210
+<line_36>	]013-049
+<line_37>	]•-020-•
+<line_38>	*169 5[ ]6?
+<line_39>	019-034 003-•[ 036-092[
+<line_40>	044-040[ 085?-[
+<line_41>	•-[ ]60?[ ]025[ ]40[
+<line_42>	]•-042-049-016-016-077 057-070-061-005-019 ]077-042-049-016-016-056-077 ]002?-061 *170 10 050-070-013?-063-038 ]042-063-060 008-070-060 036?-031
+<line_43>	X 047?-002-061 049-038[ 050-070-•-•-019 10 057[ ]•-056-077 20 073-090 012-050 042-049-016-016[ ]040-013 X 057-023-042-063-060 008-070[
+<line_44>	]•-070-007-•[ ]070-013-•[ ]•-•[ ]•-•-057-023?[
+<line_45>	]035-053-034 ]•-013-060
+<line_46>	]055-020[ ]011-040
+<line_47>	050-057-056 [ ] 073-049-013 49 042-056-035 068-009-056-050-070
+<line_48>	073-049-013 050[ 038-031-025-073?[ 016 [ 008-019-013 050-057-056 300

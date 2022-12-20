@@ -1,0 +1,9 @@
+#type:		animal
+#specification:	Black-Headed Grosbeak (bhg)
+#scriptcode:	Latn
+#source:	http://taylor0.biology.ucla.edu/birdDBQuery/Files/Files_TextGrids/2013/Jun/GTNP13-69.TextGrid (last access: 13.07.2019), phrases appended in bhg_Phrases.pdf
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Each "unit" corresponds to a sound produced by the bird. White spaces indicate intervals of different durations between the units. These annotations resulted from a recording made in one piece from a specific bird. Comments that would sometimes follow the bird recording were removed.
+
+<line_1>	uj kd ro su sv sw sx gf jr dw kd tc jt ag ta tb uj kd no su sv sx sw sx gf jr dw kd tc jr ag ta td te uj kd no su sv sw sx gf jr dw kd tc jt ag ta td te uj kd no su sv sx sw sw jr dw kd tc jt ag ta td te uj kd no su sv su sv sx sw sx gf jr dw kd tc jt ag ta td te uj kd no no su sv sw sx gf jr dw kd tc jt ag ta td tc uj kd kd no su sv sx sw gf jr dw kd tc jt ag uj kd no su sv su sv sx sw sw jr dw kd tc jt ag qe uj kd no no su sv sx sw sw jr ou ou ou ou ou uj kd no no su sv sx sw uk ou ou ou ou ou ou te uj kd no su sv sc sw sw uk ou ou ou ou ou ou te uj kd no sx gf sw sx gf sw jr dw kd tc jt ag qe ta uj kd no no su sv sw sx gf jr dw kd tc jt ag ta td te uj kd no su sv sx gf sw jr dw kd tc jt ag qe  uj kd uj kd no su sx sw sx gf sw jr dw kd tc jt ag ta td te

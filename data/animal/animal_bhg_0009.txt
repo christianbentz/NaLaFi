@@ -1,0 +1,9 @@
+#type:		animal
+#specification:	Black-Headed Grosbeak (bhg)
+#scriptcode:	Latn
+#source:	http://taylor0.biology.ucla.edu/birdDBQuery/Files/Files_TextGrids/2013/Jun/AmadMyJn12-20.TextGrid (last access: 13.07.2019), phrases appended in bhg_Phrases.pdf
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Each "unit" corresponds to a sound produced by the bird. White spaces indicate intervals of different durations between the units. These annotations resulted from a recording made in one piece from a specific bird. Comments that would sometimes follow the bird recording were removed.
+
+<line_1>	la lb ky kw kx hh jd as kz la la lb ky kw la lb ku kv ku kw kx la la kv ku kv jd kn kz dz la ku kv ku la lb ky la lb ku lo jd kp ld la lb la lb la lb ky kw kx lo jd  ld la lb ky kw kx lo jd kp la lb ku kw kx lc ky

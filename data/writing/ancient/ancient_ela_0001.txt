@@ -1,0 +1,38 @@
+#type:		unclassified
+#specification:	Proto-Elamite (ela)
+#scriptcode:	Latn
+#source:	Dahl, J. (2005) Complex Graphemes in Proto-Elamite. In: Cuneiform Digital Library Journal, Vol 3., p. 9.
+#encoding:	utf-8
+#copyright:	NA
+#comments:	The codes used for different signs can be found in the Proto-Elamite signlist provided by Dahl (2005). <obv_line_XX> are transliterations of lines of the obverse, <rev_line_XX> of the reverse tablet side. '[...]' indicates undecipherable signs. Underscores indicate that the numbers and letters following are in index position. In the original text, some signs are marked with ankles in the upper corners, which indicate that the sign is "reconstructed" in the sense that it is not fully visible in the original tablet. These reconstruction signs are removed here.  
+
+<obv_line_1>	M327+M342
+<obv_line_2>	M180b M387_ef M381 M249_h M288 2N_30c
+<obv_line_3>	M36 3N_39b X
+<obv_line_4>	[...] [...]
+<obv_line_5>	[...] M61a 2N_30c
+<obv_line_6>	M387_a X M36+M343_h 2N_30c#
+<obv_line_7>	M36+M343_h 2N_30c
+<obv_line_8>	M266_b 2N_30c#
+<obv_line_9>	M328_b [...] M36+1N_30c 1N_34
+<obv_line_10>	M288 2N_1
+<obv_line_11>	M36+1N_30d 1N_54
+<obv_line_12>	M288 2N_1
+<obv_line_13>	M36+1N_39c 1N_34
+<obv_line_14>	M288 2N_39b 1N_24
+<obv_line_15>	[...] X 1N_24#
+<obv_line_16>	M288 M377_e 1N_24
+<obv_line_17>	M36+1N_39b 1N_1#
+<obv_line_18>	M36+1N_24 2N_1#
+<obv_line_19>	M36+1N_39b+M343_h 1N_1
+<obv_line_20>	M36+1N_24+M343_h 1N_1
+<obv_line_21>	[...] [...]
+<obv_line_22>	M36+1N_30d 7N_1
+<obv_line_23>	M36+1N_30d+M343_h 2N_1
+<obv_line_24>	M387_a M81 M36+1N_30d 2N_39b 1N_30c#
+<obv_line_25>	[...] [...]
+<obv_line_26>	M288 1N_30c 1N_30c#
+<obv_line_27>	M81 M377_e 1N_30c
+<obv_line_28>	M175+M381 M319 M2_b 1N_1 1N_39b
+<rev_line_1>	[...] [...] 4N_39b 1N_24 2N_30c
+<rev_line_2>	M36+M343_h M2_b 2N_1 2N_39b 1N_24 1N_30c

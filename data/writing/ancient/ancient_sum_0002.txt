@@ -1,0 +1,41 @@
+﻿#type:		writing
+#specification:	Cuneiform from the Lagash II (ca. 2200-2100 BC) period of the Sumerian language (sum)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P232529 (last access: 28.03.2019); Full sign list: https://cdli.ucla.edu/tools/SignLists/Rosengarten.pdf (last access: 26.02.2021)
+#encoding:	utf-8
+#copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020).
+#comments:	Cuneiform of the Lagash II period (ca. 2200-2100 BC). A full sign list can be found on the above-mentioned link. Lines beginning with '#' are comments. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html  
+
+<obverse>
+<line_1>	{d}nansze 
+<line_2>	nin uru16 
+<line_3>	nin in-dub-ba 
+<line_4>	nin-a-ni 
+<line_5>	gu3-de2-a 
+<line_6>	ensi2 
+<line_7>	lagasz{ki} 
+<line_8>	nig2-du7-e pa mu-na-e3 
+
+<reverse>
+<line_1>	nina{ki} iri ki-ag2-ga2-ni-a 
+<line_2>	e2 sirara6 
+<line_3>	kur e2-ta il2-la-ni 
+<line_4>	mu-na-du3 
+<line_5>	ki-be2 mu-na-gi4
+
+<surface_a>
+<line_1>	{d}nansze 
+<line_2>	nin uru16 
+<line_3>	nin in-dub-ba 
+<line_4>	nin-a-ni 
+<line_5>	gu3-de2-a 
+<line_6>	ensi2 
+<line_7>	lagasz{ki} 
+<line_8>	nig2-du7-e pa mu-na-e3 
+
+<surface_b>
+<line_1>	nigin6{ki} iri ki-ag2-ga2-ni-a 
+<line_2>	e2 sirara6 
+<line_3>	kur e2-ta il2-la-ni 
+<line_4>	mu-na-du3 
+<line_5>	ki-be2 mu-na-gi4 

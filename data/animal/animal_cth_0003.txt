@@ -1,0 +1,9 @@
+#type:		animal
+#specification:	California Thrasher (CTH)
+#source:	http://taylor0.biology.ucla.edu/birdDBQuery/Files/Files_TextGrids/2012/Feb/TRK06-2-12_Triple.TextGrid (last access: 13.07.2019), phrases appended in cth_Phrases2012.pdf
+#scriptcode:	Latn
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Each "unit" corresponds to a sound produced by the bird. White spaces indicate intervals of different durations between the units. These annotations resulted from a recording made in one piece from a specific bird. Comments that would sometimes follow the bird recording were removed.
+
+<line_1>	aia aib aic aic aic aid aie aie aid aif aig ngj aii ngj ail aib aib ail aab aaa aaa aic aic aic aia aib aik ail ail aik aie aie aid aaa aid aif aia aib aic aic aic aid aie aie aid aid aif aig aif ngj aii ngj ngj aii aic aic aic aic aia aib aik ail ail ail ail ail aie aie aid aid aif aig aia aib aic aic aie aic aaa aaa aaa aaa aie aie aie aid aid aif aig aif ngj aii ail ail ail aik aic aic

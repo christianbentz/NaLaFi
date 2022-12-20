@@ -1,0 +1,33 @@
+﻿#type:		writing
+#specification:	Proto cuneiform from the Uruk III period (ca. 3200-3000BC) (prc)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P005323 (last access: 28.03.2019); Full sign list: https://cdli.ucla.edu/tools/SignLists/protocuneiform/archsigns.html (last access: 26.02.2021)
+#encoding:	utf-8
+#copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020).
+#comments:	Cuneiform on a clay tablet of the late Uruk period (ca. 3200-3000 BC). A full sign list can be found on the above-mentioned link. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html  
+
+<obverse>
+<column_1>
+<line_1>	3(N40) 1(N24~a) MUD 3(N57) TE 
+<line_2>	1(N03) E2~a U4 KASKAL 
+<line_3>	1(N03) 1(N40) 1(N24~a) |GA2~a2x(GU4.SZE3)| SZU BU~a 
+<line_4>	2(N40) 1(N24~a) EN~a SANGA~a TUR 1(N58) SZIM~a 
+<column_2>
+<line_1>	1(N03) 2(N40) 1(N24~a) |GA2~a2x(GU4.SZE3)| SAGSZU 
+<line_2a>	1(N18) 4(N03) 
+<line_2b1>	KASZ~c 
+<line_2b2>	KASZ~c SUKKAL 
+<line_3>	4(N40) 1(N24~a) E2~a |3(N57).PIRIG~b1| 
+<line_4>	2(N40) 1(N24~a) AN MUSZ3~a DU PAP~a E2~a NUN~a 
+<column_3>
+<line_1>	4(N39~a)#? NIN GAL~a E2~a 
+<line_2>	3(N39~a) |GI4~axA| 
+<line_3>	GU7# 
+
+<reverse>
+<column_1>
+<line_1>	2(N14) SZE~a BULUG3 |KUR~a.E2~a|? 
+<line_2>	3(N18) GU7 
+<line_3>	SAGSZU |GA2~a2x(GU4.SZE3)| 
+<column_2>
+<line_1>	GU7 

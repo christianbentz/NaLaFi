@@ -1,0 +1,55 @@
+﻿#type:		writing
+#specification:	Proto cuneiform from the Uruk III period (ca. 3200-3000 BC) (prc)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P005151 (last access: 26.02.2021); Full sign list: https://cdli.ucla.edu/tools/SignLists/protocuneiform/archsigns.html (last access: 28.03.2019)
+#encoding:	utf-8
+#copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020).
+#comments:	Cuneiform on a clay tablet of the Uruk III period (ca. 3200-3000 BC). A full sign list can be found on the above-mentioned link. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html  
+
+<obverse>
+<column_1>
+<line_1>	5(N01)# ZATU659 
+<line_2>	1(N01) 1(N08) 1(N39~a) 
+<line_3>	1(N01) 1(N24) 
+<line_4>	|ZATU651xGAR| 3(N57) A IB~a |U4.1(N08)| 
+<column_2>
+<line_1>	5(N01) ZATU659 
+<line_2>	1(N01) 1(N24) 
+<line_3>	5(N01) |5(N57).GAR| 
+<line_4>	|ZATU737xBUR~a|# EN~a UR~a BA NUN~a |U4.2(N08)| 
+<column_3>
+<line_1>	5(N01) ZATU659 
+<line_2>	8(N01) ZATU726~d 
+<line_3>	|ZATU737xBUR~a| EN~a UR~a BA NUN~a |U4.3(N08)| 
+<column_4>
+<line_1>	1(N14) 5(N01) ZATU659 
+<line_2>	3(N01) 1(N39~a) 
+<line_3>	1(N14) 5(N01) 1(N24) 
+<line_4>	4(N14) |4(N57).GAR| 
+<line_5>	5(N01) GAR ZAG~a MUD NUN~a TE 
+<line_6>	SZITA~a1 U4 E2~a NUN~a |U4.4(N08)| 
+<column_5>
+<line_1>	1(N14) [ZATU659] 
+<line_2>	2(N01) 1(N39~a)# 
+<line_3>	3(N01) 1(N24) 
+<line_4>	2(N14) |4(N57).GAR| 
+<line_5>	EN~a NUN~a UR~a BA |U4.5(N08)| 
+
+<reverse>
+<column_1>
+<line_1>	1(N14) ZATU659# 
+<line_2>	1(N01) 1(N08) 1(N39~a) 
+<line_3>	4(N01) 1(N24) 
+<line_4>	3(N01) ZATU726~d 
+<line_5>	2(N14) 5(N01) |3(N57).GAR| 
+<line_6>	2(N01) TE ZAG~a MUD# AN# 
+<line_7>	BA |ZATU737xBUR~a| 
+<column_2>
+<line_1>	4(N14) ZATU659 BA 
+<line_2a>	1(N34) 1(N14) 9(N01) 1(N08) GAR BA 
+<line_2b1>	6(N01) 1(N08) 1(N39~a) 
+<line_2b2>	8(N01) ZATU726~d 
+<line_2b3>	1(N34) 5(N01) GAR 
+<line_3a>	1(N14)# 9(N01)# 1(N24) U4#? [...] 
+<line_3b1>	5(N01) U4 E2~a SZITA~a1 NUN~a GU7 
+<line_3b2>	1(N14) 4(N01) BA

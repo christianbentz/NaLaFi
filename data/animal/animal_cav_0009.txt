@@ -1,0 +1,9 @@
+#type:		animal
+#specification:	Cassin's Vireo (cav)
+#scriptcode:	Latn
+#source:	http://taylor0.biology.ucla.edu/birdDBQuery/Files/Files_TextGrids/2012/July/AmadMyJn12-25.TextGrid (last access: 13.07.2019), phrases appended in cav_Phrases.pdf
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Each "unit" corresponds to a sound produced by the bird. White spaces indicate intervals of different durations between the units. These annotations resulted from a recording made in one piece from a specific bird. Comments that would sometimes follow the bird recording were removed.
+
+<line_1>	ai en ak dn an dd ap as be ar dl bi ac aa fq bq cr fq bq dn dn ap as ar dl aq bi ac aa dl ac cm dm ad dm ad ae ag cr

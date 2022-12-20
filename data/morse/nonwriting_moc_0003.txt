@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse code (moc)
+#scriptcode:	Latn
+#source:	https://morsecode.world/international/translator.html (last access: 03.02.2021)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First sentence of the UDHR in English "All human beings are born equal in dignity and rights". The morse code signs ".", "-", and "/", where here replaced by "p", "h", and "s", respectively.
+
+ph phpp phpp s pppp pph hh ph hp s hppp p pp hp hhp ppp s ph php p s hppp hhh php hp s p hhph pph ph phpp s pp hp s hpp pp hhp hp pp h hphh s ph hp hpp s php pp hhp pppp h ppp

@@ -1,0 +1,17 @@
+#type:		writing
+#specification:	Cuneiform from the Old Babylonian (ca. 1900-1600 BC) period of the Sumerian language (sum)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P395698 (last access: 26.02.2021); Full sign list: https://cdli.ucla.edu/tools/SignLists/Rosengarten.pdf (last access: 26.02.2021)
+#encoding:	utf-8
+#copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020).
+#comments:	Translations and comments were removed. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html
+
+<obverse>
+<line_1>	mu# ri-im-{d}a-nu-um lugal-e
+<line_2>	ma#-da ia#-mu-ut-ba-a-lum{ki}
+<line_3>	ugnim# esz3-nun-na{ki} i3-si-in
+<line_4>	[ka]-zal#-lu e-ne-bi-da-gin7
+<line_5>	[unu{ki}]-sze3# me3-a in-szi-su8-re-esz-am3
+<line_6>	[unu?{ki?}] nig2-ul-ta sahar-ra la-ba-dub?-a-ba
+<line_7>	[...]-us2?-am3
+<line_8>	[... nam-a2]-gal#-a-ni-ta gar3-dar-a-bi i3-ni-in-gar-ra

@@ -1,0 +1,512 @@
+﻿#type:	 	writing
+#specification:	Blazon (bla) - Heraldic language
+#scriptcode:	Latn
+#source:	http://www.heraldry-scotland.co.uk/lindsay.html (last access: 24.03.2019); Short overview on the use of blazon in scottish heraldry: http://heraldry.sca.org/armory/bruce.html (last access: 24.03.2019)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Blazon, a formal description of heraldic arms, uses an own syntactic system and specific vocabulary. Here: a collection of Sir David Lindsay's Armorial. 
+
+<line_1>	Or, a lion rampant within a double tressure flory counter-flory Gules
+<line_2>	Or, Christ crucified Proper between two whips, handles Azure thongs Gules, in flanks
+<line_3>	Or, a moor Proper vested in a gown per pale Azure and Gules, wreathed at the head and grasping in his dexter hand a pole Argent from which is flying two pennants, that in chief Azure, the other Gules
+<line_4>	Azure, a mullet of six points within the horns of an increscent Or
+<line_5>	Azure, six (3,2,1) mullets of six points Or
+<line_6>	Azure, a harp Or
+<line_7>	Lozengy Argent and Gules, a dragon Proper
+<line_8>	Or, two birds in pale Sable beaked and membered Gules
+<line_9>	Or, a double-headed eagle displayed Sable beaked and membered Gules
+<line_10>	Gules, a lion crowned Or seated in a chair Argent grasping a battle-axe also Argent
+<line_11>	Sable, two lions combatant Or
+<line_12>	Azure, five (2,2,1) fleurs-de-lis Or dimidiating Or, a double-headed eagle displayed Sable beaked and membered Gules
+<line_13>	Azure, three crowns in pale Or
+<line_14>	Argent, a cross potent between four crosses Or dimidiating Gules, an escarbuncle Or
+<line_15>	Or, a double-headed eagle displayed Sable beaked and membered Gules
+<line_16>	Azure, three fleurs-de-lis Or
+<line_17>	Quarterly: 1st and 4th Azure, three fleurs-de-lis Or (France) 2nd and 3rd Gules, three lions passant guardant Or (England)
+<line_18>	Or, a lion rampant within a double tressure flory counter-flory Gules
+<line_19>	Quarterly: 1st and 4th Quarterly: i and iv Gules, a castle Orii and iii Argent, a lion rampant Gules 2nd and 3rd per pale: dexter Or, four pales Gules sinister Per saltire chief and base Or, four pales Gules sinister Argent, an eagle displayed Sable beaked and membered Gules
+<line_20>	Quarterly: 1st Or semy of hearts Gules, three lions passant guardant Azure crowned Or 2nd Azure, three crowns Or 3rdGules, a lion rampant crowned Or holding a battle-axe Argent 4th Azure, a dragon Or; the four quarters separated by a cross Argent fimbriated Gules surtout Quarterly: 1st and 4th Or, two lions passant guardant Azure 2nd and 3rdGules, an escutcheon Argent within a spoked wheel Or surtout en surtout Or, two bars Gules
+<line_21>	Quarterly: 1st and 4th Gules, a castle triple-towered Or 2nd and 3rd Argent, a lion rampant Gules
+<line_22>	Or, four pales Gules
+<line_23>	Parted per saltire: chief and base Or, four pales Gules flanksArgent, an eagle displayed Sable crowned Or beaked and membered Gules
+<line_24>	Azure, three crowns Or
+<line_25>	Gules, a lion rampant crowned Or grasping a battle-axe Argent shafted Or
+<line_26>	Barry of eight Or and Gules
+<line_27>	Quarterly: 1st parted per pale: dexter Azure, five (2,2,1) eagles displayed Or sinister Gules, a fess Argent 2nd three coats per pale: dexter Azure semy-de-lis Or within a bordure compony Argent and Gules centre Bendy of six Or and Gules sinister Sable, a lion rampant Argent 3rd four coats per pale: first Sable, a lion rampant Argent secondGules, a fess Argent third Or, three lions rampant in pale Sable fourth Argent, an eagle displayed Gules 4th three coats per pale: dexter Bendy of six Or and Azure centreArgent, a lion rampant Gules sinister Azure, semi-de-lis Or within a bordure compony Argent and Gules surtout two coats per pale: dexter Or, a lion rampant Sable sinisterArgent, an eagle displayed Gules
+<line_28>	Argent, ten bars Azure surmounted by a lion rampant Gules
+<line_29>	Gules, a lion rampant Argent crowned Or
+<line_30>	Quarterly: 1st and 4th Gules, an eagle displayed Argent 2nd and 3rd Azure, a knight in armour mounted on a horse all Argent
+<line_31>	Quarterly: 1st and 4th three coats per pale: dexter Argent, four bars Gules centre Azure, semi-de-lis Or sinister Argent, a cross potent between four crosses Or 2nd and 3rd Or, four pales Gules
+<line_32>	Azure, five escutcheons Argent in cross, each charged with five roundels in saltire Azure, and on a bordure Or four demi fleurs-de-lis issuant Azure between eight towers Gules
+<line_33>	Or, an escarbuncle Gules
+<line_34>	Argent, a cross potent between four crosses Or
+<line_35>	Azure, Saint Patrick seated on his throne holding a sceptre all Or
+<line_36>	Gules, an inescutcheon Or
+<line_37>	The paternal coat of each Queen is depicted on a lozenge impaling the Royal Scottish arms of her husband
+<line_38>	Scotland impaling: Azure, a cross formy between four martlets Or
+<line_39>	Scotland impaling: Gules, three lions rampant Argent
+<line_40>	Scotland impaling: Quarterly: 1st and 4th Argent, on a fess Azure three mullets Or (Mure of Rowallan) 2nd and 3rdAzure, three garbs Or (Comyn earldom of Buchan)
+<line_41>	Scotland impaling: Barry wavy of six Or and Gules (Drummond of Stobhall)
+<line_42>	Scotland impaling: Quarterly: 1st and 4th Azure, three fleurs-de-lis Or (France) 2nd and 3rd Gules, three lions passant guardant Or (England); all within a bordure compony Azure and Argent (Beaufort earldom of Somerset)
+<line_43>	Scotland impaling: two coats per pale: dexter Azure, a lion rampant contourny and crowned Or sinister Or, a lion rampant Sable armed and langued Gules (Gueldres)
+<line_44>	Scotland impaling: Quarterly: 1st Or, semi of hearts Gules and three lions passant guardant Azure 2nd Azure, three crowns Or 3rd Gules, a lion rampant crowned Or holding a battle-axe Argent shafted Or 4th Azure, a dragon Or; the four quarters separated by a cross Argent fimbriated Gulessurtout Quarterly: 1st and 4th Or, two lions passant guardant Azure 2nd and 3rd Gules, an inescutcheon within a spiked wheel Argent surtout en surtout Or, two bars Gules (the whole for Denmark)
+<line_45>	Scotland impaling: Quarterly: 1st and 4th Azure, three fleurs-de-lis Or (France) 2nd and 3rd Gules, three lions passant guardant Or (England)
+<line_46>	Scotland impaling: Azure, three fleurs-de-lis Or (France)
+<line_47>	Scotland impaling: Quarterly: 1st two coats per pale: dexter Barry of eight Argent and Gules sinister Azure, semy-de-lis Or debruised by a label of three points Gules 2nd two coats per pale: dexter Argent, a cross potent between four crosses Or sinister Paly of ten Or and Gules; the first and second quarters are debruised by a lablel of three points Argent 3rd Azure, semy-de-lis Or within a bordure Gules 4th Azure, crusilly fitchy and two barbels addorsed Or surtout Or, on a bend Gules three eagles displayed Or (the whole for Lorraine)
+<line_48>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure debruised by a label of three points Axure (Earldom of Fife) 2nd and 3rd Or, a fess chequy Azure and Argent debruised by a label of three points Azure (Stewart earldom of Menteith)
+<line_49>	Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules, debruised by a label of three points Azure
+<line_50>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules (Scotland) 2nd Gules, three lions rampant Argent (Earldom of Ross) 3rd Or, three piles Gules (Lordship of Brechin)
+<line_51>	Quarterly: 1st Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules (Scotland) 2nd Gules, a lion rampant Argent within a bordure Argent charged with eight roses Gules (Dunbar earldom of March) 3rd Gules, three legs embowed and conjoined at the thigh, mailed Argent and spurred Or (Lordship of Man) 4th Or, a saltire and chief Gules (Lordship of Annandale)
+<line_52>	Quarterly: 1st and 4th Gules, a fess chequy Argent and Azure (Lindsay) 2nd and 3rd Or, a lion rampant Gules armed and langued Azure debruised by a riband Sable (Lordship of Abernethy) surtout Argent, a rose Gules (Dukedom of Montrose)
+<line_53>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules (Scotland) 2nd and 3rd Azure, a bend between six crosses crosslet fitchy Or (Earldom of Mar) surtout Or, a fess chequy Argent and Azure between three crowns Gules (Stewart lordhip of the Garioch)
+<line_54>	Argent, a chevron Gules
+<line_55>	Or, two chevrons Gules
+<line_56>	Or, a lion rampant Gules armed and langued Azure
+<line_57>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules debruised by a riband engrailed Sable (Scotland) 2nd and 3rd Azure, a bend between six crosses crosslet fitchy Or (Earldom of Mar)
+<line_58>	Gules, a lion rampant Argent within a bordure Argent charged with ten roses Gules
+<line_59>	Or, three tasselled cushions lozengewise within a double tressure flory counter-flory Gules
+<line_60>	Quarterly: 1st Argent, a heart Gules and on a chief Azure three mullets Argent (Douglas) 2nd Azure, a lion rampant Argent (Lordship of Galloway) 3rd Azure, three mullets Argent (Murray lordship of Bothwell) 4th Or, a saltire and chief Gules (Lordship of Annandale)
+<line_61>	Quarterly: 1st Gules, a lion rampant Argent (Earldom of Angus) 2nd Or, a lion rampant Gules debruised by a riband Sable (Lordship of Abernethy) 3rd Ermine, three chevronels Gules (Lordship of Liddesdale) 4th Or, a fess chequy Argent and Azure surmounted by a bend Gules charged with three buckles Or (Stewart of Bonkyll) surtout Argent, a heart Gules and on a chief Azure three mullets Argent (Douglas)
+<line_62>	Quarterly: 1st and 4th Argent, a lymphad Sable (Earldom of Arran) 2nd and 3rd Gules, three pierced cinquefoild Argent (Hamilton)
+<line_63>	Quarterly: 1st Azure, three boars' heads couped Or (Gordon) 2nd Or, three lions' heads erased Gules langued Azure (Lordship of Badenoch) 3rd Or, three crescents within a double tressure flory counter-flory Gules (Seton) 4thAzure, five six-foils in saltire Argent (Fraser)
+<line_64>	Quarterly: 1st and 4th Gyronny of eight Argent and Sable (Campbell) 2nd and 3rd Or, a lymphad Sable with fire at the mast-head Proper (Lordship of Lorne)
+<line_65>	Quarterly: 1st and 4th Azure, three fleurs-de-lis Or within a bordure Gules charged with eight buckles Or (Lordship of Aubigny) 2nd and 3rd Or, a fess chequy Azure and Argent within a bordure engrailed Gules (Stewart) surtout Argent, a saltire between four roses Gules (Earldom of Lennox)
+<line_66>	Argent, three escutcheons Gules
+<line_67>	Argent, a chief paly of six Or and Gules
+<line_68>	Argent, on a chief Gules two mullets Argent
+<line_69>	Quarterly: 1st and 4th Azure, on a bend Argent three buckles Gules (Leslie) 2nd and 3rd Argent, a lion rampant Sable armed and langued Gules (?)
+<line_70>	Quarterly: 1st and 4th Or, a fess chequy Argent and Azure (Stewart) 2nd and 3rd Paly of six Or and Sable (Earldom of Atholl)
+<line_71>	Quarterly: 1st and 4th Or, a fess chequy Argent and Azure (Stewart) 2nd and 3rd Azure, three garbs Or (Comyn earldom of Buchan)
+<line_72>	Gules, three mullets Or
+<line_73>	Quarterly: 1st and 4th Or, a bend Azure (Vaus of Dirleton) 2nd and 3rd Gules, on a chevron Argent a rose between two lions combatant Gules (Hepburn)
+<line_74>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules debruised by a riband Sable (Scotland) 2nd and 3rdArgent, three tasselled cushions lozengewise within a double tressure flory counter-flory Gules (Randolph earldom of Moray)
+<line_75>	Quarterly: 1st and 4th Gules, three fleurs-de-lis Or (Montgomery) 2nd and 3rd Azure, three rings Os gemmed Gules (Eglinton)
+<line_76>	Argent, a pairle Sable
+<line_77>	Argent, three crosses crosslet Sable within a double tressure flory counter-flory Gules, and overall a chevron also Gules
+<line_78>	Quarterly: 1st and 4th Gules, a fess chequy Argent and Azure (Lindsay) 2nd and 3rd Or, a lion rampant Gules armed and langued Azure debruised by a riband Sable (Lordship of Abernethy)
+<line_79>	Quarterly: 1st and 4th Or, on a chief Sable three escallops Or (Graham) 2nd and 3rd Argent, three roses Gules (Earldom of Montrose)
+<line_80>	Quarterly: 1st and 4th Azure, a lymphad with sails furled within a double tressure flory counter-flory Or (Earldom of Orkney) 2nd and 3rd Argent, a cross engrailed Sable (Sinclair)
+<line_81>	Azure, a lymphad with flag flying Or in full sail Argent
+<line_82>	Quarterly: 1st and 4th Argent, three tasselled cushions lozengewise within a double tressure flory counter-flory Gules (Randolph earldom of Moray) 2nd and 3rd Argent, a heart Gules and on a chief Azure three mullets Argent (Douglas)
+<line_83>	Ermine, a heart Gules and on a chief Azure three mullets Argent
+<line_84>	Argent, three tasselled cushions lozengewise within a double tressure flory counter-flory Gules
+<line_85>	Barry of six Or and Gules
+<line_86>	Gules, a pierced cinquefoil Or
+<line_87>	Azure, three garbs Or
+<line_88>	Argent, a saltire between four roses Gules
+<line_89>	Gules, three lions rampant Argent
+<line_90>	Argent, a lymphad with sails furled Sable
+<line_91>	Quarterly: 1st Azure, a lion rampant Argent crowned Or (Lordship of Galloway) 2nd and 3rd Gules, a chevron within a double tressure flory counter-flory Argent (Fleming earldom of Wigton) 4th Argent, a heart Gules and on a chief Azure three mullets Argent (Douglas)
+<line_92>	Paly of six Or and Gules
+<line_93>	Quarterly: 1st Argent, on a chief Sable three escallops Or (Graham) 2nd and 3rd Or, a chevron Gules (Earldom of Strathearn ?) 4th Or, a fess chequy Argent and Azure (Stewart)
+<line_94>	Azure, a lymphad Or sails furled and crow's nest Argent
+<line_95>	Quarterly: 1st and 4th Gules, three mullets Or (Earldom of Sutherland) 2nd and 3rd Azure, a boar's head couped Or (Gordon)
+<line_96>	Quarterly: 1st and 4th Azure, a lymphad Or sailed Argent (Earldom of Caithness) 2nd and 3rd Argent, a cross engrailed Sable (Sinclair)
+<line_97>	Quarterly: 1st and 4th Azure, a bend between six crosses crosslet fitchy Or (Earldom of Mar) 2nd and 3rd Argent, a pale Sable Erskine)
+<line_98>	Quarterly: 1st and 4th Azure, a fess between three mascles Or (Beaton) 2nd and 3rd Argent, on a chevron Sable an otter's head erased Argent (Balfour)
+<line_99>	Or, an eagle displayed Gules beaked and membered Sable surmounted by a galley also Sable
+<line_100>	Quarterly: 1st and 4th Or, a lymphad Sable with fire at the prow, stern and mast-head all Proper (Lordship of Lorne) 2nd and 3rd Or, a fess chequy Azure and Argent and in chief a garb Sable (Stewart)
+<line_101>	Argent, a pale Sable
+<line_102>	Quarterly: 1st and 4th Gules, a double tressure flory counter-flory Argent surmounted by a chevron also Argent (Fleming) 2nd and 3rd Azure, five cinquefoils in saltire Argent (Fraser)
+<line_103>	Gules, a fess chequy Argent and Azure
+<line_104>	Gules, a fess chequy Argent and Azure and in chief three mullets Argent
+<line_105>	Quarterly: 1st and 4th Or, three crescents within a double tressure flory counter-flory Gules (Seton) 2nd and 3rdAzure, three garbs Or (Comyn earldom of Buchan)
+<line_106>	Argent, a saltire Sable
+<line_107>	Quarterly: 1st and 4th Argent, three cinquefoils Gules within a double tressure flory counter-flory Vert (Livingston) 2nd and 3rd Sable, a bend between six billets Or (Callendar)
+<line_108>	Argent, three pierced cinquefoils Sable
+<line_109>	Gules, a lion rampant within a bordure engrailed Argent
+<line_110>	Argent, a lion rampant Azure armed and langued Gules within a double tressure flory counter-flory Azure
+<line_111>	Azure, three bears' heads couped Argent muzzled Sable
+<line_112>	Quarterly: 1st and 4th Gules, fretty Or (Lyle) 2nd and 3rdAzure, a bend between six crosses crosslet fitchy Or (Earldom of Mar)
+<line_113>	Azure, three crosses crosslet fitchy issuing from as many crescents Argent
+<line_114>	Azure, crusilly fitchy Argent, three mullets Or
+<line_115>	Quarterly: 1st and 4th Or, a dolphin embowed Azure eyed and langued Gules 2nd and 3rd Gules, three crosses crosslet fitchy issuing from as many crescents all Argent (Monypenny)
+<line_116>	Quarterly: 1st and 4th Vert, a lion rampant Argent armed and langued Gules (Home) 2nd and 3rd Argent, three papingoes Vert beaked, eyed, legged and collared Gules (Pepdie) surtout Or, an orle Azure (Landells)
+<line_117>	Argent, a cross flory Gules
+<line_118>	Quarterly: 1st and 4th Argent, a lion rampant Azure armed and langued Gules (Crichton) 2nd and 3rd Argent, a saltire and chief Azure (Boyes) surtout Argent, three tasselled cushions lozengewise within a double tressure flory counter-flory Gules (Randolph earldom of Moray)
+<line_119>	Azure, a fess chequy Argent and Gules
+<line_120>	Paly of six Argent and Gules
+<line_121>	Barry wavy of six Or and Gules
+<line_122>	Quarterly: 1st and 4th Argent, a lion rampant Azure (Crichton) 2nd and 3rd Azure, three water-bougets Or (Ross of Sanquhar)
+<line_123>	Quarterly: 1st and 4th Sable, five cinquefoils in saltire Argent (Fraser of Oliver Castle) 2nd and 3rd Barry of six Ermine and Gules (Gifford of Yester) surtout Azure, three escutcheons Argent (Hay)
+<line_124>	Argent, three hurchions Sable
+<line_125>	Argent, a cross moline square pierced Sable
+<line_126>	Or, a chevron chequy Azure and Argent between three water-bougets Sable
+<line_127>	Argent, a chevron chequy Gules and Argent between three hunting-horns Sable stringed Gules
+<line_128>	Argent, a lion passant Gules armed and langued Azure and ducally gorged Or
+<line_129>	Gules, three crescents Argent
+<line_130>	Quarterly: 1st and 4th Or, on a bend Azure three mascles Or (Haliburton) 2nd Barry of six Or and Gules (Cameron) 3rd Argent, a bend Gules (Vaus of Dirleton)
+<line_131>	Gules, a fess chequy Azure and Argent and in chief a cross Argent
+<line_132>	Or, a lion rampant Gules armed and langued Azure debruised by a riband Sable
+<line_133>	Or, three piles Gules
+<line_134>	Quarterly: 1st Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules (Scotland) 2nd Or, a fess chequy Azure and Argent (Stewart) 3rd Argent, a saltire between four pierced roses Gules (Earldom of Lennox) 4th Or, a lion rampant Gules armed and langued Azure (Earldom of Fife); all within a bordure compony Argent and Azure
+<line_135>	Quarterly: 1st and 4th Or, a fess chequy Argent and Azure and in chief a garb Sable (Stewart) 2nd and 3rd Or, a lymphad Sable with fire at prow, stern and mast-head all Proper (Lordship of Lorne)
+<line_136>	Argent, a chief Gules
+<line_137>	Sable, five cinquefoils in saltire Argent
+<line_138>	Azure, five cinquefoils in saltire Argent
+<line_139>	Argent, a bend Gules
+<line_140>	Quarterly: 1st Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules (Scotland) 2nd Or, a fess chequy Azure and Argent (Stewart) 3rd Argent, a saltire between four pierced roses Gules (Earldom of Lennox) 4th Or, a lion rampant Gules armed and langued Azure (Earldom of Fife) surtout Gules, a lion rampant Or holding a tower in its fore-paws Argent (Lordship of Methven); all within a bordure compony Argent and Azure
+<line_141>	Quarterly: 1st and 4th Argent, a pale Sable (Erskine) 2nd and 3rd Or, three piles conjoined in base Gules (Lordship of Brechin)
+<line_142>	Argent, a chief Gules
+<line_143>	Or, an orle Azure
+<line_144>	Azure, fretty Or
+<line_145>	Ermine, three chevronels Gules
+<line_146>	Azure, a lion rampant Argent crowned Or
+<line_147>	Or, a fess chequy Argent and Azure between three open crowns Gules
+<line_148>	Or, a rock Azure in flames Gules
+<line_149>	Or, a saltire and chief Gules
+<line_150>	Gules, three legs embowed and conjoined at the thigh, armed and spurred Argent
+<line_151>	Azure, a bend Argent
+<line_152>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure debruised by a riband Sable (Lordship of Abernethy) 2nd and 3rd Argent, Three piles Gules (Wishart)
+<line_153>	Argent, a chevron Sable between three boars' heads erased Gules
+<line_154>	Quarterly: 1st and 4th Argent, a cross flory Gules (Carlyle) 2nd and 3rd Gules, a cross Or (Crosbie) surtout Argent, a saltire Azure and on a chief Azure three mullets Argent (Torthorwald ?)
+<line_155>	Or, a lymphad Sable with fire at the mast-head Gules
+<line_156>	Azure, three boars' heads couped Or
+<line_157>	Barry of six Ermine and Gules
+<line_158>	Argent, a saltire and chief Azure
+<line_159>	Sable, a lion rampant Argent
+<line_160>	Gules, three swords paleways in fess points downward Argent
+<line_161>	Gules, a boar's head couped Argent
+<line_162>	Quarterly: 1st and 4th Argent, a heart crowned Gules and on a chief Azure three mullets Argent, all debruised by a riband Or (Douglas) 2nd and 3rd Sable, a lion rampant Argent (Lordship of Nithsdale)
+<line_163>	Argent, on a chief dancetty Gules two mullets Argent
+<line_164>	Argent, three lions' heads erased Gules langued Azure
+<line_165>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure (Wemyss) 2nd and 3rd Argent, a lion rampant Sable armed and langued Gules within a single tressure Sable (Inchmartin)
+<line_166>	Paly of six Gules and Argent, on a bend Azure three tasselled cushions Argent
+<line_167>	Or, on a bend Sable three escallops Argent
+<line_168>	Quarterly: 1st and 4th Azure, three mascles Or (Wardlaw) 2nd and 3rd Azure, three water-bougets Or (Vallange)
+<line_169>	Quarterly: 1st and 4th Paly of six Gules and Argent, on a bend Azure three cushions Argent (Lundie) 2nd and 3rdArgent, a cross moline Gules (Sibbald of Balgony)
+<line_170>	Argent, three pierced cinquefoils Gules within a double tressure flory counter-flory Vert
+<line_171>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure within a single tressure Gules (Wemyss) 2nd and 3rd Azure, a bend Argent (Bisset)
+<line_172>	Argent, on a chevron Sable an otter's head erased Argent and in base a pierced cinquefoil Gules
+<line_173>	Quarterly: 1st and 4th Argent, on a fess Sable three cinquefoils Argent (Boswell) 2nd and 3rd Or, a lion rampant Gules armed and langued Azure debruised by a riband Sable (Lordship of Abernethy)
+<line_174>	Quarterly: 1st and 4th Azure, a fess between three mascles Or (Beaton) 2nd and 3rd Argent, on a chevron Sable an otter's head erased Argent (Balfour)
+<line_175>	Or, a mullet between three crescents within a double tressure flory counter-flory all Gules
+<line_176>	Quarterly: 1st and 4th Argent, an eagle displayed Sable beaked and membered Gules (Ramsay) 2nd and 3rd Azure, a boar's head erased Argent armed Gules between three lozenges Or
+<line_177>	Argent, on a chevron Sable an otter's head erased Argent
+<line_178>	Argent, a cross moline square pierced Gules
+<line_179>	Argent, three escutcheons within a bordure engrailed Gules
+<line_180>	Azure, a chevron between three crosses patty Argent
+<line_181>	Azure, a chevron Argent between three fleurs-de-lis Or
+<line_182>	Argent, a fess Gules
+<line_183>	Argent, a chevron between three crescents Azure
+<line_184>	Vert, a boar's head erased Argent
+<line_185>	Argent, a chevron between three mascles Sable
+<line_186>	Argent, a chevron engrailed Gules between three griffins segreant Vert
+<line_187>	Or, on a chevron Sable three mascles Or
+<line_188>	Quarterly: 1st and 4th Azure, a fess between three mascles Or (Beaton) 2nd and 3rd Argent, on a chevron Sable an otter's head erased Argent and in base a cinquefoil Gules (Balfour)
+<line_189>	Argent, three martlets Gules
+<line_190>	Azure, an oak tree eradicated Or
+<line_191>	Gules, two arms embowed and vambraced both grasping a single sword broken in the blade all Argent
+<line_192>	Gules, a lion rampant Argent crowned Or debruised by a label of three points Argent
+<line_193>	Quarterly: 1st and 4th Azure, a lion rampant and in chief three mullets all Argent (Inglis) 2nd and 3rd Argent, a chevron between three wolves' heads couped Sable (Tarvet)
+<line_194>	Argent, an eagle's head erased between three pierced cinquefoils all Sable
+<line_195>	Argent, three piles Sable
+<line_196>	Azure, on a chevron Argent between three escallops Argent a boar's head erased Sable between two mullets Gules
+<line_197>	Quarterly: 1st and 4th Or, on a chevron Sable three mascles Or (Learmonth) 2nd and 3rd Azure, on a bend Argent three roses Gules (Balcomie)
+<line_198>	Gules, a chevron Or between three bezants
+<line_199>	Gules, two mullets in chief and a crescent in base all Or
+<line_200>	Or, a fess chequy Argent and Azure within a bordure Argent charged with eight buckles Azure
+<line_201>	Vert, a fess chequy Azure and Argent between three habergeons Argent and on a chief Argent three buckles Azure
+<line_202>	Or, a saltire and chief Gules and in dexter chief a mullet Argent
+<line_203>	Or, a saltire and chief Gules and in centre chief a fleur-de-lis Or
+<line_204>	Gules, a fess chequy Azure and Argent and in chief a fleur-de-lis Argent
+<line_205>	Gules, three crescents within a bordure engrailed Argent
+<line_206>	Argent, a chevron Sable between two wolves' heads couped Gules in chief and an escallop Vert in base
+<line_207>	Azure, a chevron Or between two mascles Or in chief and a trefoil slipped Argent in base
+<line_208>	Quarterly: 1st and 4th Argent, a cross moline square pierced Sable (Colville) 2nd and 3rd Gules, a fess chequy Argent and Azure (Lindsay)
+<line_209>	Gules, a fess chequy Azure and Argent between two mullets in chief and a stringed hunting-horn in base all Argent
+<line_210>	Quarterly: 1st and 4th Argent, a lion rampant Azure armed and langued Gules (Crichton) 2nd and 3rd Argent, an inescutcheon within a bordure engrailed Gules (Hay of Naughton)
+<line_211>	Gules, a fess chequy Azure and Argent between a mullet in chief Argent and two bars wavy Or in base
+<line_212>	Gules, a fess chequy Azure and Argent between three mullets Argent
+<line_213>	Gules, a fess chequy Azure and Argent between two mullets in chief and a pierced cinquefoil in base all Argent
+<line_214>	Gules, a fess chequy Azure and Argent between three mullets in chief and a mascle in base all Argent
+<line_215>	Gules, a fess chequy Azure and Argent debruised by a label of three points Argent
+<line_216>	Gules, a fess chequy Azure and Argent between three mullets in chief and a stringed hunting-horn in base all Argent
+<line_217>	Argent, on a chevron Sable between two otters' heads erased Sable in chief and a fleur-de-lis Azure in base, an otter's head erased Argent
+<line_218>	Quarterly: 1st and 4th Gyronny of eight Argent and Azure, surtout Argent, a lion's head erased Sable langued Gules, within a bordure Gules
+<line_219>	Sable, three piles conjoined in base Argent
+<line_220>	Argent, three piles conjoined in base Sable
+<line_221>	Argent, an eagle displayed Sable beaked and membered Gules, debruised at the honour point by a barrulet couped Gules
+<line_222>	Argent, an eagle displayed Gules beaked and membered Sable
+<line_223>	Argent, a chevron Azure between three boars' heads couped Sable armed Gules
+<line_224>	Quarterly: 1st and 4th Argent, three cocks Gules (Cockburn) 2nd and 3rd Azure, three water-bougets Or (Vallange)
+<line_225>	Argent, an eagle displayed Sable beaked and membered Gules charged on the breast with a fleur-de-lis Or
+<line_226>	Argent, a saltire Azure and in base a crescent Gules
+<line_227>	Gules, three crosses crosslet fitchy issuing out of as many crescents Argent
+<line_228>	Gules, a lion rampant Argent within a bordure Argent charged with eight roses Gules
+<line_229>	Per pale Argent and Sable, on an annulet four pierced quatrefoils all counterchanged
+<line_230>	Or, a fess Azure between three lions' heads erased Gules langued Azure
+<line_231>	Or, a fess chequy Sable and Argent between three water-bougets Sable
+<line_232>	Argent, a lion rampant Gules armed langued Azure, and a chief Ermine
+<line_233>	Azure, on a bend Argent three buckles Gules and in sinister chief a lion's head erased Argent
+<line_234>	Argent, on a chevron Sable an otter's head erased Argent and in base a pierced cinquefoil Gules
+<line_235>	Sable, three piles conjoined in base Argent and on a chief Gules a lion passant Argent
+<line_236>	Argent, a chevron Sable between three escutcheons Gules
+<line_237>	Gules, a griffin segreant within a double tressure flory counter-flory Argent
+<line_238>	Argent, a griffin segreant Sable beaked and membered Gules
+<line_239>	Quarterly: 1st and 4th Argent, a bend Azure (Sandilands) 2nd and 3rd Argent, a heart Gules and on a chief Azure three mullets Argent (Douglas)
+<line_240>	Quarterly: 1st and 4th Gules, on a chevron Argent a rose between two lions combatant all Gules (Hepburn) 2ndArgent, a chief Sable 3rd Argent, an orle Gules and in chief three martlets Sable (Rutherford)
+<line_241>	Argent, three stringed hunting-horns Sable
+<line_242>	Quarterly: 1st and 4th Or, three piles Sable (Logan) 2ndArgent, an eagle displayed Sable beaked and membered Gules (Ramsay)
+<line_243>	Argent, three unicorns' heads couped Sable
+<line_244>	Argent, a lion rampant Gules armed and langued Azure
+<line_245>	Argent, an eagle displayed Sable beaked and membered Gules
+<line_246>	Argent, a cross engrailed Azure
+<line_247>	Or, three crescents Gules
+<line_248>	Gules, a lion rampant Argent crowned Or
+<line_249>	Argent, on a cross engrailed Sable a mullet Or
+<line_250>	Argent, a unicorn rampant Sable
+<line_251>	Gules, three goats' heads couped Argent
+<line_252>	Or, a lion dismembered Gules armed and langued Azure
+<line_253>	Quarterly: 1st and 4th Or, a fess chequy Argent and Azure and in chief three buckles Azure (Stewart) 2nd and 3rdErmine, on a fess Sable three crescents Argent (Craigie)
+<line_254>	Argent, three chess-rooks Sable
+<line_255>	Azure, two pierced cinquefoils in chief and an escallop in base all Or
+<line_256>	Argent, a bend Sable
+<line_257>	Sable, a chevron between three crescents Argent
+<line_258>	Azure, three mullets in chief Argent
+<line_259>	Gules, three cranes Argent
+<line_260>	Sable, three boars' heads couped Argent
+<line_261>	Gules, on a bend engrailed Or three escutcheons Azure
+<line_262>	Azure, a lion rampant and in chief three mullets all Argent
+<line_263>	Quarterly: 1st and 4th Or, a bend Gules debruised by a label of three points Azure) 2nd and 3rd Gules, a fess Or fimbriated wreathed Argent and Azure
+<line_264>	Vair, an escutcheon Gules and on a chief Azure a bar nebuly Argent
+<line_265>	Argent, a fess between three stringed hunting-horns Sable
+<line_266>	Argent, on a bend engrailed Sable three escallops Or
+<line_267>	Ermine, a saltire Sable
+<line_268>	Sable, a chevron Or between three boars' heads couped Argent
+<line_269>	Or, on a bend Azure three mullets Argent
+<line_270>	Gules, on a bend Argent a rose between two lions passant Gules
+<line_271>	Argent, on a bend Sable three escallops Argent
+<line_272>	Argent, a pairle Sable between three mullets Gules
+<line_273>	Gules, a bend engrailed and in sinister chief a mullet both Argent
+<line_274>	Quarterly: 1st and 4th Argent, a saltire engrailed between four roses Gules (Napier) 2nd and 3rd blank
+<line_275>	Gules, a fess Or between three bezants
+<line_276>	Argent, a cross embattled counter-embattled Sable
+<line_277>	Gules, on a bend Argent three pierced mullets of nine points Sable
+<line_278>	Barry of six Ermine and Gules within a bordure Argent
+<line_279>	Argent, three pierced cinquefoils Gules
+<line_280>	Gules, on a chevron Argent three roses Gules
+<line_281>	Gules, a fess Ermine and in dexter chief a mullet Argent
+<line_282>	Argent, a lion rampant Azure armed and langued Gules within a bordure engrailed Azure surmounted by a single tressure Argent
+<line_283>	Azure, two mullets in chief Argent and a garb Or in base
+<line_284>	Azure, on a fess Argent between three mascles Or as many crescents Gules
+<line_285>	Ermine, on a chief Gules two mullets Argent
+<line_286>	Azure, on a chevron Argent three roses Gules
+<line_287>	Vert, a savage's head Proper, eyed and tongued Gules
+<line_288>	Gules, a fess Ermine between two mullets Argent in chief and a castle triple-towered also Argent in base
+<line_289>	Gules, a chevron between three crosses patty fitchy all Argent
+<line_290>	Gules fretty Or, and in dexter chief a mullet Or
+<line_291>	Argent, a cross engrailed Sable between two crosses crosslet fitchy Gules in chief
+<line_292>	Argent, on a bend Azure a crescent between two mullets Argent
+<line_293>	Or, on a bend Azure three birds Or
+<line_294>	Argent, on a fess Azure three cinquefoils Argent
+<line_295>	Or, a lion rampant Gules armed and langued Azure debruised by a riband engrailed Sable
+<line_296>	Argent, a fleur-de-lis between three mullets within a bordure engrailed all Gules
+<line_297>	Argent, a bend and in sinister chief a bear's head muzzled both Gules
+<line_298>	Argent, a bend Sable surmounted by a bendlet dancetty Argent
+<line_299>	Gules, three crescents Argent within a bordure Argent charged with eight roses Gules
+<line_300>	Gules, three martlets Or
+<line_301>	Ermine, a chevron Gules
+<line_302>	Or, a fess chequy Argent and Azure between three stags' heads couped Gules
+<line_303>	Ermine, on a fess Sable three crescents Argent
+<line_304>	Quarterly: 1st and 4th Argent, a crowned heart Gules and on a chief Azure three mullets Argent (Douglas) 2nd and 3rd Azure, a bend between six crosses crosslet fitchy Or (Earldom of Mar); all within a bordure engrailed Gules
+<line_305>	Argent, a lion's head erased Gules and on a chief Gules two mullets Argent
+<line_306>	Gules, a cross Or
+<line_307>	Argent, a lion's head erased Gules and on a chief Gules a crescent between two mullets Argent
+<line_308>	Argent, a lion rampant Azure armed and langued Gules within a bordure engrailed Azure
+<line_309>	Quarterly: 1st and 4th Argent, three cocks Gules (Cockburn) 2nd and 3rd Azure, six (3,2,1) mascles Or (Weapont)
+<line_310>	Quarterly: 1st and 4th Vert, a lion rampant Argent (Home) 2nd and 3rd Argent, three papingoes Vert beaked, eyed and membered Gules (Pepdie) charged at the fess point by a rose Gules
+<line_311>	Argent, an orle Gules and in chief three martlets Sable
+<line_312>	Quarterly: 1st and 4th Gules, three mascles Or (Weapont) 2nd and 3rd Azure, on a chevron Argent three mullets of eight points Vert (Ker)
+<line_313>	Or, on a bend Azure a mullet Argent between two crescents Or
+<line_314>	Argent, a chevron engrailed between three boars' heads erased Gules
+<line_315>	Or, a fess chequy Argent and Azure surmounted by a bend Gules charged with three buckles Or
+<line_316>	Argent, three pelicans vulning themselves Gules
+<line_317>	Argent, a cross engrailed between four roses Gules
+<line_318>	Argent, a saltire engrailed Gules and a chief Azure
+<line_319>	Argent, three leaved slipped Vert
+<line_320>	Gules, a stag's head couped between three crosses crosslet fitchy Or
+<line_321>	Azure, three water-bougets Or
+<line_322>	Per chevron Argent and Argent goutty Sable, a chevron between three otters' heads couped Sable and on a chief Vert a crescent Or in dexter
+<line_323>	Per fess Argent and Sable, a chevron counterchanged and in base a cinquefoil Argent
+<line_324>	Argent, a mascle Azure between three cocks Gules
+<line_325>	Argent, three cocks within a bordure Gules
+<line_326>	Argent, three cocks Gules
+<line_327>	Argent, a mullet Azure between three cocks Gules
+<line_328>	Argent, a buckle Azure between three cocks Gules
+<line_329>	Azure, a lion statant guardant and in chief a cross patty both Argent
+<line_330>	Argent, a saltire engrailed and chief Gules
+<line_331>	Argent, three bulls' heads erased Sable
+<line_332>	Argent, a bull's head erased Sable
+<line_333>	Quarterly: 1st and 4th Azure, a mullet Argent 2nd and 3rdAzure, a fess chequy Gules and Argent
+<line_334>	Gules, a lion rampant Argent armed and langued Azure grasping a sword Argent in his dexter paw
+<line_335>	Argent, on a pale Sable a cross crosslet fitchy Argent
+<line_336>	Or, on a chief dancetty of three points Sable three escallops Or
+<line_337>	Gules, a fess chequy Azure and Argent
+<line_338>	Quarterly: 1st and 4th Argent, a lion rampant Gules armed and langued Azure (Ogilvy) 2nd and 3rd Argent, an eagle displayed Sable beaked and membered Gules (Ramsay)
+<line_339>	Argent, on an eagle displayed Sable beaked and membered Gules, a covered cup Or
+<line_340>	Azure, a crescent between three mullets Argent
+<line_341>	Per pale Argent and Gules, on a bordure six escallops all counterchanged
+<line_342>	Or, on a fess Azure three mullets Or
+<line_343>	Argent, a fess between three otters' heads erased Gules
+<line_344>	Ermine, three bars Gules
+<line_345>	Azure, a tree eradicated between two crosses crosslet fitchy in the flanks all Or
+<line_346>	Azure, in front of a tree eradicated Or a hunting-horn Sable stringed Gules, all within a bordure engrailed Or
+<line_347>	Per pale indented of five points Or and Sable, on a chief Argent a crescent Azure between two Ermine spots Sable
+<line_348>	Argent, a fess between three escutcheons Gules
+<line_349>	Gules, a saltire between four crescents Argent
+<line_350>	Quarterly: 1st and 4th Argent, a saltire engrailed Sable (Haldane) 2nd Argent, a saltire engrailed between four roses Gules (Earldom of Lennox) 3rd Or, a bend chequy Argent and Azure (Menteith)
+<line_351>	Quarterly: 1st and 4th Argent, a lion rampant Azure armed and langued Gules (Crichton) 2nd and 3rd Gules, three martlets Or (Cairns)
+<line_352>	Azure, a fess between six crosses crosslet fitchy Or
+<line_353>	Argent, an eagle displayed Sable beaked and membered Gules surmounted by a bend Gules charged with three crescents Argent
+<line_354>	Quarterly: 1st and 4th Azure, a lion rampant Argent (Auchterlony) 2nd and 3rd Or, a fess chequy Argent and Azure within a bordure Argent charged with eight buckles Azure (Stewart of Rossyth)
+<line_355>	Sable, on a bend Argent three mascles Sable
+<line_356>	Argent, a fess wavy Gules and in chief three piles Sable
+<line_357>	Argent, three piles conjoined in base Gules
+<line_358>	Argent, a chief paly of six Or and Gules within a bordure engrailed Sable
+<line_359>	Or, on a fess Gules between two crosses patty Gules in chief and a mullet Azure in base, three bezants
+<line_360>	Argent, a saltire engrailed Azure and on a chief Azure three mullets Argent
+<line_361>	Azure, a stag statant Or
+<line_362>	Argent, three holly leaves slipped Vert
+<line_363>	Azure, a chevron Or between three mullets Argent
+<line_364>	Azure, three mullets Argent within a double tressure flory counter-flory Or
+<line_365>	Or, a saltire engrailed Azure and on a chief Azure three mullets Or
+<line_366>	Azure, a cross patty between three mullets Argent within a double tressure flory counter-flory Or
+<line_367>	Argent, a lion rampant Sable goutty Argent armed and langued Gules
+<line_368>	Quarterly: 1st and 4th Argent, a cross Sable (Guthrie) 2nd and 3rd Azure, three garbs Or (Comyn)
+<line_369>	Argent, on a bend Azure three escallops Or
+<line_370>	Argent, a stringed hunting-horn Sable and on a chief Azure three mullets Argent
+<line_371>	Gules, three escutcheons Argent
+<line_372>	Ermine, three escutcheons Gules
+<line_373>	Quarterly: 1st and 4th Argent, a demi-otter Sable issuant from a fess wavy Azure (Meldrum) 2nd and 3rd Argent, three unicorns' heads erased Sable (Preston)
+<line_374>	Quarterly: 1st and 4th Or, three bears' heads couped Or (Aberchirder) 2nd and 3rd Argent, three mullets Azure (Innes)
+<line_375>	Azure, three open crowns Or
+<line_376>	Quarterly: 1st and 4th Azure, three bears' heads couped Argent muzzled Sable (Forbes) 2nd and 3rd Argent, three unicorns' heads erased Sable (Preston)
+<line_377>	Gules, a boar's head couped between three (2,1) mullets and as many (1,2) crosses crosslet fitchy all Or
+<line_378>	Argent, a lion passant guardant Gules charged on the chest with a mullet Argent
+<line_379>	Quarterly: 1st and 4th Argent, a lion passant Gules (Ogilvy) 2nd and 3rd Argent, a cross engrailed Sable (Sinclair)
+<line_380>	Ermine, a chief Gules
+<line_381>	Argent, three martlets Sable eyed and beaked Gules
+<line_382>	Argent, a bend Sable between two garbs Gules
+<line_383>	Azure, a fess engrailed Argent between three covered cups Or
+<line_384>	Quarterly: 1st and 4th Azure, a bend between six crosses crosslet fitchy Argent (Cheyne) 2nd and 3rd Argent, three leaves slipped Vert (Marshall of Essilmont)
+<line_385>	Quarterly: 1st and 4th Or, a bend chequy Sable and Argent (Menteith) 2nd and 3rd Or, a lymphad Sable and in chief three buckles Azure
+<line_386>	Or, an annulet between three crescents within a double tressure flory counter-flory all Gules
+<line_387>	Argent, three mullets Gules
+<line_388>	Argent, a lion rampant Vert armed and langued Gules
+<line_389>	Argent, on a bend Sable voided Argent three martlets Sable eyed and beaked Gules
+<line_390>	Argent, on a bend engrailed Vert three buckles Or
+<line_391>	Argent, on a bend Sable three buckles Or
+<line_392>	Argent, a chief Sable
+<line_393>	Sable, a bend between six billets Or
+<line_394>	Ermine, three chevronels Gules the middle one charged with a mullet Argent
+<line_395>	Argent, on a saltire Sable five mascles Argent and a chief Sable
+<line_396>	Azure, three covered cups Or
+<line_397>	Or, a lion rampant Sable armed and langued Gules within a double tressure flory counter-flory Sable
+<line_398>	Gules, three pierced cinquefoils Ermine within a bordure compony Ermine and Gules
+<line_399>	Argent, a fess wreathed Azure and Gules
+<line_400>	Sable, eleven (3,2,3,2,1) mullets Argent
+<line_401>	Gules, a sword in bend point upwards and in sinister chief a mullet both Argent
+<line_402>	Argent, three roundels Gules
+<line_403>	Or, a chevron chequy Azure and Argent between three purses Gules
+<line_404>	Gules, a fess chequy Azure and Argent and in base a mascle Or
+<line_405>	Azure, three boars' heads erased Or
+<line_406>	Quarterly: 1st and 4th Argent, on a fess Azure three mullets Or (Mure) 2nd and 3rd Azure, three garbs Or (Comyn)
+<line_407>	Argent, three leaves slipped Vert
+<line_408>	Argent, on a fess Azure three mullets Or within a bordure engrailed Gules
+<line_409>	Azure, a hare salient Argent, hanging from its neck a hunting horn Vert stringed Gules
+<line_410>	Argent, on a bend Azure three acorns Or
+<line_411>	Argent, on a fess Azure three mullets Argent
+<line_412>	Argent, a demi-lion rampant Sable armed and langued Gules issuing from a fess Gules
+<line_413>	Or, a chevron chequy Azure and Argent between three martlets Sable eyed and beaked Gules
+<line_414>	Argent, a saltire engrailed Sable
+<line_415>	Sable, a naked man with arms extended Argent
+<line_416>	Per cross indented Argent and Sable, a cross counterchanged
+<line_417>	Argent, a saltire Sable and on a chief Sable three tasselled cushions Argent
+<line_418>	Argent, on a saltire Sable nine mascles Argent
+<line_419>	Argent, a saltire Sable and a chief paly of six Argent and Sable
+<line_420>	Argent, on a pairle Sable a cinquefoil Argent
+<line_421>	Argent, on a pairle Sable a mullet Argent
+<line_422>	Argent, a pairle Sable and in chief a mullet Gules
+<line_423>	Argent, on a pairle Sable a mascle Or
+<line_424>	Argent, a pairle Sable and in chief a mullet also Sable
+<line_425>	Quarterly: 1st and 4th Argent, a chevron Gules between three crosses crosslet fitchy Sable (Kennedy) 2nd and 3rdAzure, a lion rampant crowned Argent (MacDowall)
+<line_426>	Azure, a bend between three (2,1) boars' heads couped Or
+<line_427>	Argent, on a fess Azure a mullet Or, within a double tressure flory counter-flory Gules
+<line_428>	Or, two chevrons Sable
+<line_429>	Argent, a saltire Gules and on a chief Gules three mullets Argent
+<line_430>	Quarterly: 1st and 4th Argent, a chevron Gules between three crosses crosslet fitchy Sable (Kennedy) 2nd and 3rdAzure, three fleurs-de-lis Or (Montgomery)
+<line_431>	Argent, three tasselled cushions lozengewise within a double tressure flory counter-flory Gules
+<line_432>	Or, a fess chequy Azure and Argent surmounted by a bend engrailed Gules
+<line_433>	Argent, a chevron Gules between three crosses crosslet fitchy Sable and in chief a boar's head erased Gules, all within a double tressure flory counter-flory Gules
+<line_434>	Argent, three dexter hands couped and apaumy Gules
+<line_435>	Or, a fess chequy Azure and Argent between three unicorns' heads couped Sable
+<line_436>	Or, a fess chequy Azure and Argent and in chief a lion passant Gules armed and langued Azure
+<line_437>	Or, a fess chequy Azure and Argent within a bordure engrailed Gules
+<line_438>	Or, a fess chequy Azure and Argent between three wolves' heads couped Sable
+<line_439>	Or, a fess chequy Azure and Argent between three otters' heads couped Gules
+<line_440>	Ermine, fretty Gules
+<line_441>	Argent, a saltire between four roses Gules barbed and seeded Vert
+<line_442>	Argent, three tasselled cushions lozengewise within a double tressure flory counter-flory Gules
+<line_443>	Argent, a saltire Azure and on a chief Azure three tasselled cushions Argent
+<line_444>	Argent, a saltire and chief Gules
+<line_445>	Sable, a saltire and chief Argent
+<line_446>	Gules, a chevron between three fleurs-de-lis Argent
+<line_447>	Argent, a fess wavy Gules between three boars' heads couped Sable armed Gules
+<line_448>	Gules, a saltire Argent and on a chief Argent three tasselled cushions Gules
+<line_449>	Argent, a fess Azure
+<line_450>	Gules, three pierced cinquefoils Ermine within a double tressure flory counter-flory Or
+<line_451>	Argent, on a cross between four mullets Azure a crescent Argent
+<line_452>	Gules, three hawks' lures Or
+<line_453>	Argent, a chevron Sable between three bears' heads erased Sable muzzled Gules
+<line_454>	Argent, a chevron between three pierced stars of many rays Sable
+<line_455>	Quarterly: 1st and 4th Gules, a lion rampant Argent (Wallace) 2nd and 3rd Gules, a fess chequy Azure and Argent (Lindsay)
+<line_456>	Gyronny of eight Ermine and Gules
+<line_457>	Or, a chevron between three water-bougets Sable
+<line_458>	Argent, three stags' heads couped Sable
+<line_459>	Argent, on a bend Sable three fetter-locks Or
+<line_460>	Azure, a castle triple-towered Argent masoned Sable
+<line_461>	Argent, a chevron between three roses Gules
+<line_462>	Argent, on a bend Sable three boars' heads couped Or
+<line_463>	Gules, on a chief Argent three hearts Gules
+<line_464>	Vert, three leaves slipped Argent
+<line_465>	Or, a fess between three crosses crosslet fitchy Gules
+<line_466>	Argent, a fess Sable
+<line_467>	Argent, two chevrons engrailed Gules
+<line_468>	Or, a chief Sable and in dexter chief a mullet Argent
+<line_469>	Argent, on a chief dancetty of three points Sable as many annulets Argent
+<line_470>	Argent, a bend between two crescents Sable
+<line_471>	Argent, a saltire and in chief a mullet both Sable
+<line_472>	Argent, on a chief Azure three crescents Argent
+<line_473>	Argent, three stags' heads couped Azure
+<line_474>	Gules, a lion passant Argent and on a chief Azure two mullets Argent
+<line_475>	Gules, a crescent between three mullets Argent
+<line_476>	Argent, a yair (wattle fence) Vert
+<line_477>	Argent, on a bend engrailed Sable a mullet Argent in chief
+<line_478>	Azure, three boars' heads erased Argent
+<line_479>	Argent, an eagle displayed Sable beaked and membered Gules and on a chief Vert three roses Argent
+<line_480>	Sable, a fess Or between three bezants
+<line_481>	Argent, a chevron Sable between two roses Gules in chief and a holly leaf slipped Vert in base
+<line_482>	Azure, a bend between eight crosses crosslet fitchy Argent
+<line_483>	Sable, a chevron between three fleurs-de-lis Argent
+<line_484>	Sable, an inescutcheon chequy Argent and Azure between three lions' heads erased Argent and in centre chief a mullet Argent
+<line_485>	Argent, a chevron between three water-bougets Sable
+<line_486>	Argent, a chevron Sable
+<line_487>	Sable, a fess between three roundels Argent
+<line_488>	Sable, three candlesticks Or
+<line_489>	Azure, a cross engrailed Ermine
+<line_490>	Gules, a fess chequy Azure and Argent between three mullets in chief and a heart in base all Argent
+<line_491>	Quarterly: 1st and 4th Sable, three camels' heads erased Or 2nd and 3rd Azure, a chevron between three fishes hauriant Argent
+<line_492>	Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules
+<line_493>	Quarterly: 1st and 4th Azure, three fleurs-de-lis Or within a bordure Gules charged with eight buckles Or (Lordship of Aubigny) 2nd and 3rd Or, a fess chequy Azure and Argent within a bordure engrailed Gules (Stewart of Darnley) surtout Argent, a saltire between four roses Gules (Earldom of Lennox)
+<line_494>	Quarterly: 1st and 4th quarterly: i Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules (Scotland) ii Or, a fess chequy Azure and Argent debruised in chief by a label of three points Gules (Stewart) iii Argent, a saltire between four roses Gules (Earldom of Lennox) iv Or, a lion rampant Gules langued Azure (Earldom of Fife) 2nd and 3rd quarterly: i and iv Gules, three cinquefoils Argent (Hamilton) ii and iiiArgent, a lymphad Sable (Earldom of Arran)
+<line_495>	Quarterly: 1st and 4th Or, a lion rampant Gules armed and langued Azure within a double tressure flory counter-flory Gules debruised by a riband Sable (Scotland) 2nd and 3rdAzure, a lymphad with sails furled Or (Earldom of Orkney)
+<line_496>	Quarterly: 1st and 4th Or, three pales Gules (Ruthven) 2ndOr, three bars Gules (Cameron) 3rd Or, on a bend Azure three mascles Or (Haliburton); the whole within a bordure Or charged with a double tressure flory counter-flory Gules
+<line_497>	Quarterly: 1st Argent, on a chief Gules two mullets Argent (Douglas of Morton) 2nd Or, a double-headed eagle displayed Sable beaked and membered Gules (Lord Maxwell) 3rd Argent, three hurchions Sable (Herries) 4thGules, a cross Or (Crosbie) surtout Argent, a saltire Sable (Maxwell)
+<line_498>	Quarterly: 1st and 4th Argent, a chief paly of six Gules and Or (Keith) 2nd and 3rd Gules, a lion passant Argent
+<line_499>	Gules, three pierced cinquefoils Argent debruised by a label of three points Or
+<line_500>	Or, a fess chequy Argent and Azure within a bordure engrailed Gules
+<line_501>	Gules, a fess chequy Azure and Argent between three mullets in chief and a heart in base all Argent and in dexter chief a crescent Or for difference
+<line_502>	Gules, a fess chequy Azure and Argent between three mullets in chief and a heart in base all Argent
+<line_503>	Quarterly: 1st and 4th Gules, a fess chequy Argent and Azure (Lindsay) 2nd and 3rd Or, a lion rampant Gules debruised by a riband Sable (Lordship of Abernethy)
+

@@ -1,0 +1,12 @@
+#type:		writing
+#specification:	Prakrit (pra)
+#scriptcode:	Latn
+#source:	http://www.koeblergerhard.de/Fontes/EdiktedesAshoka_Cunningham1879.pdf (last access: 03.03.2019)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Rock Inscriptions of Asoka, written in a Prakrit. The following texts are from rocks at Jaugada. Line breaks determine a new edict. 
+
+<line_1>	Iyam dhammalipi Khepingalasi pavatasi Devanampiyena Piyadasinâ Lajina likhapita Hida no kichh jivam âlabhiti pajà hitaviye no pi cha samaje kataviye babukam hi disam samejasa dakhati Devânampiye Piyadasi Lâyâ athi pichu ekatiyâ samâjâ sâdhumatâ Devânampiyasa Piyadasine Lâjine pulavam mabânapasi Devânampiyasa Piyadasine Lâjine anudivasam bahuni pâna satasahâsâni âlabhiyi susûpathâye se
+<line_2>	aja adâ iyam dhammalipi likhitâ tinniye vam pânâni âlabhiyanti duvema eke mige se pichu mige no dhuvam etâni pichu tinni pânâni pachhâ no âlabhiyisanti
+<line_3>	Savatam vijitasi Devânampiyasa Piyadasine Lâjine evâpi antâ athâ Chodâ Pândiya Satiyaput ANTIYOKE nâma Yona Lâjâe vâpi tasa ANTIYOKASA sâmanta Lâjâne savate Devânampiyena Piyadasinâ Lâji chikisâ cha pasu chikisâ cha atata nathi sava cha ata ta nâthi savata hâlâpitâ cha lopapitâ cha matesu udupânâni khânâpitâni lukhâni cha
+<line_4>	Devânampiye Piyadasi Lâjâ hevam âhâ Duvâsada vasâ bhisite name iyam â cha pâdesike cha panchasu panchasu vasesu anusayânam nikamâvu athâ anâye pi kammane sâ mitâ santhute sa nâtisu cha Bambhana samanehi sâdhu yi hetu te cha viyanjana te cha

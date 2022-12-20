@@ -1,0 +1,9 @@
+#type:		animal
+#specification:	California Thrasher (CTH)
+#source:	http://taylor0.biology.ucla.edu/birdDBQuery/Files/Files_TextGrids/2012/Jan/TRK26-12_Triple.TextGrid (last access: 13.07.2019), phrases appended in cth_Phrases2012.pdf
+#scriptcode:	Latn
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Each "unit" corresponds to a sound produced by the bird. White spaces indicate intervals of different durations between the units. These annotations resulted from a recording made in one piece from a specific bird. Comments that would sometimes follow the bird recording were removed.
+
+<line_1>	agf afy nid agb aaw agc agc agd age agf agc agc agh agi agb agk agl agm nfy agc agc ago agp agq agr agf agq agr afy agc agc agq agc agc ago agp ago agp ago agc agc agc agc ago agp agq agq agr agf agf agh agi afy agc agc ago agp ago agp ago agc ags agt agc ags age agc agq agl agu agv agb ago agp ago agp agc agc ags agw agc agc agq agq agu agf ago agp ago agp ago agc agc agw agc agt ags agq agl agu ago agp ago agp ago agc agt ags agq agf ago agp ago agp ago agc agt agq agu agc agc ags ags agq agu agf agp ago agp ago agp ago agc agc agt agc agt agq agr agc ago agp ago agc ags agq ago agp ago agp agc ags agc agw ago agq agu ago agp ago agp ago ago agw agc ags ago agt agx aha ahb ahb ahd ahb ahb ahd agu agf agp ago agp ago agc agc agf agq agu agc ags agx agx ahc ahb ahb ahd ahb ahb ahb agq agr ago agp ago agp ago agc agq agu agc ags agx ahc ahb ahb ahd ahb ahb ahd

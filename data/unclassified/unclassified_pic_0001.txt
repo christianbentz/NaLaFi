@@ -1,0 +1,258 @@
+#type:		unclassified
+#specification:	Pictish (pic)
+#scriptcode:	Latn
+#source:	http://outreach.mathstat.strath.ac.uk/outreach/pictish/database.php (last access: 28.03.2019)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	The notation relies on: Mack, A. (1997). Field guide to the Pictish symbol stones. Pinkfoot Press. An overview of the most common symbols with a similar notation can be found in the appended document "Talorgain". Each line represents a different stone (sorted by their name in the database). '?' indicates unclear readings. Entries that were no smybol stones or pictish have been removed.
+
+<stone_1>	serpent double-disc+Z mirror comb
+<stone_2>	divided-rectangle+Z triple-disc
+<stone_3>	crescent+V double-disc+Z
+<stone_4>	crescent? elephant?
+<stone_5>	horseshoe elephant
+<stone_6>	tuning-fork crescent+V hammer anvil
+<stone_7>	salmon rectangle
+<stone_8>	rectangle
+<stone_9>	crescent+V mirror-case
+<stone_10>	double-disc+Z
+<stone_11>	double-disc+Z fish-monster sword
+<stone_12>	disc step
+<stone_13>	elephant tuning-fork mirror
+<stone_14>	wolf
+<stone_15>	deer's-head
+<stone_16>	mirror-case divided-rectangle+Z
+<stone_17>	crescent+V divided-rectangle+Z
+<stone_18>	elephant serpent+Z
+<stone_19>	disc
+<stone_20>	rectangle disc
+<stone_21>	eagle divided-rectangle+Z
+<stone_22>	elephant comb
+<stone_23>	crescent+V double-disc+Z mirror comb
+<stone_24>	crescent+V serpent+Z
+<stone_25>	crescent rectangle
+<stone_26>	elephant double-disc+Z
+<stone_27>	mirror-case crescent+V elephant eagle
+<stone_28>	horseshoe elephant
+<stone_29>	bull
+<stone_30>	bull
+<stone_31>	bull
+<stone_32>	bull
+<stone_33>	bull
+<stone_34>	bull
+<stone_35>	eagle crescent+V mirror
+<stone_36>	rectangle
+<stone_37>	triple-disc double-disc+Z mirror
+<stone_38>	double-disc+Z
+<stone_39>	horseshoe elephant
+<stone_40>	boar
+<stone_41>	crescent+V rectangle
+<stone_42>	rectangle crescent+V mirror
+<stone_43>	horseshoe crescent+V mirror
+<stone_44>	divided-rectangle+Z mirror comb
+<stone_45>	tuning-fork elephant mirror comb
+<stone_46>	horseshoe elephant
+<stone_47>	double-disc+Z helmet
+<stone_48>	crescent+V double-disc+Z
+<stone_49>	divided-rectangle serpent
+<stone_50>	divided-rectangle crescent+V flower
+<stone_51>	elephant crescent+V
+<stone_52>	crescent+V horseshoe
+<stone_53>	divided-rectangle+Z horseshoe mirror comb
+<stone_54>	crescent+V crescent mirror comb
+<stone_55>	double-disc+Z crescent+V crescent+V disc crescent+V
+<stone_56>	crescent+V
+<stone_57>	mirror comb
+<stone_58>	horseshoe ogee mirror comb
+<stone_59>	serpent+Z double-disc
+<stone_60>	salmon mirror-case mirror comb
+<stone_61>	divided-rectangle+Z elephant mirror comb
+<stone_62>	crescent+V disc
+<stone_63>	deer's-head
+<stone_64>	boar
+<stone_65>	elephant double-disc crescent+V crescent+V elephant hammer anvil pincers
+<stone_66>	double-disc+Z
+<stone_67>	salmon
+<stone_68>	crescent
+<stone_69>	double-disc+Z mirror comb flower
+<stone_70>	twin-disc
+<stone_71>	flower double-disc+Z mirror comb
+<stone_72>	salmon tuning-fork mirror comb
+<stone_73>	2-cres serpent+Z mirror comb
+<stone_74>	elephant double-disc+Z
+<stone_75>	crescent+V triple-disc mirror-case double-disc+Z
+<stone_76>	elephant double-disc+Z horseshoe elephant
+<stone_77>	disc
+<stone_78>	bull
+<stone_79>	horseshoe crescent+V mirror comb goose salmon
+<stone_80>	salmon double-disc+Z
+<stone_81>	crescent+V mirror comb
+<stone_82>	double-disc+Z crescent+V
+<stone_83>	mirror-case triple-disc
+<stone_84>	divided-rectangle+Z crescent+V
+<stone_85>	rectangle crescent+V
+<stone_86>	double-disc+Z crescent+V
+<stone_87>	double-disc+Z
+<stone_88>	mirror
+<stone_89>	crescent+V
+<stone_90>	double-disc double-disc+Z crescent+V eagle
+<stone_91>	crescent+V elephant mirror
+<stone_92>	double-disc+Z eagle
+<stone_93>	eagle salmon
+<stone_94>	crescent+V
+<stone_95>	serpent+Z flower
+<stone_96>	crescent+V elephant
+<stone_97>	triple-disc flower beast serpent mirror
+<stone_98>	deer's-head triple-disc serpent salmon mirror
+<stone_99>	triple-oval
+<stone_100>	elephant crescent+V double-disc+Z elephant
+<stone_101>	crescent+V elephant mirror comb
+<stone_102>	rectangle elephant salmon double-disc flower crescent
+<stone_103>	stag rectangle
+<stone_104>	mirror-case crescent+V mirror
+<stone_105>	rectangle mirror-case divided-rectangle
+<stone_106>	double-disc+Z crescent+V mirror comb
+<stone_107>	horseshoe double-disc
+<stone_108>	double-disc+Z
+<stone_109>	double-disc salmon rectangle mirror comb salmon serpent
+<stone_110>	crescent+V divided-rectangle+Z
+<stone_111>	mirror-case eagle mirror comb
+<stone_112>	crescent+V triple-disc mirror comb
+<stone_113>	elephant
+<stone_114>	crescent+V elephant
+<stone_115>	crescent+V double-disc+Z
+<stone_116>	crescent+V mirror-case double-disc+Z serpent+Z
+<stone_117>	mirror
+<stone_118>	disc double-disc+Z
+<stone_119>	horse
+<stone_120>	wolf double-disc+Z mirror comb
+<stone_121>	triple-oval triple-disc
+<stone_122>	double-disc+Z salmon mirror comb
+<stone_123>	crescent+V elephant mirror comb
+<stone_124>	disc crescent+V
+<stone_125>	mirror comb crescent step
+<stone_126>	bull
+<stone_127>	salmon triple-disc crescent+V elephant
+<stone_128>	elephant double-disc+Z mirror elephant
+<stone_129>	2-cres tuning-fork
+<stone_130>	square elephant mirror
+<stone_131>	ogee mirror-case
+<stone_132>	ogee triple-disc
+<stone_133>	crescent+V mirror comb
+<stone_134>	tuning-fork
+<stone_135>	mirror comb
+<stone_136>	double-disc+Z
+<stone_137>	disc crescent+V crescent+V
+<stone_138>	serpent flower mirror comb
+<stone_139>	mirror-case boar
+<stone_140>	horseshoe
+<stone_141>	double-disc+Z elephant
+<stone_142>	eagle salmon
+<stone_143>	crescent+V
+<stone_144>	triple-disc crescent+V mirror
+<stone_145>	elephant
+<stone_146>	rectangle
+<stone_147>	horseshoe rod-end
+<stone_148>	triple-disc
+<stone_149>	crescent+V mirror
+<stone_150>	bull
+<stone_151>	crescent+V double-disc
+<stone_152>	crescent+V double-disc+Z double-disc+Z
+<stone_153>	elephant crescent+V
+<stone_154>	serpent+straight-rod
+<stone_155>	double-disc serpent+Z
+<stone_156>	double-disc
+<stone_157>	crescent+V
+<stone_158>	salmon serpent+Z mirror comb deer's-head elephant
+<stone_159>	double-disc
+<stone_160>	elephant crescent+V
+<stone_161>	mirror-case elephant
+<stone_162>	double-disc crescent
+<stone_163>	double-disc+Z comb
+<stone_164>	double-disc+Z horseshoe+V shears
+<stone_165>	divided-rectangle+Z crescent+V
+<stone_166>	double-disc comb double-disc+Z mirror
+<stone_167>	deer's-head crescent+V
+<stone_168>	step triple-disc
+<stone_169>	eagle serpent bull's head
+<stone_170>	elephant ogee
+<stone_171>	double-disc+Z serpent+Z mirror
+<stone_172>	triple-disc elephant
+<stone_173>	fish-monster
+<stone_174>	mirror-case mirror comb
+<stone_175>	rectangle wolf mirror comb
+<stone_176>	double-disc serpent+Z
+<stone_177>	mirror
+<stone_178>	mirror-case 2-cres
+<stone_179>	horseshoe man
+<stone_180>	elephant eagle
+<stone_181>	divided-rectangle
+<stone_182>	rectangle crescent+V
+<stone_183>	crescent+V
+<stone_184>	rectangle crescent+V
+<stone_185>	eagle
+<stone_186>	crescent+V flower
+<stone_187>	divided-rectangle crescent+V mirror comb
+<stone_188>	(ogee)
+<stone_189>	salmon horseshoe
+<stone_190>	goose rectangle
+<stone_191>	crescent+V
+<stone_192>	tuning-fork crescent+V
+<stone_193>	salmon elephant
+<stone_194>	double-disc+Z crescent+V
+<stone_195>	man horseshoe
+<stone_196>	elephant crescent+V mirror
+<stone_197>	dogshead double-disc+Z mirror comb
+<stone_198>	double-disc+Z crescent+V mirror
+<stone_199>	elephant ogee comb
+<stone_200>	crescent+V crescent+V double-disc+Z crescent+V mirror comb mirror
+<stone_201>	step crescent pincers
+<stone_202>	crescent+V elephant
+<stone_203>	horseshoe disc
+<stone_204>	rectangle horseshoe mirror
+<stone_205>	mirror
+<stone_206>	triple-oval mirror-case mirror comb
+<stone_207>	elephant
+<stone_208>	double-disc elephant
+<stone_209>	triple-oval crescent+V
+<stone_210>	crescent+V double-disc+Z elephant
+<stone_211>	rectangle crescent+V crescent+V mirror-case
+<stone_212>	double-disc+Z crescent mirror comb
+<stone_213>	mirror comb serpent+Z eagle
+<stone_214>	double-disc+Z
+<stone_215>	double-disc
+<stone_216>	double-disc+Z
+<stone_217>	double-disc+Z
+<stone_218>	crescent+V elephant
+<stone_219>	step elephant
+<stone_220>	elephant
+<stone_221>	double-disc+Z double-disc+Z
+<stone_222>	elephant
+<stone_223>	mirror-case deer's-head
+<stone_224>	horseshoe eagle
+<stone_225>	double-disc+Z
+<stone_226>	crescent+V tuning-fork serpent+Z
+<stone_227>	elephant
+<stone_228>	goose mirror mirror-case
+<stone_229>	crescent+V double-disc+Z
+<stone_230>	crescent+V double-disc+Z
+<stone_231>	eagle elephant
+<stone_232>	serpent+Z horseshoe mirror comb
+<stone_233>	serpent
+<stone_234>	double-disc+Z double-disc+Z
+<stone_235>	crescent+V double-disc+Z mirror comb
+<stone_236>	double-disc+Z elephant mirror
+<stone_237>	crescent+V
+<stone_238>	eagle divided-rectangle+Z
+<stone_239>	serpent flower elephant salmon crescent+V beast step fish-monster double-disc 2-cres
+<stone_240>	fish-monster mirror comb
+<stone_241>	double-disc+Z
+<stone_242>	crescent+V
+<stone_243>	triple-oval crescent+V
+<stone_244>	mirror comb
+<stone_245>	human figure cup-marks
+<stone_246>	mirror-case double-disc
+<stone_247>	divided-rectangle mirror
+<stone_248>	double-disc step
+	
+

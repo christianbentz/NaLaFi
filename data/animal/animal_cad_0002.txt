@@ -1,0 +1,25 @@
+#type:		animal
+#specification:	Chickadee (cad)
+#scriptcode:	Latn
+#source:	Hailman et al. (1994), Fig. 1 and Tab. 3
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Exemplary structure of different recordings of Chickadee calls. 
+
+<line_1>	ABCDDDD
+<line_2>	B
+<line_3>	CC
+<line_4>	DD
+<line_5>	BCBC
+<line_6>	ACCDD
+<line_7>	ABABCC
+<line_8>	AAADDDD
+<line_9>	BCBCBCDD
+<line_10>	CCCCCDDDD
+<line_11>	AAAABBCCDD
+<line_12>	DDDDDDDDDDD
+<line_13>	AAADDDDDDDDD
+<line_14>	BBBBBBBAAAAAA
+<line_15>	CCDDDDDDDDDDDD
+<line_16>	AAAAABBBBBBBBBB
+<line_17>	BCDDDDDDDDDDDDDDDDDDDDDDD
