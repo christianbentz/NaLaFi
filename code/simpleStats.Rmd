@@ -1,0 +1,136 @@
+---
+title: "Simple Corpus Stats"
+author: "Chris Bentz"
+date: "February 28, 2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries
+If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2").
+```{r}
+library(stringr)
+library(ggplot2)
+library(plyr)
+```
+
+## List files
+List all the files in the directory "corpus". 
+```{r}
+file.list <- list.files(path = "/home/chris/Github/StringBase/corpus/original", 
+                        recursive = T, full.names = T)
+#print(file.list)
+length(file.list)
+```
+
+## Count number of files in subfolders
+Count how many files are in each of the highest level subfolders of "corpus", and create a dataframe with counts.
+
+```{r}
+#number of "animal" files
+animal.count <- length(file.list[grepl("animal", file.list)])
+#number of "natural" files
+natural.count <- length(file.list[grepl("natural", file.list)])
+#number of "nonwriting" files
+nonwriting.count <- length(file.list[grepl("nonwriting", file.list)])
+#number of "unclassified"" files
+unclassified.count <- length(file.list[grepl("unclassified", file.list)])
+#number of "paleolithic" files
+paleolithic.count <- length(file.list[grepl("paleolithic", file.list)])
+#number of "writing" files
+writing.count <- length(file.list[grepl("writing", file.list)])
+#number of "ancient" files
+ancient.count <- length(file.list[grepl("ancient", file.list)])
+
+#create data frame
+df <- data.frame(subfolder = c("animal", "natural", "nonwriting", "unclassified", "paleolithic",
+                               "writing", "writing (ancient)"),
+                 count = c(animal.count, natural.count, nonwriting.count,
+                           unclassified.count, paleolithic.count, writing.count, ancient.count))
+```
+
+Create a bar plot with counts.
+```{r, fig.height = 4, fig.width = 6}
+counts.plot <- ggplot(data = df, aes(x = subfolder, y = count, fill = subfolder)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = count), vjust = -0.2, color = "black", size = 4) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45))
+counts.plot
+```
+
+## Safe figure to file
+```{r, fig.width = 6, fig.height = 4.5}
+ggsave("Figures/simpleStats_counts.pdf", counts.plot, dpi = 300, 
+       scale = 1, device = cairo_pdf)
+```
+
+## Lengths of files in characters
+
+# Read files and count characters
+```{r}
+# set counter
+counter=0
+# initialize dataframe to append results to
+simpleStats.df <- data.frame(filename = character(0), subcorpus = character(0), 
+                             num.lines = numeric(0), num.chars = numeric(0))
+
+for (file in file.list) 
+{
+  # loading textfile
+  textfile <- scan(file, what = "char", quote = "", comment.char = "", 
+                   encoding = "UTF-8", sep = "\n", skip = 7)
+  textfile <- gsub("\t","",textfile) # remove tabs
+  textfile <- gsub("<.*>","",textfile) # remove annotations marked by '<>'
+  #print(head(textfile))
+  # get filename
+  filename <- basename(file) 
+  #print(filename) # for visual inspection
+  # get subcorpus category
+  subcorpus <- sub("_.*", "", filename)
+  #print(subcorpus) # for visual inspection
+  # count number of lines in text file
+  num.lines <- length(textfile)
+  # count the number of utf-8 characters in text file (note that this includes white 
+  # spaces)
+  num.chars <- sum(nchar(textfile, type ="chars"))
+  #print(num.chars) # for visual inspection
+  # append results to dataframe
+  local.df <- data.frame(filename, subcorpus, num.lines, num.chars)
+  simpleStats.df <- rbind(simpleStats.df, local.df)
+  # counter
+  counter <- counter + 1
+  #print(counter)
+}
+simpleStats.df
+```
+
+# Density plot
+Density plot for numbers of characters per data file and subcorpus.
+```{r}
+# select subcorpora (if applicable)
+selection <- c("ancient", "paleolithic", "writing")
+simpleStats.df <- simpleStats.df[simpleStats.df$subcorpus %in% selection, ]
+# get means per subcorpus
+mu <- ddply(simpleStats.df, "subcorpus", summarise, grp.mean = mean(log(num.chars)))
+# plot densities with mean values as vertical lines
+density.plot <- ggplot(simpleStats.df, aes(x = log(num.chars), fill = subcorpus)) +
+  geom_density(alpha = 0.4) +
+  geom_vline(data = mu, aes(xintercept = grp.mean, color = subcorpus),
+             linetype = "dashed")
+print(density.plot)
+```
+
+## Safe figure to file
+```{r, fig.width = 8, fig.height = 4}
+ggsave("Figures/simpleStats_density.pdf", density.plot, dpi = 300, 
+       scale = 1, device = cairo_pdf)
+```
+
+
+

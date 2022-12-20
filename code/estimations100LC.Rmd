@@ -1,0 +1,165 @@
+---
+title: 'Estimations of Quantitative Measures: 100LC Corpus'
+author: "Chris Bentz"
+date: "23/02/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries
+If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
+```{r}
+library(stringr)
+library(ggplot2)
+library(ggrepel)
+library(plyr)
+library(entropy)
+library(ggExtra)
+library(gsubfn)
+#library(devtools)
+#install_github("dimalik/Hrate")
+library(Hrate)
+```
+
+## List files
+Create list with all the files in the directory "corpus". 
+```{r}
+# file list for 100LC texts
+file.list <- list.files(path = "~/Data/100LC_Dumps/output", 
+                        recursive = T, full.names = T)
+head(file.list)
+length(file.list)
+```
+
+# Sample
+Take a subsample of the files (for plotting 23K is hard.)
+```{r}
+file.list <- sample(file.list, 1000)
+```
+
+# Character entropy calculation per file
+```{r}
+# set counter
+counter = 0
+# set the maximal number of units (n) to be used for analysis
+n = 100
+# initialize dataframe to append results to
+entropy.df <- data.frame(filename = character(0), subcorpus = character(0), 
+                         code = character(0), huni.chars = numeric (0), 
+                         huni.strings = numeric(0), hrate.chars = numeric(0),
+                         hrate.strings = numeric(0), ttr.chars = numeric(0),
+                         ttr.strings = numeric (0)) 
+
+# start time
+start_time <- Sys.time()
+for (file in file.list) 
+{
+  # basic processing
+  # loading textfile
+  textfile <- scan(file, what = "char", quote = "", comment.char = "", 
+                   encoding = "UTF-8", sep = "\n" , skip = 16, nmax = 20) 
+  # nmax is the number of lines, and different from n above
+  # remove tabs, parentheses, and further symbols that cause processing issues
+  textfile <- gsubfn(".", list("\t" = "", "(" = "", ")" = "", "]" = "",
+                              "[" = "", "}" = "",  "{" = "", "*" = "", "+" = ""), textfile)
+  # print(head(textfile))
+  print(file)
+  # first select the lines with the original text, i.e. marked by <line_x>
+  textfile <- na.omit(str_match(textfile, "<line_.*"))
+  # remove line annotations marked by '<>'
+  textfile <- gsub("<.*>", "", textfile) 
+  # get filename
+  filename <- basename(file) 
+  # print(filename) # for visual inspection
+  # get subcorpus category
+  subcorpus <- sub("_.*", "", filename)
+  # print(subcorpus) # for visual inspection
+  # get the three letter identification code + the running number
+  code <- substring(filename, 1, nchar(filename)-4)
+  # print(code) # for visual inspection
+  # split the textfile into individual utf-8 characters. The output of strsplit() 
+  # is a list, so it needs to be "unlisted"" to get a vector. Note that white spaces are
+  # counted as utf-8 characters here.
+  chars <- unlist(strsplit(textfile, ""))
+  chars <- chars[1:n] # use only maximally n units
+  chars <- chars[chars != " "] # remove white spaces from character vector
+  chars <- chars[!is.na(chars)] # remove NAs for vectors which are already shorter than n
+  # split the textfile into strings delimited by white spaces. The output of strsplit() 
+  # is a list, so it needs to be "unlisted"" to get a vector.
+  strings <- unlist(strsplit(textfile, " "))
+  strings <- strings[1:n] # use only maximally n units
+  strings <- strings[!is.na(strings)] # remove NAs for vectors which are already 
+  # shorter than n
+    
+  # unigram entropy estimation
+  # calculate unigram entropy for characters
+  chars.df <- as.data.frame(table(chars))
+  # print(chars.df)
+  huni.chars <- entropy(chars.df$Freq, method = "ML", unit = "log2")
+  # calculate unigram entropy for units (Maximum Likelihood method)
+  strings.df <- as.data.frame(table(strings)) 
+  # print(units.df)
+  huni.strings <- entropy(strings.df$Freq, method = "ML", unit = "log2")
+  
+  # entropy rate estimation
+  # the values chosen for max.length and every.word will crucially 
+  # impact processing time. In case of "max.length = NULL" the length is n units
+  # here use the try() function since entropy rate estimation can fail when particular
+  # special characters are in the strings
+  hrate.chars <- try(get.estimate(text = chars, every.word = 1, max.length = NULL))
+    if (class(hrate.chars) == "numeric") {
+    hrate.chars <- hrate.chars
+  } else {
+    hrate.chars = "NA"
+  }
+  # for white space delimited strings 
+  hrate.strings <- try(get.estimate(text = strings, every.word = 1, max.length = NULL))
+    if (class(hrate.strings) == "numeric") {
+    hrate.strings <- hrate.strings
+  } else {
+    hrate.strings = "NA"
+  }
+  # calculate type-token ratio (ttr)
+  ttr.chars <- nrow(chars.df)/sum(chars.df$Freq)
+  ttr.strings <- nrow(strings.df)/sum(strings.df$Freq)
+  
+  # calculate repetition measue according to Sproat (2014)
+  # the overall number of repetitions is the sum of frequency counts minus 1. 
+  R <- sum(chars.df$Freq-1) 
+  # calculuate the number of adjacent repetitions
+  r = 0
+  if (length(chars) > 1){
+    for (i in 1:(length(chars)-1)){
+      if (chars[i] == chars[i+1]){
+        r = r + 1
+      } else {
+        r = r + 0
+      }
+    }
+    # calculate the repetition measure
+    rm.chars <- r/R
+  } else {
+    rm.chars <- "NA"  
+  }
+  
+  # append results to dataframe
+  local.df <- data.frame(filename, subcorpus, code, huni.chars, 
+                         hrate.chars, huni.strings, hrate.strings, 
+                         ttr.chars, ttr.strings, rm.chars)
+  entropy.df <- rbind(entropy.df, local.df)
+  # counter
+  counter <- counter + 1
+  print(counter)
+}
+end_time <- Sys.time()
+end_time - start_time
+#entropy.df
+```
+
+# Safe outputs to file
+```{r}
+write.csv(entropy.df, "/home/chris/Github/StringBase/code/Tables/output_100LC_1Ksample.csv", row.names = F)
+```

@@ -1,0 +1,162 @@
+---
+title: "Stabilization Analyses for Strings"
+author: "Chris Bentz"
+date: "3/20/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries
+If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
+```{r}
+library(stringr)
+library(ggplot2)
+library(plyr)
+library(entropy)
+library(ggExtra)
+library(gsubfn)
+# library(devtools)
+# install_github("dimalik/Hrate")
+library(Hrate)
+```
+
+## List files
+Create list with all the files in the directory "corpus". 
+```{r}
+file.list <- list.files(path = "/home/chris/Github/StringBase/corpus", 
+                        recursive = T, full.names = T)
+#print(file.list)
+length(file.list)
+```
+
+# Stabilization analysis per file
+```{r}
+# set counter
+counter = 0
+  # set the maximal number of units (n), and the stepsize for stabilization analysis
+  # (i.e. in steps of how many units are values calculated?)
+  n = 100
+stepsize = 10
+# initialize dataframe to append results to
+stabilization.df <- data.frame(filename = character(0), subcorpus = character(0), 
+                               code = character(0), huni.strings = numeric(0), 
+                               hrate.strings = numeric(0), ttr.strings = numeric(0),
+                               units = numeric(0)) 
+# start time
+start_time <- Sys.time()
+for (file in file.list) 
+{
+# basic processing
+# loading textfile
+textfile <- scan(file, what = "char", quote = "", comment.char = "",              
+                 encoding = "UTF-8", sep = " " , skip = 7)
+# remove tabs and parentheses
+textfile <- gsubfn(".", list("\t" = "", "(" = "", ")" = "", "]" = "",
+                              "[" = "", "}" = "",  "{" = ""), textfile)
+# remove annotations marked by '<>'
+textfile <- gsub("<.*>","",textfile) 
+# print(head(textfile))
+# get filename
+filename <- basename(file) 
+# print(filename) # for visual inspection
+# get subcorpus category
+subcorpus <- sub("_.*", "", filename)
+# print(subcorpus) # for visual inspection
+# get the three letter identification code + the running number
+code <- substring(substring(filename, regexpr("_", filename) + 1), 1, 8)
+# print(code) # for visual inspection
+# split the textfile into strings delimited by white spaces. The output of strsplit() 
+# is a list, so it needs to be "unlisted"" to get a vector.
+strings <- unlist(strsplit(textfile, " "))
+strings <- strings[1:n] # use only maximally n units
+strings <- strings[!is.na(strings)] # remove NAs for vectors which are already 
+# shorter than n
+# define the number of units (i.e. strings) used for analyses (note that k is always 
+# either equal to or smaller than n)
+k = length(strings)
+for (i in 1:(k/stepsize))
+  {  
+  # unigram entropy estimation
+  # calculate unigram entropy for white space delimited strings 
+  # (Maximum Likelihood method)
+  strings.df <- as.data.frame(table(strings[1:(i*stepsize)])) 
+  # print(units.df)
+  huni.strings <- entropy(strings.df$Freq, method = "ML", unit = "log2")
+  
+  # entropy rate estimation
+  # note: the values chosen for max.length and every.word will crucially 
+  # impact processing time. 
+  hrate.strings <- get.estimate(text = strings[1:(i*stepsize)], every.word = 1,
+                                max.length = 100)
+  
+  # calculate type-token ratio (ttr)
+  ttr.strings <- nrow(strings.df)/sum(strings.df$Freq)
+  # append results to dataframe
+  local.df <- data.frame(filename, subcorpus, code, huni.strings, 
+                         hrate.strings, ttr.strings, units = i*stepsize)
+  stabilization.df <- rbind(stabilization.df, local.df)
+  }
+  # counter
+  counter <- counter + 1
+  # print(counter)
+}
+end_time <- Sys.time()
+end_time - start_time
+stabilization.df
+```
+
+# Stabilization plots
+
+## Unigram entropy stabilization for strings
+```{r, fig.width = 20, fig.height = 20, warning = FALSE}
+huni.strings.plot <- ggplot(stabilization.df, aes(x = units, y = huni.strings,
+                                                colour = subcorpus)) + 
+  geom_line(alpha = 0.8, size  = 1.5) +
+  theme(legend.position = "bottom") +
+  labs(x = "number of strings", y = "unigram entropy for strings") +
+  facet_wrap(~code)
+huni.strings.plot
+```
+
+## Safe figure to file
+```{r, fig.width = 20, fig.height = 20}
+ggsave("Figures/stabilization_huni_strings.pdf", huni.strings.plot, dpi = 300, 
+       scale = 1, device = cairo_pdf)
+```
+
+## Entropy rate stabilization for strings
+```{r, fig.width = 20, fig.height = 20, warning = FALSE}
+hrate.strings.plot <- ggplot(stabilization.df, aes(x = units, y = hrate.strings,
+                                                colour = subcorpus)) + 
+  geom_line(alpha = 0.8, size  = 1.5) +
+  theme(legend.position = "bottom") +
+  labs(x = "number of strings", y = "entropy rate for strings") +
+  facet_wrap(~code)
+hrate.strings.plot
+```
+
+## Safe figure to file
+```{r, fig.width = 20, fig.height = 20}
+ggsave("Figures/stabilization_hrate_strings.pdf", hrate.strings.plot, dpi = 300, 
+       scale = 1, device = cairo_pdf)
+```
+
+## TTR stabilization for strings
+```{r, fig.width = 20, fig.height = 20, warning = FALSE}
+ttr.strings.plot <- ggplot(stabilization.df, aes(x = units, y = ttr.strings,
+                                                colour = subcorpus)) + 
+  geom_line(alpha = 0.8, size  = 1.5) +
+  theme(legend.position = "bottom") +
+  labs(x = "number of strings", y = "type-token ratio for strings") +
+  facet_wrap(~code)
+ttr.strings.plot
+```
+
+## Safe figure to file
+```{r, fig.width = 20, fig.height = 20}
+ggsave("Figures/stabilization_ttr_strings.pdf", ttr.strings.plot, dpi = 300, 
+       scale = 1, device = cairo_pdf)
+```

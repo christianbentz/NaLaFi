@@ -1,0 +1,37 @@
+---
+title: "Random String Generation"
+author: "Chris Bentz"
+date: "4/2/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries
+If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). 
+```{r}
+library(stringi)
+```
+
+# Random string generator
+Create random strings by drawing from the English alphabet
+```{r}
+# add white space to the object "letters"
+letters.plus.space <- append(" ", letters)
+for (i in 2:48){
+  meta.info <- c("#type:\trandom", "#specification:\trandomly generated string (ran)",
+               "#scriptcode:\tLatn", "#source:\tRcode in randomStringGenerator.Rmd",
+               "#encoding:\tutf-8", "#copyright:\tNA", 
+               "#comments:\t", "")
+  random.string <- paste(sample(c(append(letters.plus.space, LETTERS)[1:i]), 
+                      100000, replace = T), collapse = "")
+  # add meta information
+  full.vec <- append(meta.info, random.string) # append string to meta.info vector
+  # write to file
+  filename <- paste("random_ran_", i, sep = "")
+  write(full.vec, file = paste("~/Github/StringBase/corpus/generated/random/", filename, sep = ""), 
+      append = FALSE, sep = "\n")
+}
+```
