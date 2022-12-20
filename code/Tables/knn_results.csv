@@ -1,5 +1,0 @@
-"","precision","recall","f1"
-"Class: ancient",1,0.5,0.67
-"Class: paleolithic",1,0.91,0.95
-"Class: writing",0.99,1,1
-"Macro avg.",1,0.8,0.87

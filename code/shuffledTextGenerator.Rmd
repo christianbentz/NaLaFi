@@ -19,7 +19,7 @@ library(gsubfn)
 ## List files
 Create list with all the files in the directory "writing". 
 ```{r}
-file.list <- list.files(path = "~/Github/NaLaFi/data/", 
+file.list <- list.files(path = "~/Github/NaLaFi/data/original/", 
                         recursive = T, full.names = T)
 #print(file.list)
 length(file.list)
@@ -65,7 +65,7 @@ for (file in file.list)
   code <- substring(substring(filename, regexpr("_", filename) + 1), 1, 8)
   # write to file
   new.filename <- paste("shuffled_", code, sep = "")
-  write(full.vec, file = paste("~/Github/NaLaFi/data/shuffled/", new.filename, 
+  write(full.vec, file = paste("~/Github/NaLaFi/data/generated/shuffled/", new.filename, 
                                sep = ""), append = FALSE, sep = "\n")
 }
 ```

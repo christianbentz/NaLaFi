@@ -1,7 +1,7 @@
 ---
 title: "Simple Corpus Stats"
 author: "Chris Bentz"
-date: "February 28, 2020"
+date: "20/12/2022"
 output:
   pdf_document: default
   html_document: default
@@ -22,36 +22,38 @@ library(plyr)
 ## List files
 List all the files in the directory "corpus". 
 ```{r}
-file.list <- list.files(path = "/home/chris/Github/StringBase/corpus/original", 
+file.list <- list.files(path = "~/Github/NaLaFi/data/", 
                         recursive = T, full.names = T)
 #print(file.list)
 length(file.list)
 ```
 
 ## Count number of files in subfolders
-Count how many files are in each of the highest level subfolders of "corpus", and create a dataframe with counts.
+Count how many files are in each of the highest level subfolders of "data", and create a dataframe with counts.
 
 ```{r}
 #number of "animal" files
 animal.count <- length(file.list[grepl("animal", file.list)])
+#number of "morse" files
+morse.count <- length(file.list[grepl("morse", file.list)])
 #number of "natural" files
 natural.count <- length(file.list[grepl("natural", file.list)])
-#number of "nonwriting" files
-nonwriting.count <- length(file.list[grepl("nonwriting", file.list)])
-#number of "unclassified"" files
-unclassified.count <- length(file.list[grepl("unclassified", file.list)])
-#number of "paleolithic" files
-paleolithic.count <- length(file.list[grepl("paleolithic", file.list)])
+#number of "sign" files
+sign.count <- length(file.list[grepl("sign", file.list)])
+#number of "weather" files
+weather.count <- length(file.list[grepl("weather", file.list)])
 #number of "writing" files
 writing.count <- length(file.list[grepl("writing", file.list)])
-#number of "ancient" files
-ancient.count <- length(file.list[grepl("ancient", file.list)])
+#number of "random" files
+random.count <- length(file.list[grepl("random", file.list)])
+#number of "shuffled" files
+shuffled.count <- length(file.list[grepl("shuffled", file.list)])
 
 #create data frame
-df <- data.frame(subfolder = c("animal", "natural", "nonwriting", "unclassified", "paleolithic",
-                               "writing", "writing (ancient)"),
-                 count = c(animal.count, natural.count, nonwriting.count,
-                           unclassified.count, paleolithic.count, writing.count, ancient.count))
+df <- data.frame(subfolder = c("animal", "morse", "natural", "sign",
+                               "weather", "writing", "random", "shuffled"),
+                 count = c(animal.count, morse.count, natural.count, sign.count,
+                           weather.count, writing.count, random.count, shuffled.count))
 ```
 
 Create a bar plot with counts.
@@ -66,16 +68,16 @@ counts.plot
 
 ## Safe figure to file
 ```{r, fig.width = 6, fig.height = 4.5}
-ggsave("Figures/simpleStats_counts.pdf", counts.plot, dpi = 300, 
+ggsave("~/Github/NaLaFi/figures/simpleStats_counts.pdf", counts.plot, dpi = 300, 
        scale = 1, device = cairo_pdf)
 ```
 
-## Lengths of files in characters
+# Lengths of files in characters
 
-# Read files and count characters
+## Read files and count characters
 ```{r}
 # set counter
-counter=0
+counter = 0
 # initialize dataframe to append results to
 simpleStats.df <- data.frame(filename = character(0), subcorpus = character(0), 
                              num.lines = numeric(0), num.chars = numeric(0))
@@ -114,8 +116,8 @@ simpleStats.df
 Density plot for numbers of characters per data file and subcorpus.
 ```{r}
 # select subcorpora (if applicable)
-selection <- c("ancient", "paleolithic", "writing")
-simpleStats.df <- simpleStats.df[simpleStats.df$subcorpus %in% selection, ]
+# selection <- c("writing", "shuffled")
+#simpleStats.df <- simpleStats.df[simpleStats.df$subcorpus %in% selection, ]
 # get means per subcorpus
 mu <- ddply(simpleStats.df, "subcorpus", summarise, grp.mean = mean(log(num.chars)))
 # plot densities with mean values as vertical lines
@@ -128,7 +130,7 @@ print(density.plot)
 
 ## Safe figure to file
 ```{r, fig.width = 8, fig.height = 4}
-ggsave("Figures/simpleStats_density.pdf", density.plot, dpi = 300, 
+ggsave("~/Github/NaLaFi/figures/simpleStats_density.pdf", density.plot, dpi = 300, 
        scale = 1, device = cairo_pdf)
 ```
 

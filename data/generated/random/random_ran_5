@@ -1,0 +1,9 @@
+#type:	random
+#specification:	randomly generated string (ran)
+#scriptcode:	Latn
+#source:	Rcode in randomStringGenerator.Rmd
+#encoding:	utf-8
+#copyright:	NA
+#comments:	
+
+c dadbc bcddb     bdbbac c cacabaaadadab  bc adabbd bba db ab bdabbcbcdbbdcdaa   abca  c bcd  dc cdbccbbaabcdbdcaac b ac bdbaaddac cbcbcdaab  dbacbbc d dc abab b acdd a bbcbaa  aaddaba ab adcadcbccaac  ad bacbb abd a caab a bcbc ab bbbccdac  addadb  dd adc cbbbbba ddbbb cdc d acc  abbbdcacdadbab cbcc  aacc bab bac caaaad ca cbdb bcd b bca ba bcc c  aa  a acaa ada dacccc a   abdd baabadadccadbb  bcd ccabdbcbad da  adcbbabb dcababbddcaacdc b bad bac abbc d cacabbcadacadcc aab abcabbaaabc dadddacb bcaa c dbdcbdabcaaacddada ac b cabbab abaaadcbdddcdd dcdabaccbdac  ddbcbadca b acbadbc a a d d dcabbdc dcdab dacbc bd bcdcabddbdaccabcd cccccdaadbaccc acb aa acbcd bbaccacdcdaabcadcdcb cd  d bba ac ddc aab bbbaab addaccca  cacbb dbabbabc bcaba bdbb ca  d adcbcdcba cbcdb bdb ac ad abacacdddad bdbd ad a bdd dcabcd b a aaa adc b a bbcabcacadbbcab db acdbacdbcababa a baaa  dc  dd aaccbbddd ab cdacddcbbbcdddccadad  c bacbbcacc caadddabaaddbddadbbdacbdbcdaadab  bccabdabdd d abadddabdcbbbd  abbd bc cdb
