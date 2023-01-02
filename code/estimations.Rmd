@@ -1,7 +1,7 @@
 ---
-title: "Estimations of Quantitative Measures: StringBase Corpus"
+title: "Estimations of Quantitative Measures"
 author: "Chris Bentz"
-date: "20/12/2022"
+date: "02/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -27,32 +27,35 @@ library(Hrate)
 ```
 
 ## List files
-Create list with all the files in the directory "corpus". 
+Create list with all the files in the directory "data". 
 ```{r}
-# file list for stringBase texts
+# give file paths to the files to be processed
 file.list <- list.files(path = "~/Github/NaLaFi/data/", 
                         recursive = T, full.names = T)
 head(file.list)
 length(file.list)
 ```
 
-# Character entropy calculation per file
+# Estimations per file
 ```{r}
 # set counter
 counter = 0
 # set the maximal number of units (n) to be used for analysis
-n = 100
+n = 1000
 # initialize dataframe to append results to
 estimations.df <- data.frame(filename = character(0), subcorpus = character(0), 
                          code = character(0), huni.chars = numeric (0), 
                          huni.strings = numeric(0), hrate.chars = numeric(0),
                          hrate.strings = numeric(0), ttr.chars = numeric(0),
-                         ttr.strings = numeric (0)) 
+                         ttr.strings = numeric (0), rm.chars = numeric(0)) 
 
 # start time
 start_time <- Sys.time()
 for (file in file.list) 
 {
+  try({ # if the processing failes for a certain file, there will be no output for this file,
+  # but the try() function allows the loop to keep running  
+  
   # basic processing
   # loading textfile
   textfile <- scan(file, what = "char", quote = "", comment.char = "", 
@@ -62,13 +65,12 @@ for (file in file.list)
   # print(head(textfile))
   # get filename
   filename <- basename(file) 
-  print(filename) # for visual inspection
+  #print(filename) # for visual inspection
   # get subcorpus category
   subcorpus <- sub("_.*", "", filename)
   # print(subcorpus) # for visual inspection
   # get the three letter identification code + the running number
   code <- substring(substring(filename, regexpr("_", filename) + 1), 1, 8)
-  # print(code) # for visual inspection
   
   # Split into individual characters/signs 
   # remove tabs and parentheses, as well as star signs `*' and plus signs `+´
@@ -137,6 +139,7 @@ for (file in file.list)
   # counter
   counter <- counter + 1
   # print(counter)
+  })
 }
 end_time <- Sys.time()
 end_time - start_time
@@ -145,5 +148,6 @@ end_time - start_time
 
 # Safe outputs to file
 ```{r}
-write.csv(estimations.df, "~/Github/NaLaFi/results/tables/estimations.csv", row.names = F)
+write.csv(estimations.df, paste("~/Github/NaLaFi/results/tables/estimation", 
+                                paste(n, "chars.csv", sep = ""), sep = ""), row.names = F)
 ```
