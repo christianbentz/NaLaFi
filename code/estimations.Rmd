@@ -148,6 +148,6 @@ end_time - start_time
 
 # Safe outputs to file
 ```{r}
-write.csv(estimations.df, paste("~/Github/NaLaFi/results/tables/estimation", 
+write.csv(estimations.df, paste("~/Github/NaLaFi/results/estimation", 
                                 paste(n, "chars.csv", sep = ""), sep = ""), row.names = F)
 ```
