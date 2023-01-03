@@ -1,7 +1,7 @@
 ---
 title: "Stabilization Analyses for Characters"
 author: "Chris Bentz"
-date: "02/01/2023"
+date: "03/01/2023"
 output: pdf_document
 ---
 
@@ -39,13 +39,13 @@ length(file.list)
 counter = 0
 # set the maximal number of units (n), and the stepsize for stabilization analysis
 # (i.e. in steps of how many units are values calculated?)
-n = 1000
-stepsize = 100
+n = 100
+stepsize = 10
 # initialize dataframe to append results to
 stabilization.df <- data.frame(filename = character(0), subcorpus = character(0), 
                                code = character(0), huni.chars = numeric (0), 
-                               hrate.chars = numeric(0), ttr = numeric(0), 
-                               units = numeric(0)) 
+                               hrate.chars = numeric(0), ttr.chars = numeric(0), 
+                               rm.chars = numeric(0), units = numeric(0)) 
 # start time
 start_time <- Sys.time()
 for (file in file.list) 
@@ -56,7 +56,9 @@ for (file in file.list)
   # basic processing
   # loading textfile
   textfile <- scan(file, what = "char", quote = "", 
-                   comment.char = "", encoding = "UTF-8", sep = "\n" , skip = 7, nmax = 20) # skip 7 first lines
+                   comment.char = "", encoding = "UTF-8", sep = "\n" , skip = 7, nmax = 20) 
+  # skip 7 first lines, nmax gives the maximum number of lines to be read,
+  # note that reading more lines will considerably increase processing time.
   # remove annotations marked by '<>'
   textfile <- gsub("<.*>","",textfile) 
   # print(head(textfile))
@@ -102,9 +104,29 @@ for (file in file.list)
                                 max.length = NULL)  
     # calculate type-token ratio (ttr)
     ttr.chars <- nrow(chars.df)/sum(chars.df$Freq)
+    
+    # calculate repetition measure according to Sproat (2014)
+    # the overall number of repetitions is the sum of frequency counts minus 1. 
+    R <- sum(chars.df$Freq-1) 
+    # calculate the number of adjacent repetitions
+    r = 0
+    if (length(chars) > 1){
+      for (j in 1:(length(chars)-1)){
+        if (chars[j] == chars[j+1]){
+          r = r + 1
+        } else {
+          r = r + 0
+        }
+      }
+      # calculate the repetition measure
+      rm.chars <- r/R
+    } else {
+      rm.chars <- "NA"  
+    }
+    
     # append results to dataframe
     local.df <- data.frame(filename, subcorpus, code, huni.chars, hrate.chars, 
-                           ttr.chars, units = i*stepsize)
+                           ttr.chars, rm.chars, units = i*stepsize)
     stabilization.df <- rbind(stabilization.df, local.df)
   }
   # counter
@@ -114,7 +136,7 @@ for (file in file.list)
 }
 end_time <- Sys.time()
 end_time - start_time
-# stabilization.df
+head(stabilization.df)
 ```
 
 # Stabilization plots
@@ -167,5 +189,22 @@ ttr.chars.plot
 ## Safe figure to file
 ```{r, fig.width = 20, fig.height = 20}
 ggsave("~/Github/NaLaFi/figures/stabilization_ttr_chars.pdf", ttr.chars.plot, dpi = 300, 
+       scale = 1, device = cairo_pdf)
+```
+
+## RM characters
+```{r, fig.width = 20, fig.height = 20, warning = FALSE}
+rm.chars.plot <- ggplot(stabilization.df, aes(x = units, y = rm.chars,
+                                                colour = subcorpus)) + 
+  geom_line(alpha = 0.8, size  = 1.5) +
+  theme(legend.position = "bottom") +
+  labs(x = "number of characters", y = "RM for characters") +
+  facet_wrap(~code)
+rm.chars.plot
+```
+
+## Safe figure to file
+```{r, fig.width = 20, fig.height = 20}
+ggsave("~/Github/NaLaFi/figures/stabilization_rm_chars.pdf", rm.chars.plot, dpi = 300, 
        scale = 1, device = cairo_pdf)
 ```
