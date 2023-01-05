@@ -1,7 +1,7 @@
 ---
 title: "Estimation Plots"
 author: "Chris Bentz"
-date: "03/01/2023"
+date: "05/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -32,22 +32,21 @@ estimations1000.df <- read.csv("~/Github/NaLaFi/results/estimation1000chars.csv"
 #head(estimations10.df.)
 ```
 
-Select subcorpora (if needed).
+Exclude subcorpora (if needed).
 ```{r}
-selected <- c("shuffled")
-estimations10.df <- estimations10.df[!(estimations10.df$subcorpus %in% selected), ]
+#selected <- c("shuffled", "random")
+#estimations1000.df <- estimations1000.df[!(estimations1000.df$subcorpus %in% selected), ]
 ```
 
 # Scatterplots
 
 ## Entropy rate vs. unigram entropy for characters 
 ```{r, fig.width = 4, fig.height = 4, warning = FALSE}
-# plot
-huni.hrate.chars.plot <- ggplot(estimations10.df, 
-                                aes(x = huni.chars, y = hrate.chars, 
+huni.hrate.chars.plot <- ggplot(estimations1000.df, 
+                                aes(x = huni.chars, y = ttr.chars, 
                                     colour = subcorpus)) + 
   geom_point(alpha = 0.5, size  = 1) +
-  labs(x = "Unigram entropy for characters", y = "Entropy rate for characters") +
+  labs(x = "Unigram entropy for characters", y = "TTR for characters") +
   theme(legend.position = "none")
 huni.hrate.chars.plot <- ggMarginal(huni.hrate.chars.plot, groupFill = T, type = "histogram", colour = "white")
 huni.hrate.chars.plot
@@ -55,12 +54,12 @@ huni.hrate.chars.plot
 
 ## TTR vs. repetition rate for characters
 ```{r, fig.width = 6, fig.height = 4, warning = FALSE}
-ttr.rm.chars.plot <- ggplot(estimations10.df, 
-                   aes(x = ttr.chars, y = rm.chars, 
+ttr.rm.chars.plot <- ggplot(estimations1000.df, 
+                   aes(x = hrate.chars, y = rm.chars, 
                    colour = subcorpus)) + 
   geom_point(alpha = 0.5, size  = 1) +
   theme(legend.position = "left") +
-  labs(x = "TTR for characters", y = "Repetition rate for characters") 
+  labs(x = "Entropy rate for characters", y = "Repetition rate for characters") 
 ttr.rm.chars.plot <- ggMarginal(ttr.rm.chars.plot, groupFill = T, type = "histogram", colour = "white")
 ttr.rm.chars.plot
 ```
@@ -75,6 +74,6 @@ plots.combined
 
 ## Safe complete figure to file
 ```{r}
-ggsave("~/Github/NaLaFi/figures/plots_combined.pdf", plots.combined, width = 10, height = 4, dpi = 300,
-       scale = 1, device = cairo_pdf)
+ggsave("~/Github/NaLaFi/figures/plots_combined.pdf", plots.combined, width = 10, 
+       height = 4, dpi = 300, scale = 1, device = cairo_pdf)
 ```

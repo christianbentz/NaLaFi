@@ -1,7 +1,7 @@
 ---
 title: "Estimations of Quantitative Measures"
 author: "Chris Bentz"
-date: "02/01/2023"
+date: "05/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -45,9 +45,8 @@ n = 1000
 # initialize dataframe to append results to
 estimations.df <- data.frame(filename = character(0), subcorpus = character(0), 
                          code = character(0), huni.chars = numeric (0), 
-                         huni.strings = numeric(0), hrate.chars = numeric(0),
-                         hrate.strings = numeric(0), ttr.chars = numeric(0),
-                         ttr.strings = numeric (0), rm.chars = numeric(0)) 
+                         hrate.chars = numeric(0), ttr.chars = numeric(0),
+                         rm.chars = numeric(0)) 
 
 # start time
 start_time <- Sys.time()
@@ -82,35 +81,22 @@ for (file in file.list)
   # counted as utf-8 characters here.
   chars <- unlist(strsplit(textfile, ""))
   chars <- chars[1:n] # use only maximally n units
-  chars <- chars[!is.na(chars)] # remove NAs for vectors which are already shorter
-  # than n
+  chars <- chars[!is.na(chars)] # remove NAs for vectors which are already shorter than n
   # chars <- chars[chars != " "] # remove white spaces from character vector
-  # Split the textfile into strings delimited by white spaces. The output of strsplit() 
-  # is a list, so it needs to be "unlisted"" to get a vector.
-  strings <- unlist(strsplit(textfile, " "))
-  strings <- strings[1:n] # use only maximally n units
-  strings <- strings[!is.na(strings)] # remove NAs for vectors which are already 
-  # shorter than n
   
   # Unigram entropy estimation
   # calculate unigram entropy for characters
   chars.df <- as.data.frame(table(chars))
   # print(chars.df)
   huni.chars <- entropy(chars.df$Freq, method = "ML", unit = "log2")
-  # calculate unigram entropy for strings (Maximum Likelihood method)
-  strings.df <- as.data.frame(table(strings)) 
-  # print(strings.df)
-  huni.strings <- entropy(strings.df$Freq, method = "ML", unit = "log2")
   
   # entropy rate estimation
   # the values chosen for max.length and every.word will crucially 
   # impact processing time. In case of "max.length = NULL" the length is n units
-  hrate.chars <- get.estimate(text = chars, every.word = 1, max.length = NULL)  
-  hrate.strings <- get.estimate(text = strings, every.word = 1, max.length = NULL)
+  hrate.chars <- get.estimate(text = chars, every.word = 1, max.length = NULL)
 
   # calculate type-token ratio (ttr)
   ttr.chars <- nrow(chars.df)/sum(chars.df$Freq)
-  ttr.strings <- nrow(strings.df)/sum(strings.df$Freq)
   
   # calculate repetition measure according to Sproat (2014)
   # the overall number of repetitions is the sum of frequency counts minus 1. 
@@ -133,8 +119,7 @@ for (file in file.list)
   
   # append results to dataframe
   local.df <- data.frame(filename, subcorpus, code, huni.chars, 
-                         hrate.chars, huni.strings, hrate.strings, 
-                         ttr.chars, ttr.strings, rm.chars)
+                         hrate.chars, ttr.chars, rm.chars)
   estimations.df <- rbind(estimations.df, local.df)
   # counter
   counter <- counter + 1
