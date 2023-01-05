@@ -40,40 +40,103 @@ Exclude subcorpora (if needed).
 
 # Scatterplots
 
-## Entropy rate vs. unigram entropy for characters 
-```{r, fig.width = 4, fig.height = 4, warning = FALSE}
-huni.hrate.chars.plot <- ggplot(estimations1000.df, 
+## 10 Characters
+
+### Entropy rate vs. unigram entropy for characters 
+```{r, fig.width = 5, fig.height = 5, warning = FALSE}
+huni.hrate.10chars.plot <- ggplot(estimations10.df, 
                                 aes(x = huni.chars, y = ttr.chars, 
                                     colour = subcorpus)) + 
   geom_point(alpha = 0.5, size  = 1) +
-  labs(x = "Unigram entropy for characters", y = "TTR for characters") +
-  theme(legend.position = "none")
-huni.hrate.chars.plot <- ggMarginal(huni.hrate.chars.plot, groupFill = T, type = "histogram", colour = "white")
-huni.hrate.chars.plot
+  labs(x = "Unigram entropy for 10 characters", y = "TTR for 10 characters") +
+  theme(legend.position = "none") 
+huni.hrate.10chars.plot <- ggMarginal(huni.hrate.10chars.plot, groupFill = T, 
+                                    type = "histogram", colour = "white")
+#huni.hrate.10chars.plot
 ```
 
-## TTR vs. repetition rate for characters
+### TTR vs. repetition rate for characters
 ```{r, fig.width = 6, fig.height = 4, warning = FALSE}
-ttr.rm.chars.plot <- ggplot(estimations1000.df, 
+ttr.rm.10chars.plot <- ggplot(estimations10.df, 
                    aes(x = hrate.chars, y = rm.chars, 
                    colour = subcorpus)) + 
   geom_point(alpha = 0.5, size  = 1) +
   theme(legend.position = "left") +
-  labs(x = "Entropy rate for characters", y = "Repetition rate for characters") 
-ttr.rm.chars.plot <- ggMarginal(ttr.rm.chars.plot, groupFill = T, type = "histogram", colour = "white")
-ttr.rm.chars.plot
+  labs(x = "Entropy rate for 10 characters", y = "Repetition rate for 10 characters") 
+ttr.rm.10chars.plot <- ggMarginal(ttr.rm.10chars.plot, groupFill = T, 
+                                type = "histogram", colour = "white")
+#ttr.rm.10chars.plot
+```
+
+## 100 Characters
+
+### Entropy rate vs. unigram entropy for characters 
+```{r, fig.width = 5, fig.height = 5, warning = FALSE}
+huni.hrate.100chars.plot <- ggplot(estimations100.df, 
+                                aes(x = huni.chars, y = ttr.chars, 
+                                    colour = subcorpus)) + 
+  geom_point(alpha = 0.5, size  = 1) +
+  labs(x = "Unigram entropy for 100 characters", y = "TTR for 100 characters") +
+  theme(legend.position = "none")
+huni.hrate.100chars.plot <- ggMarginal(huni.hrate.100chars.plot, groupFill = T, 
+                                    type = "histogram", colour = "white")
+#huni.hrate.100chars.plot
+```
+
+### TTR vs. repetition rate for characters
+```{r, fig.width = 6, fig.height = 4, warning = FALSE}
+ttr.rm.100chars.plot <- ggplot(estimations100.df, 
+                   aes(x = hrate.chars, y = rm.chars, 
+                   colour = subcorpus)) + 
+  geom_point(alpha = 0.5, size  = 1) +
+  theme(legend.position = "left") +
+  labs(x = "Entropy rate for 100 characters", y = "Repetition rate for 100 characters") 
+ttr.rm.100chars.plot <- ggMarginal(ttr.rm.100chars.plot, groupFill = T, 
+                                type = "histogram", colour = "white")
+#ttr.rm.100chars.plot
+```
+
+## 1000 Characters
+
+### Entropy rate vs. unigram entropy for characters 
+```{r, fig.width = 5, fig.height = 5, warning = FALSE}
+huni.hrate.1000chars.plot <- ggplot(estimations1000.df, 
+                                aes(x = huni.chars, y = ttr.chars, 
+                                    colour = subcorpus)) + 
+  geom_point(alpha = 0.5, size  = 1) +
+  labs(x = "Unigram entropy for 1000 characters", y = "TTR for 1000 characters") +
+  theme(legend.position = "none")
+huni.hrate.1000chars.plot <- ggMarginal(huni.hrate.1000chars.plot, groupFill = T, 
+                                    type = "histogram", colour = "white")
+#huni.hrate.1000chars.plot
+```
+
+### TTR vs. repetition rate for characters
+```{r, fig.width = 6, fig.height = 4, warning = FALSE}
+ttr.rm.1000chars.plot <- ggplot(estimations1000.df, 
+                   aes(x = hrate.chars, y = rm.chars, 
+                   colour = subcorpus)) + 
+  geom_point(alpha = 0.5, size  = 1) +
+  theme(legend.position = "left") +
+  labs(x = "Entropy rate for 1000 characters", y = "Repetition rate for 1000 characters") 
+ttr.rm.1000chars.plot <- ggMarginal(ttr.rm.1000chars.plot, groupFill = T, 
+                                type = "histogram", colour = "white")
+#ttr.rm.1000chars.plot
 ```
 
 ## Combined Plots
-```{r, fig.width = 10, fig.height = 4}
-plots.combined <- ggarrange(huni.hrate.chars.plot, ttr.rm.chars.plot,
-                    labels = c("a)", "b)"),
-                    ncol = 2, nrow = 1, widths = c(1, 1.3) )
+```{r, fig.width = 10, fig.height = 12}
+plots.combined <- ggarrange(huni.hrate.10chars.plot, ttr.rm.10chars.plot,
+                            huni.hrate.100chars.plot, ttr.rm.100chars.plot,
+                            huni.hrate.1000chars.plot, ttr.rm.1000chars.plot,
+                    labels = c("a)", "b)", "c)", "d)", 
+                               "e)", "f)"),
+                    ncol = 2, nrow = 3, widths = c(1, 1.3) )
 plots.combined
 ```
 
 ## Safe complete figure to file
 ```{r}
 ggsave("~/Github/NaLaFi/figures/plots_combined.pdf", plots.combined, width = 10, 
-       height = 4, dpi = 300, scale = 1, device = cairo_pdf)
+       height = 12, dpi = 300, scale = 1, device = cairo_pdf)
 ```
