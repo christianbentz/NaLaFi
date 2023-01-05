@@ -1,7 +1,7 @@
 ---
 title: "Stabilization Analyses for Characters"
 author: "Chris Bentz"
-date: "03/01/2023"
+date: "05/01/2023"
 output: pdf_document
 ---
 
@@ -39,8 +39,8 @@ length(file.list)
 counter = 0
 # set the maximal number of units (n), and the stepsize for stabilization analysis
 # (i.e. in steps of how many units are values calculated?)
-n = 100
-stepsize = 10
+n = 1000
+stepsize = 100
 # initialize dataframe to append results to
 stabilization.df <- data.frame(filename = character(0), subcorpus = character(0), 
                                code = character(0), huni.chars = numeric (0), 
@@ -192,7 +192,7 @@ ggsave("~/Github/NaLaFi/figures/stabilization_ttr_chars.pdf", ttr.chars.plot, dp
        scale = 1, device = cairo_pdf)
 ```
 
-## RM characters
+## Repetition rate characters
 ```{r, fig.width = 20, fig.height = 20, warning = FALSE}
 rm.chars.plot <- ggplot(stabilization.df, aes(x = units, y = rm.chars,
                                                 colour = subcorpus)) + 
