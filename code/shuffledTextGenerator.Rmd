@@ -1,7 +1,7 @@
 ---
 title: "Shuffled Text Generator"
 author: "Chris Bentz"
-date: "20/12/2022"
+date: "10/01/2023"
 output: pdf_document
 ---
 
@@ -19,14 +19,14 @@ library(gsubfn)
 ## List files
 Create list with all the files in the directory "writing". 
 ```{r}
-file.list <- list.files(path = "~/Github/NaLaFi/data/original/", 
+file.list <- list.files(path = "~/Github/NaLaFi/data/writing/udhr/", 
                         recursive = T, full.names = T)
 #print(file.list)
 length(file.list)
 ```
 
 # Shuffled text generator
-Create shuffled texts.
+Create shuffled texts (based on natural language texts).
 ```{r}
 # set the maximal number of units (n) to be used for analysis
 n = 1000
@@ -65,7 +65,7 @@ for (file in file.list)
   code <- substring(substring(filename, regexpr("_", filename) + 1), 1, 8)
   # write to file
   new.filename <- paste("shuffled_", code, sep = "")
-  write(full.vec, file = paste("~/Github/NaLaFi/data/generated/shuffled/", new.filename, 
+  write(full.vec, file = paste("~/Github/NaLaFi/data/non-writing/shuffled/", new.filename, 
                                sep = ""), append = FALSE, sep = "\n")
 }
 ```

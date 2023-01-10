@@ -1,7 +1,7 @@
 ---
 title: "Simple Corpus Stats"
 author: "Chris Bentz"
-date: "20/12/2022"
+date: "10/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -27,6 +27,34 @@ file.list <- list.files(path = "~/Github/NaLaFi/data/",
 #print(file.list)
 length(file.list)
 ```
+## Count number of files in writing and non-writing subfolders
+Count how many files are in each of the highest level subfolders of "data", and create a dataframe with counts.
+
+```{r}
+#number of "animal" files
+writing.count <- length(file.list[grepl("writing", file.list)])
+nonwriting.count <- length(file.list[grepl("non-writing", file.list)])
+
+#create data frame
+df <- data.frame(subfolder = c("writing", "non-writing"),
+                 count = c(writing.count, nonwriting.count))
+```
+
+Create a bar plot with counts.
+```{r, fig.height = 4, fig.width = 4}
+counts.plot <- ggplot(data = df, aes(x = subfolder, y = count, fill = subfolder)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = count), vjust = -0.2, color = "black", size = 4) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45))
+counts.plot
+```
+
+## Safe figure to file
+```{r, fig.width = 4, fig.height = 4}
+ggsave("~/Github/NaLaFi/figures/simpleStats_writing.pdf", counts.plot, dpi = 300, 
+       scale = 1, device = cairo_pdf)
+```
 
 ## Count number of files in subfolders
 Count how many files are in each of the highest level subfolders of "data", and create a dataframe with counts.
@@ -34,26 +62,25 @@ Count how many files are in each of the highest level subfolders of "data", and 
 ```{r}
 #number of "animal" files
 animal.count <- length(file.list[grepl("animal", file.list)])
-#number of "morse" files
+ancient.count <- length(file.list[grepl("ancient", file.list)])
+heraldics.count <- length(file.list[grepl("heraldics", file.list)])
 morse.count <- length(file.list[grepl("morse", file.list)])
-#number of "natural" files
 natural.count <- length(file.list[grepl("natural", file.list)])
-#number of "sign" files
-sign.count <- length(file.list[grepl("sign", file.list)])
-#number of "weather" files
-weather.count <- length(file.list[grepl("weather", file.list)])
-#number of "writing" files
-writing.count <- length(file.list[grepl("writing", file.list)])
-#number of "random" files
+pycode.count <- length(file.list[grepl("pycode", file.list)])
 random.count <- length(file.list[grepl("random", file.list)])
-#number of "shuffled" files
+signlang.count <- length(file.list[grepl("signlang", file.list)])
 shuffled.count <- length(file.list[grepl("shuffled", file.list)])
+udhr.count <- length(file.list[grepl("udhr", file.list)])
+weather.count <- length(file.list[grepl("weather", file.list)])
 
 #create data frame
-df <- data.frame(subfolder = c("animal", "morse", "natural", "sign",
-                               "weather", "writing", "random", "shuffled"),
-                 count = c(animal.count, morse.count, natural.count, sign.count,
-                           weather.count, writing.count, random.count, shuffled.count))
+df <- data.frame(subfolder = c("animal", "ancient", "heraldics", "morse",
+                               "natural", "pycode", "random", "signlang", 
+                               "shuffled", "udhr", "weather"),
+                 count = c(animal.count, ancient.count, heraldics.count, 
+                           morse.count, natural.count, pycode.count, 
+                           random.count, signlang.count, shuffled.count, 
+                           udhr.count, weather.count))
 ```
 
 Create a bar plot with counts.
