@@ -63,8 +63,7 @@ estimations.df <- data.frame(filename = character(0), corpus = character(0),
 
 # start time
 start_time <- Sys.time()
-for (file in file.list.combined) 
-{
+for (file in file.list.combined) {
   try({ # if the processing failes for a certain file, there will be no output for this file,
   # but the try() function allows the loop to keep running  
   

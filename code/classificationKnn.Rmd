@@ -1,0 +1,114 @@
+---
+title: "Classification K-Nearest-Neighbors"
+author: "Chris Bentz"
+date: "12/01/2023"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load Packages
+If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
+```{r, message = F}
+library(ggplot2)
+library(dplyr)
+library(class)
+library(gridExtra)
+library(gmodels)
+library(caret)
+```
+# Load Data
+Load data table with values per text file. 
+```{r}
+# load estimations from stringBase corpus
+estimations.df <- read.csv("~/Github/NaLaFi/results/estimation1000chars.csv")
+# alternatively: "~/Github/NaLaFi/results/estimation100chars.csv"
+# "~/Github/NaLaFi/results/estimation1000chars.csv"
+#head(estimations10.df.)
+```
+
+Select relevant columns of the data frame, i.e. the measures to be included in classification and the ''corpus'' or ''subcorpus'' column.
+```{r}
+estimations.subset <- estimations.df[c("corpus", "subcorpus", "huni.chars", "hrate.chars", "ttr.chars", "rm.chars")]
+```
+
+Remove NAs (whole row)
+```{r}
+estimations.subset <- na.omit(estimations.subset)
+```
+
+# Center and scale the data
+```{r}
+estimations.scaled <- cbind(estimations.subset[1:2], scale(estimations.subset[3:ncol(estimations.subset)]))
+```
+
+# Create Training and Test Sets
+```{r}
+# Generating seed
+set.seed(1234)
+# Randomly generating our training and test samples with a respective ratio of 2/3 and 1/3
+datasample <- sample(2, nrow(estimations.scaled), replace = TRUE, prob = c(0.67, 0.33))
+# Generate training set
+estimations.training <- estimations.scaled[datasample == 1, 3:ncol(estimations.scaled)]
+# Generate test set 
+estimations.test <- estimations.scaled[datasample == 2, 3:ncol(estimations.scaled)]
+```
+
+# Get training and test labels
+```{r}
+# Generate training labels
+training.labels <- estimations.scaled[datasample == 1, 1]
+# Generate test labels
+test.labels <- estimations.scaled[datasample == 2, 1]
+```
+
+# Initialize data frame
+```{r}
+knn.results <- data.frame(k = numeric(0), precision = numeric(0), 
+                             recall = numeric(0), f1 = numeric(0))
+```
+
+# Building knn classifier
+```{r}
+# choose maximum number of neighbors n
+n = 10
+# run a loop over different numbers of neighbors up to n
+for (k in 1:n){
+  # knn estimation of labels
+  estimations.knn <- knn(train = estimations.training, test = estimations.test, cl = training.labels, k = k)
+  
+  # model evaluation
+  # creating a dataframe from known (true) test labels
+  test.labels <- data.frame(test.labels)
+  # combining predicted and known classes
+  class.comparison <- data.frame(estimations.knn, test.labels)
+  # giving appropriate column names
+  names(class.comparison) <- c("predicted", "observed")
+  # inspecting our results table
+  head(class.comparison)
+  # get confusion matrix
+  cm <- confusionMatrix(class.comparison$predicted, 
+                      reference = class.comparison$observed)
+  # print(cm)
+  # get precision, recall, and f1 from the output list of confusionMatrix()
+  f1 <- cm[["byClass"]]["F1"]
+  recall <- cm[["byClass"]]["Recall"]
+  precision <- cm[["byClass"]]["Precision"]
+  
+  # prepare data frame with results
+  local.results <- data.frame(k, precision, recall, f1, row.names = NULL)
+  local.results.rounded <- round(local.results, 2)
+  # print(local.results.rounded)
+  knn.results <- rbind(knn.results, local.results)
+}
+print(knn.results)
+```
+
+Write to file.
+```{r}
+write.csv(knn.results, file = "~/Github/NaLaFi/results/knn/knn_results.csv", row.names = F)
+```
