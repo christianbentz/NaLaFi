@@ -11,7 +11,6 @@
 
 <meta name="author" content="Chris Bentz" />
 
-<meta name="date" content="2023-12-01" />
 
 <title>Classification K-Nearest-Neighbors</title>
 
@@ -167,7 +166,7 @@ pre code {
 
 <h1 class="title toc-ignore">Classification K-Nearest-Neighbors</h1>
 <h4 class="author">Chris Bentz</h4>
-<h4 class="date">12/01/2023</h4>
+<h4 class="date">13/01/2023</h4>
 
 </div>
 
@@ -186,7 +185,7 @@ library(caret)</code></pre>
 <h1>Load Data</h1>
 <p>Load data table with values per text file.</p>
 <pre class="r"><code># load estimations from stringBase corpus
-estimations.df &lt;- read.csv(&quot;~/Github/NaLaFi/results/estimation1000chars.csv&quot;)
+estimations.df &lt;- read.csv(&quot;~/Github/NaLaFi/results/estimation10chars.csv&quot;)
 # alternatively: &quot;~/Github/NaLaFi/results/estimation100chars.csv&quot;
 # &quot;~/Github/NaLaFi/results/estimation1000chars.csv&quot;
 #head(estimations10.df.)</code></pre>
@@ -257,18 +256,18 @@ for (k in 1:n){
 }
 print(knn.results)</code></pre>
 <pre><code>##     k precision    recall        f1
-## 1   1 0.8936170 0.9767442 0.9333333
-## 2   2 0.8913043 0.9534884 0.9213483
-## 3   3 0.9111111 0.9534884 0.9318182
-## 4   4 0.9302326 0.9302326 0.9302326
-## 5   5 0.9318182 0.9534884 0.9425287
-## 6   6 0.9302326 0.9302326 0.9302326
-## 7   7 0.9318182 0.9534884 0.9425287
-## 8   8 0.9318182 0.9534884 0.9425287
-## 9   9 0.9090909 0.9302326 0.9195402
-## 10 10 0.9090909 0.9302326 0.9195402</code></pre>
+## 1   1 0.5294118 0.4390244 0.4800000
+## 2   2 0.6071429 0.4146341 0.4927536
+## 3   3 0.6538462 0.4146341 0.5074627
+## 4   4 0.6666667 0.3902439 0.4923077
+## 5   5 0.6400000 0.3902439 0.4848485
+## 6   6 0.6400000 0.3902439 0.4848485
+## 7   7 0.6400000 0.3902439 0.4848485
+## 8   8 0.6296296 0.4146341 0.5000000
+## 9   9 0.5769231 0.3658537 0.4477612
+## 10 10 0.6400000 0.3902439 0.4848485</code></pre>
 <p>Write to file.</p>
-<pre class="r"><code>write.csv(knn.results, file = &quot;~/Github/NaLaFi/results/knn/knn_results.csv&quot;, row.names = F)</code></pre>
+<pre class="r"><code>write.csv(knn.results, file = &quot;~/Github/NaLaFi/results/knn/knn_results_10chars.csv&quot;, row.names = F)</code></pre>
 </div>
 
 
