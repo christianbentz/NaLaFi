@@ -1,0 +1,100 @@
+import osi
+mport time
+source = '
+/home/chri
+s/Calendar
+s'printsou
+rcetarget_
+dir = '/ho
+me/chris/b
+ackup'prin
+ttarget_di
+rtarget = 
+target_dir
+  os.sep  
+\         
+time.strft
+ime'%Y%m%d
+%H%M%S'  '
+.zip'print
+targetif n
+ot os.path
+.existstar
+get_dir:  
+  os.mkdir
+target_dir
+  # make d
+irectoryzi
+p_command 
+= 'zip -r 
+0 1'.forma
+ttarget, '
+ '.joinsou
+rceprintzi
+p_commandp
+rint'Zip c
+ommand is:
+'printzip_
+commandpri
+nt'Running
+:'if os.sy
+stemzip_co
+mmand == 0
+:    print
+'Successfu
+l backup t
+o', target
+else:    p
+rint'Backu
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

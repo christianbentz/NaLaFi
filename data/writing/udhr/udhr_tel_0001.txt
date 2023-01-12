@@ -1,4 +1,4 @@
- #type:		writing
+#type:		writing
 #specification:	Telugu (tel)
 #scriptcode:	Telu
 #source:	https://unicode.org/udhr/d/udhr_tel.html (last access: 17.09.2019)
