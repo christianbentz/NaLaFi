@@ -216,7 +216,7 @@ length(file.list.combined)</code></pre>
 <div id="sampler-for-character-strings" class="section level2">
 <h2>Sampler for Character Strings</h2>
 <pre class="r"><code># choose the length of chunks in number of characters
-char.num &lt;- 1000
+char.num &lt;- 100
 
 # start time
 start_time &lt;- Sys.time()
@@ -253,7 +253,7 @@ for (file in file.list.combined){
     next
   }
   # limit number of chunks to maximally 100 (for some text files are much larger than others)
-  chunks.list &lt;- chunks.list[1:100]
+  chunks.list &lt;- chunks.list[1:10]
   
   # prepare writing to file
   # get original filename
@@ -276,7 +276,7 @@ for (file in file.list.combined){
 }
 end_time &lt;- Sys.time()
 end_time - start_time</code></pre>
-<pre><code>## Time difference of 9.118776 secs</code></pre>
+<pre><code>## Time difference of 4.391116 secs</code></pre>
 </div>
 
 
