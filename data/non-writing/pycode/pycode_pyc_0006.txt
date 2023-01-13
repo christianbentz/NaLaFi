@@ -1,0 +1,60 @@
+#type:		pycode
+#specification:	python code (pyc)
+#scriptcode:	Latn
+#source:	https://python.swaroopch.com/modules.html
+#encoding:	utf-8
+#copyright:	NA
+#comments:	English comments after hashtags are removed here 
+
+import sys
+
+print('The command line arguments are:')
+for i in sys.argv:
+    print(i)
+
+print('\n\nThe PYTHONPATH is', sys.path, '\n')
+
+from math import sqrt
+print("Square root of 16 is", sqrt(16))
+
+if __name__ == '__main__':
+    print('This program is being run by itself')
+else:
+    print('I am being imported from another module')
+
+def say_hi():
+    print('Hi, this is mymodule speaking.')
+
+__version__ = '0.1'
+
+import mymodule
+
+mymodule.say_hi()
+print('Version', mymodule.__version__)
+
+from mymodule import say_hi, __version__
+
+say_hi()
+print('Version', __version__)
+
+>>> import sys
+
+>>> dir(sys)
+['__displayhook__', '__doc__',
+'argv', 'builtin_module_names',
+'version', 'version_info']
+
+
+>>> dir()
+['__builtins__', '__doc__',
+'__name__', '__package__', 'sys']
+
+>>> a = 5
+
+>>> dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'sys', 'a']
+
+>>> del a
+
+>>> dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'sys']

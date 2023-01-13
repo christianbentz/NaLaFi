@@ -1,7 +1,7 @@
 ---
 title: "Estimation Plots"
 author: "Chris Bentz"
-date: "11/01/2023"
+date: "13/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -14,7 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Load libraries
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
 ```{r}
-library(stringr)
 library(ggplot2)
 library(ggrepel)
 library(plyr)
@@ -26,18 +25,21 @@ library(ggpubr)
 Load data table with values per text file. 
 ```{r}
 # load estimations from stringBase corpus
-estimations10.df <- read.csv("~/Github/NaLaFi/results/estimation10chars.csv")
-estimations100.df <- read.csv("~/Github/NaLaFi/results/estimation100chars.csv")
-estimations1000.df <- read.csv("~/Github/NaLaFi/results/estimation1000chars.csv")
+estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
 #head(estimations10.df.)
 ```
 
 Exclude subcorpora (if needed).
 ```{r}
 selected <- c("shuffled", "random")
-estimations10.df <- estimations10.df[!(estimations10.df$subcorpus %in% selected), ]
-estimations100.df <- estimations100.df[!(estimations100.df$subcorpus %in% selected), ]
-estimations1000.df <- estimations1000.df[!(estimations1000.df$subcorpus %in% selected), ]
+estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
+```
+
+Split into separate files by length of chunks in characters.
+```{r}
+estimations10.df <- estimations.df[estimations.df$num.char == 10, ]
+estimations100.df <- estimations.df[estimations.df$num.char == 100, ]
+estimations1000.df <- estimations.df[estimations.df$num.char == 1000,]
 ```
 
 # Scatterplots
@@ -50,13 +52,13 @@ huni.hrate.10chars.plot <- ggplot(estimations10.df,
                                 aes(x = huni.chars, y = ttr.chars, 
                                     colour = corpus, shape = subcorpus)) +
   scale_shape_manual(values = 1:nlevels(estimations10.df$subcorpus)) +
-  geom_point(alpha = 0.5, size  = 1.5) +
+  geom_point(alpha = 0.3, size  = 1) +
   labs(x = "Unigram entropy for 10 characters", y = "TTR for 10 characters") +
   theme(legend.position = "none") 
 huni.hrate.10chars.plot <- ggMarginal(huni.hrate.10chars.plot, 
                                       groupFill = T, groupColour = T,
                                       type = "histogram")
-#huni.hrate.10chars.plot
+huni.hrate.10chars.plot
 ```
 
 ### TTR vs. repetition rate for characters
@@ -65,7 +67,7 @@ ttr.rm.10chars.plot <- ggplot(estimations10.df,
                    aes(x = hrate.chars, y = rm.chars, 
                    colour = corpus, shape = subcorpus)) +
   scale_shape_manual(values = 1:nlevels(estimations10.df$subcorpus)) +
-  geom_point(alpha = 0.5, size  = 1.5) +
+  geom_point(alpha = 0.3, size  = 1) +
   theme(legend.position = "left") +
   labs(x = "Entropy rate for 10 characters", y = "Repetition rate for 10 characters") 
 ttr.rm.10chars.plot <- ggMarginal(ttr.rm.10chars.plot, 
@@ -82,7 +84,7 @@ huni.hrate.100chars.plot <- ggplot(estimations100.df,
                                 aes(x = huni.chars, y = ttr.chars, 
                                     colour = corpus, shape = subcorpus)) + 
   scale_shape_manual(values = 1:nlevels(estimations100.df$subcorpus)) +
-  geom_point(aes(fill = corpus), alpha = 0.5, size  = 1.5) +
+  geom_point(aes(fill = corpus), alpha = 0.3, size  = 1) +
   labs(x = "Unigram entropy for 100 characters", y = "TTR for 100 characters") +
   theme(legend.position = "none")
 huni.hrate.100chars.plot <- ggMarginal(huni.hrate.100chars.plot, 
@@ -97,7 +99,7 @@ ttr.rm.100chars.plot <- ggplot(estimations100.df,
                    aes(x = hrate.chars, y = rm.chars, 
                    colour = corpus, shape = subcorpus)) +
   scale_shape_manual(values = 1:nlevels(estimations100.df$subcorpus)) +
-  geom_point(alpha = 0.5, size  = 1.5) +
+  geom_point(alpha = 0.3, size  = 1) +
   theme(legend.position = "left") +
   labs(x = "Entropy rate for 100 characters", y = "Repetition rate for 100 characters") 
 ttr.rm.100chars.plot <- ggMarginal(ttr.rm.100chars.plot, 
@@ -114,7 +116,7 @@ huni.hrate.1000chars.plot <- ggplot(estimations1000.df,
                                 aes(x = huni.chars, y = ttr.chars, 
                                     colour = corpus, shape = subcorpus)) +
   scale_shape_manual(values = 1:nlevels(estimations1000.df$subcorpus)) +
-  geom_point(alpha = 0.5, size  = 1.5) +
+  geom_point(alpha = 0.3, size  = 1) +
   labs(x = "Unigram entropy for 1000 characters", y = "TTR for 1000 characters") +
   theme(legend.position = "none")
 huni.hrate.1000chars.plot <- ggMarginal(huni.hrate.1000chars.plot,  
@@ -129,7 +131,7 @@ ttr.rm.1000chars.plot <- ggplot(estimations1000.df,
                    aes(x = hrate.chars, y = rm.chars, 
                    colour = corpus, shape = subcorpus)) + 
   scale_shape_manual(values = 1:nlevels(estimations1000.df$subcorpus)) +
-  geom_point(alpha = 0.5, size  = 1.5) +
+  geom_point(alpha = 0.3, size  = 1) +
   theme(legend.position = "left") +
   labs(x = "Entropy rate for 1000 characters", y = "Repetition rate for 1000 characters") 
 ttr.rm.1000chars.plot <- ggMarginal(ttr.rm.1000chars.plot,  
