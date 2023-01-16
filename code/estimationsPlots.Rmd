@@ -1,7 +1,7 @@
 ---
 title: "Estimation Plots"
 author: "Chris Bentz"
-date: "13/01/2023"
+date: "16/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -31,7 +31,7 @@ estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
 
 Exclude subcorpora (if needed).
 ```{r}
-selected <- c("shuffled", "random")
+selected <- c("random", "shuffled")
 estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
 ```
 
@@ -50,14 +50,14 @@ estimations1000.df <- estimations.df[estimations.df$num.char == 1000,]
 ```{r, fig.width = 5, fig.height = 5, warning = FALSE}
 huni.hrate.10chars.plot <- ggplot(estimations10.df, 
                                 aes(x = huni.chars, y = ttr.chars, 
-                                    colour = corpus, shape = subcorpus)) +
+                                    shape = subcorpus, colour = corpus)) +
   scale_shape_manual(values = 1:nlevels(estimations10.df$subcorpus)) +
   geom_point(alpha = 0.3, size  = 1) +
   labs(x = "Unigram entropy for 10 characters", y = "TTR for 10 characters") +
   theme(legend.position = "none") 
 huni.hrate.10chars.plot <- ggMarginal(huni.hrate.10chars.plot, 
                                       groupFill = T, groupColour = T,
-                                      type = "histogram")
+                                      type = "density")
 huni.hrate.10chars.plot
 ```
 
@@ -72,7 +72,7 @@ ttr.rm.10chars.plot <- ggplot(estimations10.df,
   labs(x = "Entropy rate for 10 characters", y = "Repetition rate for 10 characters") 
 ttr.rm.10chars.plot <- ggMarginal(ttr.rm.10chars.plot, 
                                   groupFill = T, groupColour = T, 
-                                  type = "histogram")
+                                  type = "density")
 #ttr.rm.10chars.plot
 ```
 
@@ -89,7 +89,7 @@ huni.hrate.100chars.plot <- ggplot(estimations100.df,
   theme(legend.position = "none")
 huni.hrate.100chars.plot <- ggMarginal(huni.hrate.100chars.plot, 
                                        groupFill = T, groupColour = T, 
-                                       type = "histogram")
+                                       type = "density")
 #huni.hrate.100chars.plot
 ```
 
@@ -104,7 +104,7 @@ ttr.rm.100chars.plot <- ggplot(estimations100.df,
   labs(x = "Entropy rate for 100 characters", y = "Repetition rate for 100 characters") 
 ttr.rm.100chars.plot <- ggMarginal(ttr.rm.100chars.plot, 
                                    groupFill = T, groupColour = T, 
-                                   type = "histogram")
+                                   type = "density")
 #ttr.rm.100chars.plot
 ```
 
@@ -121,7 +121,7 @@ huni.hrate.1000chars.plot <- ggplot(estimations1000.df,
   theme(legend.position = "none")
 huni.hrate.1000chars.plot <- ggMarginal(huni.hrate.1000chars.plot,  
                                    groupFill = T, groupColour = T, 
-                                   type = "histogram")
+                                   type = "density")
 #huni.hrate.1000chars.plot
 ```
 
@@ -136,7 +136,7 @@ ttr.rm.1000chars.plot <- ggplot(estimations1000.df,
   labs(x = "Entropy rate for 1000 characters", y = "Repetition rate for 1000 characters") 
 ttr.rm.1000chars.plot <- ggMarginal(ttr.rm.1000chars.plot,  
                                    groupFill = T, groupColour = T, 
-                                   type = "histogram")
+                                   type = "density")
 #ttr.rm.1000chars.plot
 ```
 

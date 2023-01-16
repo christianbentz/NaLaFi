@@ -1,7 +1,7 @@
 ---
 title: "Classification K-Nearest-Neighbors"
 author: "Chris Bentz"
-date: "13/01/2023"
+date: "16/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -25,15 +25,32 @@ library(caret)
 Load data table with values per text file. 
 ```{r}
 # load estimations from stringBase corpus
-estimations.df <- read.csv("~/Github/NaLaFi/results/estimation10chars.csv")
-# alternatively: "~/Github/NaLaFi/results/estimation100chars.csv"
-# "~/Github/NaLaFi/results/estimation1000chars.csv"
-#head(estimations10.df.)
+estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
+#head(features.csv)
+```
+
+Exclude subcorpora (if needed).
+```{r}
+#selected <- c("natural")
+#estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
+```
+
+Split into separate files by length of chunks in characters.
+```{r}
+# choose number of characters
+num.char = 1000
+# subset data frame
+estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
 
 Select relevant columns of the data frame, i.e. the measures to be included in classification and the ''corpus'' or ''subcorpus'' column.
 ```{r}
-estimations.subset <- estimations.df[c("corpus", "subcorpus", "huni.chars", "hrate.chars", "ttr.chars", "rm.chars")]
+estimations.subset <- estimations.df[c("corpus", "subcorpus", 
+                                       "huni.chars", 
+                                       "hrate.chars", 
+                                       "ttr.chars", 
+                                       "rm.chars"
+                                       )]
 ```
 
 Remove NAs (whole row)
@@ -79,7 +96,9 @@ n = 10
 # run a loop over different numbers of neighbors up to n
 for (k in 1:n){
   # knn estimation of labels
-  estimations.knn <- knn(train = estimations.training, test = estimations.test, cl = training.labels, k = k)
+  estimations.knn <- knn(train = as.data.frame(estimations.training), 
+                         test = as.data.frame(estimations.test), 
+                         cl = training.labels, k = k)
   
   # model evaluation
   # creating a dataframe from known (true) test labels
@@ -110,5 +129,7 @@ print(knn.results)
 
 Write to file.
 ```{r}
-write.csv(knn.results, file = "~/Github/NaLaFi/results/knn/knn_results_10chars.csv", row.names = F)
+write.csv(knn.results, file = paste("~/Github/NaLaFi/results/knn/knn_results_", 
+                                    paste(num.char, ".csv", sep =""), 
+                                    sep =""), row.names = F)
 ```
