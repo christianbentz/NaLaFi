@@ -1,7 +1,7 @@
 ---
 title: "Classification with Logistic Regression"
 author: "Chris Bentz"
-date: "16/01/2023"
+date: "17/01/2023"
 output:
   pdf_document: default
   html_document: default
@@ -80,14 +80,19 @@ The following code to run a logistic regression is adopted from https://datascie
 # logistic regression estimation of labels
 log.model <- glm(corpus ~., data = train, family = binomial(link = "logit"))
 summary(log.model)
+# look at the training data and predicted values (y) to check the the dummy coding,
+# i.e. "non-writing" is coded as 0, and "writing" as 1
+head(train)
+head(log.model$y)
 ```
 
 # Prediction
+Make predictions using the logistic regression model with "trained", i.e. estimated coefficients.
 ```{r}
 log.predictions <- predict(log.model, test, type = "response")
 head(log.predictions)
 ```
-Assign a label according to the rule that the label is "non-writing" if the prediction probability is >0.5, else assign "writing". 
+Assign a label according to the rule that the label is "writing" if the prediction probability is >0.5, else assign "non-writing". 
 ```{r}
 log.prediction.rd <- ifelse(log.predictions > 0.5, "writing", "non-writing")
 head(log.prediction.rd, 10)
@@ -106,7 +111,7 @@ head(class.comparison)
 # get confusion matrix
 cm <- confusionMatrix(class.comparison$predicted, 
                       reference = class.comparison$observed)
-# print(cm)
+print(cm)
 # get precision, recall, and f1 from the output list of confusionMatrix()
 f1 <- cm[["byClass"]]["F1"]
 recall <- cm[["byClass"]]["Recall"]
@@ -115,10 +120,12 @@ precision <- cm[["byClass"]]["Precision"]
 # prepare data frame with results
 lr.results <- data.frame(precision, recall, f1, row.names = NULL)
 lr.results.rounded <- round(lr.results, 2)
-print(lr.results)
+print(lr.results.rounded)
 ```
 
 Write to file.
 ```{r}
-write.csv(lr.results, file = "~/Github/NaLaFi/results/LR/results_logReg.csv", row.names = F)
+write.csv(lr.results.rounded, file = paste("~/Github/NaLaFi/results/LR/results_logReg_", 
+                                      paste(num.char, ".csv", sep = ""), 
+                                   sep = ""), row.names = F)
 ```
