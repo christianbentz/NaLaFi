@@ -39,7 +39,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 1000
+num.char = 100
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
