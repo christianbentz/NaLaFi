@@ -147,7 +147,7 @@ plots.combined <- ggarrange(huni.hrate.10chars.plot, ttr.rm.10chars.plot,
                             huni.hrate.1000chars.plot, ttr.rm.1000chars.plot,
                     labels = c("a)", "b)", "c)", "d)", 
                                "e)", "f)"),
-                    ncol = 2, nrow = 3, widths = c(1, 1.3) )
+                    ncol = 2, nrow = 3, widths = c(1, 1.3))
 plots.combined
 ```
 
