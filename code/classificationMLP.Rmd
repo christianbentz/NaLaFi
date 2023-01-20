@@ -34,7 +34,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 100
+num.char = 10
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
@@ -59,13 +59,6 @@ estimations.subset <- na.omit(estimations.subset)
 estimations.scaled <- cbind(estimations.subset[1], scale(estimations.subset[2:ncol(estimations.subset)]))
 ```
 
-# Convert to Boolean
-The MLP classisfiers in the neuralnet library require Boolean values for the response.
-```{r}
-#levels(estimations.scaled$corpus) <- c(FALSE,TRUE)
-#df$y <- as.logical(df$y)
-```
-
 # Create Training and Test Sets
 ```{r}
 # Generating seed
@@ -81,12 +74,15 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 # Implement MLP classifier
 This is based on code given at http://uc-r.github.io/ann_classification (last accessed 18.01.2023)
 ```{r}
+# choose hidden layer structure (for adding to file name later)
+hidden <- c(2,2)
+
 set.seed(123)
 # start time
 start_time <- Sys.time()
 classifier.mlp <- neuralnet(corpus == "writing" ~ ., 
                      data = train,
-                     hidden = c(3, 2),
+                     hidden = hidden,
                      threshold = 0.1, # defaults to 0.01
                      rep = 10, # number of reps in which new initial values are used, 
                      # (essentially the same as a for loop)
@@ -102,19 +98,23 @@ classifier.mlp <- neuralnet(corpus == "writing" ~ .,
 end_time <- Sys.time()
 end_time - start_time
 # results matrix (each column represents one repetition)
-classifier.mlp$result.matrix
+# classifier.mlp$result.matrix
 ```
 
 # Visualize the NN
 Visualize the nn with the best weights after training.
 ```{r}
-plot(classifier.mlp, rep = 'best')
+mlp.plot <- plot(classifier.mlp, rep = 'best')
+mlp.plot
 ```
 
 # Predict with NN
 Predict response values based on the "best" repetition (epoche), i.e. the one with the lowest error in terms of cross entropy.
 ```{r}
-mlp.predictions <- predict(classifier.mlp, test, rep = 4, all.units = FALSE)
+# get prediction using the predict() function
+mlp.predictions <- predict(classifier.mlp, test, 
+                           rep = which.min(classifier.mlp$result.matrix[1,]), 
+                           all.units = FALSE)
 # assign a label according to the rule that the label is "writing" if the prediction probability is >0.5, else assign "non-writing". 
 mlp.predictions.rd <- ifelse(mlp.predictions > 0.5, "writing", "non-writing")
 head(mlp.predictions.rd, 10)
@@ -148,7 +148,9 @@ print(mlp.results.rounded)
 
 Write to file.
 ```{r}
-write.csv(mlp.results.rounded, file = paste("~/Github/NaLaFi/results/MLP/results_MLP_", 
-                                      paste(num.char, ".csv", sep = ""), 
-                                   sep = ""), row.names = F)
+write.csv(mlp.results.rounded, file = paste("~/Github/NaLaFi/results/MLP/results_MLP", 
+                                            paste(hidden, collapse = ""), "_", 
+                                            num.char, ".csv", 
+                                            sep = "", collapse = " "), 
+                                      row.names = F)
 ```
