@@ -27,14 +27,14 @@ estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
 
 Exclude subcorpora (if needed).
 ```{r}
-#selected <- c("shuffled", "random")
+#selected <- c("natural")
 #estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
 ```
 
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 10
+num.char = 1000
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
@@ -75,7 +75,7 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 This is based on code given at http://uc-r.github.io/ann_classification (last accessed 18.01.2023)
 ```{r}
 # choose hidden layer structure (for adding to file name later)
-hidden <- c(2,2)
+hidden <- c(3,2)
 
 set.seed(123)
 # start time
@@ -104,7 +104,7 @@ end_time - start_time
 # Visualize the NN
 Visualize the nn with the best weights after training.
 ```{r}
-mlp.plot <- plot(classifier.mlp, rep = 'best')
+mlp.plot <- plot(classifier.mlp, rep = 'best', show.weights = F)
 mlp.plot
 ```
 
@@ -148,7 +148,7 @@ print(mlp.results.rounded)
 
 Write to file.
 ```{r}
-write.csv(mlp.results.rounded, file = paste("~/Github/NaLaFi/results/MLP/results_MLP", 
+write.csv(mlp.results.rounded, file = paste("~/Github/NaLaFi/results/MLP/results_MLP_noDNA", 
                                             paste(hidden, collapse = ""), "_", 
                                             num.char, ".csv", 
                                             sep = "", collapse = " "), 
