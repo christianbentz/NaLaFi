@@ -1,4 +1,4 @@
----
+  ---
 title: "Simple Corpus Stats"
 author: "Chris Bentz"
 date: "10/01/2023"
@@ -16,6 +16,7 @@ If the libraries are not installed yet, you need to install them using, for exam
 ```{r}
 library(stringr)
 library(ggplot2)
+library(ggridges)
 library(plyr)
 ```
 
@@ -32,7 +33,7 @@ Count how many files are in each of the highest level subfolders of "data", and 
 
 ```{r}
 #number of "animal" files
-writing.count <- length(file.list[grepl("writing", file.list)])
+writing.count <- length(file.list[grepl("/writing", file.list)])
 nonwriting.count <- length(file.list[grepl("non-writing", file.list)])
 
 #create data frame
@@ -148,10 +149,13 @@ Density plot for numbers of characters per data file and subcorpus.
 # get means per subcorpus
 mu <- ddply(simpleStats.df, "subcorpus", summarise, grp.mean = mean(log(num.chars)))
 # plot densities with mean values as vertical lines
-density.plot <- ggplot(simpleStats.df, aes(x = log(num.chars), fill = subcorpus)) +
-  geom_density(alpha = 0.4) +
-  geom_vline(data = mu, aes(xintercept = grp.mean, color = subcorpus),
-             linetype = "dashed")
+density.plot <- ggplot(simpleStats.df, aes(x = log(num.chars), y = subcorpus, fill = subcorpus)) +
+  geom_density_ridges(alpha = 0.4) +
+  theme_ridges() 
+  #geom_density(alpha = 0.4) +
+  #geom_vline(data = mu, aes(xintercept = grp.mean, color = subcorpus),
+           #  linetype = "dashed")
+  #facet_wrap(~subcorpus)
 print(density.plot)
 ```
 
