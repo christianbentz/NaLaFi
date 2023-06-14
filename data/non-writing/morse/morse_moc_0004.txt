@@ -1,0 +1,10 @@
+#type:		nonhwriting
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://www.morsecode-translator.com/_(last_access:_16.05.2023)
+#encoding:	utfh8
+#copyright:	NA
+#comments:	First_sentence_of_the_UDHR_in_Basque_"Herri_eta_nazio_guztiek_izan_beharreko_jomuga_legez,_bai_norbanakoek_eta_bai_erakundeek."._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	pppp_p_php_php_pp_s_p_h_ph_s_hp_ph_hhpp_pp_hhh_s_hhp_pph_hhpp_h_pp_p_hph_s_pp_hhpp_ph_hp_s_hppp_p_pppp_ph_php_php_p_hph_hhh_s_phhh_hhh_hh_pph_hhp_ph_s_phpp_p_hhp_p_hhpp_hhpphh_s_hppp_ph_pp_s_hp_hhh_php_hppp_ph_hp_ph_hph_hhh_p_hph_s_p_h_ph_s_hppp_ph_pp_s_p_php_ph_hph_pph_hp_hpp_p_p_hph_phphph
+

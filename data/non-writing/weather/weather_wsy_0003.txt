@@ -1,0 +1,20 @@
+#type:		non-writing
+#specification:	weather symbols (wsy)
+#scriptcode:	Latn
+#source:	https://www.weather.com (last access: 03.03.2019)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	The data was collected by looking at the 10-day forecast (which actually is a 14-days forecast) for different cities around the world. Following transcriptions of the weather symbols have been used: MostlyCloudy (M), Showers (S), Cloudy (C), PartlyCloudy (P), RainSnowShowers (W), SnowShowers (D), Thunderstorms (T), MostlySunny (F), IsolatedThunderstorms (I), Sunny (O), Wind (W), ScatteredThunderstorms (K), Rain (R)
+
+<line_17>	LLTTTLTTLLTTTT
+<line_18>	LTSSRTSOPRSPSI
+<line_19>	RCPCSSFOOMSSPP
+<line_20>	CSPCFPPFPPPPFP
+<line_21>	MMRMPFFOFFFPPF
+<line_22>	PCWWWSSWWCPFFF
+<line_23>	PPTSTTLLPPPFFF
+<line_24>	DDFDKDDCPDDDDD
+<line_25>	DPMPCDDFDDDDDDD
+<line_26>	OFPPPPOPFOOOOO
+
+

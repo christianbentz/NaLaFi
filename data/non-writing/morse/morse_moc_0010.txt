@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://morsecode.worldsinternationalstranslator.html_(last_access:_15.05.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First_sentence_of_the_UDHR_in_Inuktitut,_Greenlandic_"Inuit_tamarmik_inunngorput_nammineersinnaassuseqarlutik_assigiimmillu_ataqqinassuseqarlutillu_pisinnaatitaaffeqarlutik."._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	pp_hp_pph_pp_h_s_h_ph_hh_ph_php_hh_pp_hph_s_pp_hp_pph_hp_hp_hhp_hhh_php_phhp_pph_h_s_hp_ph_hh_hh_pp_hp_p_p_php_ppp_pp_hp_hp_ph_ph_ppp_ppp_pph_ppp_p_hhph_ph_php_phpp_pph_h_pp_hph_s_ph_ppp_ppp_pp_hhp_pp_pp_hh_hh_pp_phpp_phpp_pph_s_ph_h_ph_hhph_hhph_pp_hp_ph_ppp_ppp_pph_ppp_p_hhph_ph_php_phpp_pph_h_pp_phpp_phpp_pph_s_phhp_pp_ppp_pp_hp_hp_ph_ph_h_pp_h_ph_ph_pphp_pphp_p_hhph_ph_php_phpp_pph_h_pp_hph_phphph

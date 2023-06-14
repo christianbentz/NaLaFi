@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://morsecode.worldsinternationalstranslator.html_(last_access:_15.05.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First_sentence_of_the_UDHR_in_Ibibio_"Kpukpuru_owo_emana_nte_amanison,_enyun_enyene_ukem_ukem_uku_ye_unen."._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	hph_phhp_pph_hph_phhp_pph_php_pph_s_hhh_phh_hhh_s_p_hh_ph_hp_ph_s_hp_h_p_s_ph_hh_ph_hp_pp_ppp_hhh_hp_hhpphh_s_p_hp_hphh_pph_hp_s_p_hp_hphh_p_hp_p_s_pph_hph_p_hh_s_pph_hph_p_hh_s_pph_hph_pph_s_hphh_p_s_pph_hp_p_hp_phphph

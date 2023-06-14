@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://morsecode.worldsinternationalstranslator.html_(last_access:_15.05.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First_sentence_of_the_UDHR_in_Javanese_"Saben_uwong_kalairake_kanthi_mardika_lan_darbe_martabat_lan_hak-hak_kang_padha."._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	ppp_ph_hppp_p_hp_s_pph_phh_hhh_hp_hhp_s_hph_ph_phpp_ph_pp_php_ph_hph_p_s_hph_ph_hp_h_pppp_pp_s_hh_ph_php_hpp_pp_hph_ph_s_phpp_ph_hp_s_hpp_ph_php_hppp_p_s_hh_ph_php_h_ph_hppp_ph_h_s_phpp_ph_hp_s_pppp_ph_hph_hpppph_pppp_ph_hph_s_hph_ph_hp_hhp_s_phhp_ph_hpp_pppp_ph_phphph

@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://morsecode.worldsinternationalstranslator.html_(last_access:_15.05.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First_sentence_of_the_UDHR_in_Esparanto_"Ĉiuj_homoj_estas_denaske_liberaj_kaj_egalaj_laŭ_digno_kaj_rajtoj."._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	hphpp_pp_pph_phhh_s_pppp_hhh_hh_hhh_phhh_s_p_ppp_h_ph_ppp_s_hpp_p_hp_ph_ppp_hph_p_s_phpp_pp_hppp_p_php_ph_phhh_s_hph_ph_phhh_s_p_hhp_ph_phpp_ph_phhh_s_phpp_ph_pphh_s_hpp_pp_hhp_hp_hhh_s_hph_ph_phhh_s_php_ph_phhh_h_hhh_phhh_phphph

@@ -4,31 +4,13 @@
 #source:	https://www.weather.com (last access: 03.03.2019)
 #encoding:	utf-8
 #copyright:	NA
-#comments:	The data was collected by looking at the 10-day forecast (which actually is a 14-days forecast) for different cities around the world. Following transcriptions of the weather symbols have been used: MostlyCloudy, Showers, Cloudy, PartlyCloudy, RainSnowShowers, SnowShowers, Thunderstorms, MostlySunny, IsolatedThunderstorms, Sunny, Wind, ScatteredThunderstorms, Rain
+#comments:	The data was collected by looking at the 10-day forecast (which actually is a 14-days forecast) for different cities around the world. Following transcriptions of the weather symbols have been used: MostlyCloudy (M), Showers (S), Cloudy (C), PartlyCloudy (P), RainSnowShowers (W), SnowShowers (D), Thunderstorms (T), MostlySunny (F), IsolatedThunderstorms (I), Sunny (O), Wind (W), ScatteredThunderstorms (K), Rain (R)
 
-<line_1>	Showers Wind Cloudy Cloudy Showers Showers Showers Showers Showers Showers Showers Showers Showers Showers
-<line_2>	Cloudy Showers Sunny MostlySunny Showers PartlyCloudy PartlyCloudy PartlyCloudy MostlySunny PartlyCloudy PartlyCloudy MostlySunny PartlyCloudy PartlyCloudy
-<line_3>	Thunderstorms Thunderstorms MostlySunny MostlySunny MostlySunny IsolatedThunderstorms MostlySunny MostlySunny Thunderstorms MostlySunny Thunderstorms Thunderstorms Thunderstorms Thunderstorms
-<line_4>	Cloudy IsolatedThunderstorms Thunderstorms Mostlys MostlyCloudy MostlyCloudy PartlyCloudy IsolatedThunderstorms ScatteredThunderstorms Thunderstorms Thunderstorms Thunderstorms ScatteredThunderstorms Thunderstorms
-<line_5>	SnowShowers PartlyCloudy Cloudy RainSnowShowers Cloudy SnowShowers SnowShowers PartlyCloudy SnowShowers SnowShowers RainSnowShowers SnowShowers SnowShowers
-<line_6>	PartlyCloudy MostlySunny PartlyCloudy MostlyCloudy RainSnowShowers PartlyCloudy RainSnowShowers Showers MostlySunny PartlyCloudy Showers Showers PartlyCloudy Showers
-<line_7>	Rain Showers Showers Showers Showers Rain Rain Showers Showers Showers Showers Showers Showers Showers
-<line_8>	Rain Rain Showers Showers Showers PartlyCloudy Showers Showers Showers PartlyCloudy ScatteredThunderstorms Showers Showers Showers
-<line_9>	PartlyCloudy PartlyCloudy Wind Showers Sunny MostlySunny MostlySunny Wind Sunny PartlyCloudy MostlySunny MostlySunny PartlyCloudy MostlySunny
-<line_10>	MostlyCloudy Cloudy MostlyCloudy SnowShowers PartlyCloudy Cloudy SnowShowers SnowShowers Cloudy SnowShowers SnowShowers SnowShowers SnowShowers PartlyCloudy
-<line_11>	MostlyCloudy Cloudy Rain Sunny MostlySunny Showers Rain Showers MostlySunny MostlySunny Showers Showers Showers Showers
-<line_12>	PartlyCloudy PartlyCloudy Sunny Sunny Sunny Sunny Sunny MostlySunny MostlySunny MostlySunny MostlySunny MostlySunny MostlySunny MostlySunny
-<line_13>	Sunny Sunny PartlyCloudy Sunny MostlySunny PartlyCloudy PartlyCloudy Cloudy PartlyCloudy PartlyCloudy Sunny MostlySunny MostlySunny MostlySunny
-<line_14>	Wind PartlyCloudy Showers PartlyCloudy PartlyCloudy Cloudy Cloudy MostlySunny PartlyCloudy Showers PartlyCloudy PartlyCloudy Showers PartlyCloudy
-<line_15>	PartlyCloudy MostlyCloudy MostlySunny MostlyCloudy PartlyCloudy MostlySunny PartlyCloudy Cloudy MostlySunny PartlyCloudy Showers Showers Showers Showers
-<line_16>	Rain PartlyCloudy IsolatedThunderstorms Thunderstorms Rain MostlySunny Showers Showers PartlyCloudy Sunny Sunny PartlyCloudy MostlySunny MostlySunny
-<line_17>	ScatteredThunderstorms ScatteredThunderstorms Thunderstorms Thunderstorms Thunderstorms ScatteredThunderstorms Thunderstorms Thunderstorms ScatteredThunderstorms ScatteredThunderstorms Thunderstorms Thunderstorms Thunderstorms Thunderstorms
-<line_18>	ScatteredThunderstorms Thunderstorms Showers Showers Rain Thunderstorms Showers Sunny PartlyCloudy Rain Showers PartlyCloudy Showers IsolatedThunderstorms
-<line_19>	Rain Cloudy PartlyCloudy Cloudy Showers Showers MostlySunny Sunny Sunny MostlyCloudy Showers Showers PartlyCloudy PartlyCloudy
-<line_20>	Cloudy Showers PartlyCloudy Cloudy MostlySunny PartlyCloudy PartlyCloudy MostlySunny PartlyCloudy PartlyCloudy PartlyCloudy PartlyCloudy MostlySunny PartlyCloudy
-<line_21>	MostlyCloudy MostlyCloudy Rain MostlyCloudy PartlyCloudy MostlySunny MostlySunny Sunny MostlySunny MostlySunny MostlySunny PartlyCloudy PartlyCloudy MostlySunny
-<line_22>	PartlyCloudy Cloudy Wind Wind Wind Showers Showers Wind Wind Cloudy PartlyCloudy MostlySunny MostlySunny MostlySunny
-<line_23>	PartlyCloudy PartlyCloudy Thunderstorms Showers Thunderstorms Thunderstorms ScatteredThunderstorms ScatteredThunderstorms PartlyCloudy PartlyCloudy PartlyCloudy MostlySunny MostlySunny MostlySunny
-<line_24>	SnowShowers SnowShowers MostlySunny SnowShowers RainSnowShowers SnowShowers SnowShowers Cloudy PartlyCloudy SnowShowers SnowShowers SnowShowers SnowShowers SnowShowers
-<line_25>	SnowShowers PartlyCloudy MostlyCloudy PartlyCloudy Cloudy SnowShowers SnowShowers MostlySunny SnowShowers SnowShowers SnowShowers SnowShowers SnowShowers SnowShowers SnowShowers
-<line_26>	Sunny MostlySunny PartlyCloudy PartlyCloudy PartlyCloudy PartlyCloudy Sunny PartlyCloudy MostlySunny Sunny Sunny Sunny Sunny Sunny
+<line_1>	SWCCSSSSSSSSSS
+<line_2>	CSOFSPPPFPPFPP
+<line_3>	TTFFFIFFTFTTTT
+<line_4>	CITFMMPILTTTLT
+<line_5>	DPCKCDDPDDKDD
+<line_6>	PFPMKPKSFPSSPS
+<line_7>	RSSSSRRSSSSSSS
+<line_8>	RRSSSPSSSPLSSS

@@ -1,0 +1,19 @@
+#type:		non-writing
+#specification:	Transcribed Sign Language (tsl)
+#scriptcode:	Latn
+#source:	Slobin et al. (1999). Sign language transcription at the morphological level: the Berkeley transcription system (BTS). Report to the European Science Foundation.
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Examples of the Berkeley Transcription System which was designed to be applicable to all sign languages and is based on data from interactions in American Sign Language (ASL) and Sign Language of the Netherlands (SLN). The example here is the transliterated interaction between a mother and her child in Sign Language of the Netherlands (SLN) (p. 14).
+
+<line_1>	PNT(nh)(with_pen_on_slate) < FATHER > [>] .
+<line_2>	< MAN > [<] FATHER PNT_3(on_slate) .
+<line_3>	t@ag MAN .
+<line_4>	MAN .
+<line_5>	PNT_3(at_drawing) .
+<line_6>	PNT_3(at_drawing) PNT_1 [%ges: long ears] .
+<line_7>	PNT_2 PNT_3(on_slate) .
+<line_8>	PNT_3(on_slate) GRANDPARENTS .
+<line_9>	GRANDMOTHER .
+<line_10>	PNT_3(on_slate)(*N) < A_LOT(*N) > [>] .
+<line_11>	<^dis’CONF A_LOT FACES > [<] A_LOT FACES ^ .

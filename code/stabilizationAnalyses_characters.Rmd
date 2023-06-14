@@ -1,7 +1,7 @@
 ---
 title: "Stabilization Analyses for Characters"
 author: "Chris Bentz"
-date: "05/01/2023"
+date: "14/06/2023"
 output: pdf_document
 ---
 
@@ -39,8 +39,8 @@ length(file.list)
 counter = 0
 # set the maximal number of units (n), and the stepsize for stabilization analysis
 # (i.e. in steps of how many units are values calculated?)
-n = 1000
-stepsize = 100
+n = 100
+stepsize = 10
 # initialize dataframe to append results to
 stabilization.df <- data.frame(filename = character(0), subcorpus = character(0), 
                                code = character(0), huni.chars = numeric (0), 
@@ -84,7 +84,10 @@ for (file in file.list)
   chars <- chars[!is.na(chars)] # remove NAs for vectors which are already shorter
   # than n
   # chars <- chars[chars != " "] # remove white spaces from character vector
-  
+  # use "next" statement to exclude files with less than x characters
+  if (length(chars) < 100) {
+    next
+  }
   # run loop with stepsizes
   # define the number of units (i.e. characters) used for analyses (note that k is      
   # always either equal to or smaller than n)

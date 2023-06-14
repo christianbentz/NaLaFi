@@ -41,9 +41,10 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 100
+num.char = 10
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
+nrow(estimations.df)
 ```
 
 Select relevant columns of the data frame, i.e. the measures to be included in classification and the ''corpus'' or ''subcorpus'' column.
@@ -64,6 +65,7 @@ estimations.subset <- na.omit(estimations.subset)
 # Center and scale the data
 ```{r}
 estimations.scaled <- cbind(estimations.subset[1:2], scale(estimations.subset[3:ncol(estimations.subset)]))
+nrow(estimations.scaled)
 ```
 
 # Create Training and Test Sets
@@ -74,8 +76,10 @@ set.seed(1234)
 datasample <- sample(2, nrow(estimations.scaled), replace = TRUE, prob = c(0.67, 0.33))
 # Generate training set
 estimations.training <- estimations.scaled[datasample == 1, 3:ncol(estimations.scaled)]
+nrow(estimations.training)
 # Generate test set 
 estimations.test <- estimations.scaled[datasample == 2, 3:ncol(estimations.scaled)]
+nrow(estimations.test)
 ```
 
 # Get training and test labels
@@ -113,8 +117,8 @@ for (k in 1:n){
   # inspecting our results table
   head(class.comparison)
   # get confusion matrix
-  cm <- confusionMatrix(class.comparison$predicted, 
-                      reference = class.comparison$observed)
+  cm <- confusionMatrix(data = class.comparison$predicted, 
+                      reference = as.factor(class.comparison$observed))
   # print(cm)
   # get precision, recall, and f1 from the output list of confusionMatrix()
   f1 <- cm[["byClass"]]["F1"]
@@ -132,50 +136,7 @@ print(knn.results)
 
 Write to file.
 ```{r}
-# write.csv(knn.results, file = paste("~/Github/NaLaFi/results/knn/knn_results_baselineTTR", 
-#                                    paste(num.char, ".csv", sep =""), 
-#                                    sep =""), row.names = F)
-```
-
-# Visualization
-Create dataframe with test data and predictions.
-```{r}
-plot.df <- cbind(estimations.test, test.labels, predictions.knn)
-colnames(plot.df) <- c("huni.chars", "hrate.chars", "ttr.chars", 
-                       "rm.chars", "observed", "predicted")
-```
-
-## Unigram entropy vs. TTR for characters
-```{r, fig.width = 5, fig.height = 5, warning = FALSE}
-huni.hrate.plot <- ggplot(plot.df, 
-                                aes(x = huni.chars, y = ttr.chars)) + 
-  geom_point(aes(colour = predicted), size  = 2, alpha = 0.3) +
-  geom_point(aes(colour = observed), size  = 1) +
-  labs(x = "Unigram entropy for characters", y = "TTR for characters") +
-  theme(legend.position = "none")
-#huni.hrate.plot
-```
-
-### Entropy rate vs. repetition rate for characters
-```{r, fig.width = 6, fig.height = 4, warning = FALSE}
-ttr.rm.plot <- ggplot(plot.df, 
-                   aes(x = hrate.chars, y = rm.chars)) +
-  geom_point(aes(colour = predicted), size  = 2, alpha = 0.3) +
-  geom_point(aes(fill = observed), size  = 1) +
-  theme(legend.position = "left") +
-  labs(x = "Entropy rate for characters", y = "Repetition rate for characters") 
-#ttr.rm.plot
-```
-
-## Combined Plots
-```{r, fig.width = 10, fig.height = 4}
-plots.combined <- ggarrange(huni.hrate.plot, ttr.rm.plot,
-                    ncol = 2, nrow = 1, widths = c(1, 1.3))
-plots.combined
-```
-
-## Safe complete figure to file
-```{r}
-ggsave("~/Github/NaLaFi/figures/plots_knn_combined.pdf", plots.combined, width = 10, 
-       height = 4, dpi = 300, scale = 1, device = cairo_pdf)
+write.csv(knn.results, file = paste("~/Github/NaLaFi/results/knn/knn_results_", 
+                                    paste(num.char, ".csv", sep =""), 
+                                    sep =""), row.names = F)
 ```

@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://morsecode.worldsinternationalstranslator.html_(last_access:_15.05.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First_words_of_rock_inscriptions_of_Asoka,_written_in_a_Prakrit_vernacular:_"Iyam_dhammalipi_Khepingalasi_pavatasi_Devanampiyena_Piyadasinâ_Lajina"._See_file_ancient_pra_0001.txt._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	pp_hphh_ph_hh_s_hpp_pppp_ph_hh_hh_ph_phpp_pp_phhp_pp_s_hph_pppp_p_phhp_pp_hp_hhp_ph_phpp_ph_ppp_pp_s_phhp_ph_ppph_ph_h_ph_ppp_pp_s_hpp_p_ppph_ph_hp_ph_hh_phhp_pp_hphh_p_hp_ph_s_phhp_pp_hphh_ph_hpp_ph_ppp_pp_hp_phhph_s_phpp_ph_phhh_pp_hp_ph

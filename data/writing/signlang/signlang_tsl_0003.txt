@@ -1,0 +1,20 @@
+#type:		non-writing
+#specification:	Transcribed Sign Language (tsl)
+#scriptcode:	Latn
+#source:	Slobin et al. (1999). Sign language transcription at the morphological level: the Berkeley transcription system (BTS). Report to the European Science Foundation.
+#encoding:	utf-8
+#copyright:	NA
+#comments:	Examples of the Berkeley Transcription System which was designed to be applicable to all sign languages and is based on data from interactions in American Sign Language (ASL) and Sign Language of the Netherlands (SLN). The example here is the transliterated interaction between a mother and her child in American Sign Language (ASL) (p. 14).
+
+<line_1>	t@ag(*2) w@ag ^opr’WHQ SEE WHAT(1h) ^ ?
+<line_2>	MOUSE(*N) .
+<line_3>	t@ag g@ag(nh): \- ^opr’WHQ WHAT(1h) ^ \ ?
+<line_4>	0 [%act: lifts panel in book] *mot .
+<line_5>	^opr’WHQ WHAT(1h) ^ ?
+<line_6>	< PNT_3[on book] *m > [>] .
+<line_7>	< ^opr’WHQ WHAT(1h)(*2) ^ > [<] ?
+<line_8>	^opr’YNQ \- CAT \ t@ag(nh) CAT PNT_3(at_cat_in_book) ^ < CAT > [>] ?
+<line_9>	< ^opr’NEG 0 ^ > [<] [%ges: don’t know/not me] .
+<line_10>	open 5s, wrists rotate out
+<line_11>	^opr’WHQ WHAT(1h) ^ ?
+<line_12>	<BEAR> [*] [//] BEAR .

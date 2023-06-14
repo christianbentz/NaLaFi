@@ -19,7 +19,7 @@ library(gsubfn)
 ## List files
 Create list with all the files in the directory "writing". 
 ```{r}
-file.list <- list.files(path = "~/Github/NaLaFi/data/writing/udhr/", 
+file.list <- list.files(path = "~/Github/NaLaFi/data/writing/", 
                         recursive = T, full.names = T)
 #print(file.list)
 length(file.list)

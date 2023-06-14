@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://morsecode.worldsinternationalstranslator.html_(last_access:_15.05.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First_sentence_of_the_UDHR_in_Bosnian_"Sva_ljudska_bića_rađaju_se_slobodna_i_jednaka_u_dostojanstvu_i_pravima."._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	ppp_ppph_ph_s_phpp_phhh_pph_hpp_ppp_hph_ph_s_hppp_pp_hphpp_ph_s_php_ph_ph_phhh_pph_s_ppp_p_s_ppp_phpp_hhh_hppp_hhh_hpp_hp_ph_s_pp_s_phhh_p_hpp_hp_ph_hph_ph_s_pph_s_hpp_hhh_ppp_h_hhh_phhh_ph_hp_ppp_h_ppph_pph_s_pp_s_phhp_php_ph_ppph_pp_hh_ph_phphph

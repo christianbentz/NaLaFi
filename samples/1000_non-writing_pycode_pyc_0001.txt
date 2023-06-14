@@ -1,0 +1,10 @@
+class Person:    pass  p = Personprintpclass Person:    def say_hiself:        print'Hello, how are you?'p = Personp.say_hiclass Person:    def __init__self, name:        self.name = name    def say_hiself:        print'Hello, my name is', self.nameclass Robot:    """Represents a robot, with a name."""    population = 0    def __init__self, name:        """Initializes the data."""        self.name = name        print"Initializing ".formatself.name        Robot.population = 1    def dieself:        """I am dying."""        print" is being destroyed!".formatself.name        Robot.population -= 1        if Robot.population == 0:            print" was the last one.".formatself.name        else:            print"There are still :d robots working.".format                Robot.population    def say_hiself:        """Greeting by the robot.        Yeah, they can do that."""        print"Greetings, my masters call me .".formatself.name    @classmethod    def how_manycls:        """Prints the cur
+rent population."""        print"We have :d robots.".formatcls.populationdroid1 = Robot"R2-D2"droid1.say_hiRobot.how_manydroid2 = Robot"C-3PO"droid2.say_hiRobot.how_manyprint"\nRobots can do some work here.\n"print"Robots have finished their work. So let's destroy them."droid1.diedroid2.dieRobot.how_manyclass SchoolMember:    '''Represents any school member.'''    def __init__self, name, age:        self.name = name        self.age = age        print'Initialized SchoolMember: '.formatself.name    def tellself:        '''Tell my details.'''        print'Name:"" Age:""'.formatself.name, self.age, end=" "class TeacherSchoolMember:    '''Represents a teacher.'''    def __init__self, name, age, salary:        SchoolMember.__init__self, name, age        self.salary = salary        print'Initialized Teacher: '.formatself.name    def tellself:        SchoolMember.tellself        print'Salary: ":d"'.formatself.salaryclass StudentSchoolMember:    '''Represents a student.'''    def __init__self, 
+
+
+
+
+
+
+
+

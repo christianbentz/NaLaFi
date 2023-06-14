@@ -1,0 +1,9 @@
+#type:		non-writing
+#specification:	morse_code_(moc)
+#scriptcode:	Latn
+#source:	https://morsecode.worldsinternationalstranslator.html_(last_access:_15.05.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	First_sentence_of_the_UDHR_in_Zulu_"Bonke_abantu_bazalwa_bekhululekile_belingana_ngesithunzi_nangamalungelo."._The_morse_code_signs_".",_"-",_and_"/",_where_here_replaced_by_"p",_"h",_and_"s",_respectively.
+
+<line_1>	hppp_hhh_hp_hph_p_s_ph_hppp_ph_hp_h_pph_s_hppp_ph_hhpp_ph_phpp_phh_ph_s_hppp_p_hph_pppp_pph_phpp_pph_phpp_p_hph_pp_phpp_p_s_hppp_p_phpp_pp_hp_hhp_ph_hp_ph_s_hp_hhp_p_ppp_pp_h_pppp_pph_hp_hhpp_pp_s_hp_ph_hp_hhp_ph_hh_ph_phpp_pph_hp_hhp_p_phpp_hhh_phphph
