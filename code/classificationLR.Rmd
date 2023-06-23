@@ -1,7 +1,7 @@
 ---
 title: "Classification with Logistic Regression"
 author: "Chris Bentz"
-date: "17/01/2023"
+date: "20/06/2023"
 output:
   pdf_document: default
   html_document: default
@@ -37,7 +37,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 1000
+num.char = 100
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
@@ -78,7 +78,7 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 The following code to run a logistic regression is adopted from https://datasciencedojo.com/blog/logistic-regression-in-r-tutorial/ (last accessed 16.01.2023).
 ```{r}
 # logistic regression estimation of labels
-log.model <- glm(corpus ~., data = train, family = binomial(link = "logit"))
+log.model <- glm(as.factor(corpus) ~., data = train, family = binomial(link = "logit"))
 summary(log.model)
 # look at the training data and predicted values (y) to check the the dummy coding,
 # i.e. "non-writing" is coded as 0, and "writing" as 1
@@ -109,8 +109,8 @@ names(class.comparison) <- c("predicted", "observed")
 # inspecting our results table
 head(class.comparison)
 # get confusion matrix
-cm <- confusionMatrix(class.comparison$predicted, 
-                      reference = class.comparison$observed)
+cm <- confusionMatrix(as.factor(class.comparison$predicted), 
+                      reference = as.factor(class.comparison$observed))
 print(cm)
 # get precision, recall, and f1 from the output list of confusionMatrix()
 f1 <- cm[["byClass"]]["F1"]

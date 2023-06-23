@@ -1,7 +1,7 @@
 ---
 title: "Classification with linear SVM"
 author: "Chris Bentz"
-date: "18/01/2023"
+date: "16/06/2023"
 output:
   pdf_document: default
   html_document: default
@@ -39,7 +39,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 100
+num.char = 1000
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
@@ -80,7 +80,7 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 The following code to build a linear SVM is adopted from https://rpubs.com/cliex159/865583 (last accessed 17.01.2023).
 ```{r}
 # svm classification
-svm.model <- svm(corpus ~ ., 
+svm.model <- svm(as.factor(corpus) ~ ., 
                 data = train, 
                 type = "C-classification", 
                 kernel = "linear", 
@@ -108,8 +108,8 @@ names(class.comparison) <- c("predicted", "observed")
 # inspecting our results table
 head(class.comparison)
 # get confusion matrix
-cm <- confusionMatrix(class.comparison$predicted, 
-                      reference = class.comparison$observed)
+cm <- confusionMatrix(as.factor(class.comparison$predicted), 
+                      reference = as.factor(class.comparison$observed))
 print(cm)
 # get precision, recall, and f1 from the output list of confusionMatrix()
 f1 <- cm[["byClass"]]["F1"]
@@ -143,7 +143,7 @@ huni.ttr.plot <- ggplot(data = train.ds, aes(x = huni.chars, y = ttr.chars, colo
 #huni.ttr.plot
 
 # svm classification (with just entropy rate and repetition rate)
-svm.model <- svm(corpus ~ huni.chars + ttr.chars, 
+svm.model <- svm(as.factor(corpus) ~ huni.chars + ttr.chars, 
                 data = train.ds, 
                 type = "C-classification", 
                 kernel = "linear", 
@@ -183,7 +183,7 @@ hrate.rm.plot <- ggplot(data = train.ds, aes(x = hrate.chars, y = rm.chars, colo
 #hrate.rm.plot
 
 # svm classification (with just entropy rate and repetition rate)
-svm.model <- svm(corpus ~ hrate.chars + rm.chars, 
+svm.model <- svm(as.factor(corpus) ~ hrate.chars + rm.chars, 
                 data = train.ds, 
                 type = "C-classification", 
                 kernel = "linear", 
