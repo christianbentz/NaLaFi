@@ -127,7 +127,7 @@ for (hidden in hidden.list) {
                      data = train,
                      hidden = hidden,
                      threshold = 0.1, # defaults to 0.01
-                     rep = 10, # number of reps in which new initial values are used,
+                     rep = 3, # number of reps in which new initial values are used,
                      # (essentially the same as a for loop)
                      stepmax = 100000, # defaults to 100K
                      linear.output = FALSE,

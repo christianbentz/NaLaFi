@@ -1,7 +1,7 @@
 ---
 title: "Classification with linear SVM"
 author: "Chris Bentz"
-date: "16/06/2023"
+date: "23/06/2023"
 output:
   pdf_document: default
   html_document: default
@@ -39,7 +39,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 1000
+num.char = 10
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
@@ -79,11 +79,14 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 # Building SVM
 The following code to build a linear SVM is adopted from https://rpubs.com/cliex159/865583 (last accessed 17.01.2023).
 ```{r}
+# choose kernel
+kernel = "sigmoid" # "linear", "polynomial", "radial", "sigmoid"
+
 # svm classification
 svm.model <- svm(as.factor(corpus) ~ ., 
                 data = train, 
                 type = "C-classification", 
-                kernel = "linear", 
+                kernel = kernel, 
                 scale = FALSE)
 # list components of model
 names(svm.model)
@@ -112,21 +115,22 @@ cm <- confusionMatrix(as.factor(class.comparison$predicted),
                       reference = as.factor(class.comparison$observed))
 print(cm)
 # get precision, recall, and f1 from the output list of confusionMatrix()
+accuracy <- cm$overall['Accuracy']
 f1 <- cm[["byClass"]]["F1"]
 recall <- cm[["byClass"]]["Recall"]
 precision <- cm[["byClass"]]["Precision"]
   
 # prepare data frame with results
-svm.results <- data.frame(precision, recall, f1, row.names = NULL)
+svm.results <- data.frame(accuracy, precision, recall, f1, row.names = NULL)
 svm.results.rounded <- round(svm.results, 2)
 print(svm.results.rounded)
 ```
 
 Write to file.
 ```{r}
-write.csv(svm.results.rounded, file = paste("~/Github/NaLaFi/results/SVM/results_SVM_", 
-                                      paste(num.char, ".csv", sep = ""), 
-                                   sep = ""), row.names = F)
+write.csv(svm.results.rounded, file = paste(c("~/Github/NaLaFi/results/SVM/results_SVM_", 
+                                              num.char, "chars", "_", kernel, ".csv"), collapse = ""), 
+          row.names = F)
 ```
 
 # Visualization

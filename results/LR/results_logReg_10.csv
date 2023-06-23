@@ -1,2 +1,2 @@
-"precision","recall","f1"
-0.75,0.66,0.7
+"accuracy","precision","recall","f1"
+0.72,0.75,0.66,0.7

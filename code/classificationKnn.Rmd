@@ -1,7 +1,7 @@
 ---
 title: "Classification K-Nearest-Neighbors"
 author: "Chris Bentz"
-date: "16/01/2023"
+date: "23/06/2023"
 output:
   pdf_document: default
   html_document: default
@@ -41,7 +41,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 10
+num.char = 1000
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 nrow(estimations.df)
@@ -92,7 +92,7 @@ test.labels <- estimations.scaled[datasample == 2, 1]
 
 # Initialize data frame
 ```{r}
-knn.results <- data.frame(k = numeric(0), precision = numeric(0), 
+knn.results <- data.frame(k = numeric(0), accuracy = numeric(0), precision = numeric(0), 
                              recall = numeric(0), f1 = numeric(0))
 ```
 
@@ -121,12 +121,13 @@ for (k in 1:n){
                       reference = as.factor(class.comparison$observed))
   # print(cm)
   # get precision, recall, and f1 from the output list of confusionMatrix()
+  accuracy <- cm$overall['Accuracy']
   f1 <- cm[["byClass"]]["F1"]
   recall <- cm[["byClass"]]["Recall"]
   precision <- cm[["byClass"]]["Precision"]
   
   # prepare data frame with results
-  local.results <- data.frame(k, precision, recall, f1, row.names = NULL)
+  local.results <- data.frame(k, accuracy, precision, recall, f1, row.names = NULL)
   local.results.rounded <- round(local.results, 2)
   # print(local.results.rounded)
   knn.results <- rbind(knn.results, local.results.rounded)
@@ -136,7 +137,7 @@ print(knn.results)
 
 Write to file.
 ```{r}
-write.csv(knn.results, file = paste("~/Github/NaLaFi/results/knn/knn_results_", 
+write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_", 
                                     paste(num.char, ".csv", sep =""), 
                                     sep =""), row.names = F)
 ```
