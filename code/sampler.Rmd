@@ -1,7 +1,7 @@
 ---
 title: "Sampler for Character Strings"
 author: "Chris Bentz"
-date: "12/01/2023"
+date: "26/06/2023"
 output:
   pdf_document: default
   html_document: default
@@ -80,8 +80,9 @@ for (file in file.list.combined){
   if (length(chunks.list) == 0) {
     next
   }
-  # limit number of chunks to maximally 100 (for some text files are much larger than others)
-  chunks.list <- chunks.list[1:10]
+  # limit number of text chunks to a defined maximum (since some text files are much larger than others)
+  max = 10
+  chunks.list <- chunks.list[1:max]
   
   # prepare writing to file
   # get original filename

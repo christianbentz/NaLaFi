@@ -1,7 +1,7 @@
-  ---
+---
 title: "Simple Corpus Stats"
 author: "Chris Bentz"
-date: "10/01/2023"
+date: "26/03/2023"
 output:
   pdf_document: default
   html_document: default
@@ -17,7 +17,9 @@ If the libraries are not installed yet, you need to install them using, for exam
 library(stringr)
 library(ggplot2)
 library(ggridges)
+library(gridExtra)
 library(plyr)
+library(tidyverse)
 ```
 
 ## List files
@@ -86,18 +88,21 @@ df <- data.frame(subfolder = c("animal", "ancient", "heraldics", "morse",
 
 Create a bar plot with counts.
 ```{r, fig.height = 4, fig.width = 6}
-counts.plot <- ggplot(data = df, aes(x = subfolder, y = count, fill = subfolder)) +
+counts.plot <- ggplot(data = df, aes(x = count, 
+                      y = reorder(subfolder,(+count)), fill = subfolder)) +
   geom_bar(stat = "identity") +
-  geom_text(aes(label = count), vjust = -0.2, color = "black", size = 4) +
+  geom_text(aes(label = count), hjust = -0.1, color = "black", size = 4) +
   theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45))
+  theme(axis.text.x = element_text(angle = 45)) +
+  theme(legend.position = "none") +
+  labs(y ="Subcorpus", x = "Number of files")
 counts.plot
 ```
 
 ## Safe figure to file
 ```{r, fig.width = 6, fig.height = 4.5}
-ggsave("~/Github/NaLaFi/figures/simpleStats_counts.pdf", counts.plot, dpi = 300, 
-       scale = 1, device = cairo_pdf)
+#ggsave("~/Github/NaLaFi/figures/simpleStats_counts.pdf", counts.plot, dpi = 300, 
+#       scale = 1, device = cairo_pdf)
 ```
 
 # Lengths of files in characters
@@ -145,23 +150,28 @@ Density plot for numbers of characters per data file and subcorpus.
 ```{r}
 # select subcorpora (if applicable)
 # selection <- c("writing", "shuffled")
-#simpleStats.df <- simpleStats.df[simpleStats.df$subcorpus %in% selection, ]
-# get means per subcorpus
-mu <- ddply(simpleStats.df, "subcorpus", summarise, grp.mean = mean(log(num.chars)))
+# simpleStats.df <- simpleStats.df[simpleStats.df$subcorpus %in% selection, ]
+
 # plot densities with mean values as vertical lines
-density.plot <- ggplot(simpleStats.df, aes(x = log(num.chars), y = subcorpus, fill = subcorpus)) +
-  geom_density_ridges(alpha = 0.4) +
-  theme_ridges() 
-  #geom_density(alpha = 0.4) +
-  #geom_vline(data = mu, aes(xintercept = grp.mean, color = subcorpus),
-           #  linetype = "dashed")
-  #facet_wrap(~subcorpus)
+density.plot <- ggplot(simpleStats.df, aes(x = log(num.chars), 
+                                           y = fct_reorder(subcorpus, log(num.chars), .fun = mean), 
+                                           fill = subcorpus)) +
+  geom_density_ridges(alpha = 0.7) +
+  #theme_ridges() +
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(x ="Number of UTF-8 characters (logarithm)",
+       y = "")
 print(density.plot)
+```
+## Combine figures
+```{r, fig.width = 9, fig.height = 4}
+simpleStats.combined <- grid.arrange(counts.plot, density.plot, ncol = 2)
 ```
 
 ## Safe figure to file
-```{r, fig.width = 8, fig.height = 4}
-ggsave("~/Github/NaLaFi/figures/simpleStats_density.pdf", density.plot, dpi = 300, 
+```{r, fig.width = 9, fig.height = 4}
+ggsave("~/Github/NaLaFi/figures/simpleStats_combined.pdf", simpleStats.combined, dpi = 300, 
        scale = 1, device = cairo_pdf)
 ```
 
