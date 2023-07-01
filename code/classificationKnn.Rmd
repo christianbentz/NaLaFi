@@ -34,14 +34,14 @@ estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
 
 Exclude subcorpora (if needed).
 ```{r}
-#selected <- c("random","shuffled")
-#estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
+#selected <- c("teddi")
+# estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
 ```
 
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 1000
+num.char = 10
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 nrow(estimations.df)
@@ -50,10 +50,10 @@ nrow(estimations.df)
 Select relevant columns of the data frame, i.e. the measures to be included in classification and the ''corpus'' or ''subcorpus'' column.
 ```{r}
 estimations.subset <- estimations.df[c("corpus", "subcorpus", 
-                                       "huni.chars", 
-                                       "hrate.chars", 
-                                       "ttr.chars", 
-                                       "rm.chars"
+                                       #"huni.chars", 
+                                       #"hrate.chars", 
+                                       "ttr.chars" 
+                                       #"rm.chars"
                                        )]
 ```
 
@@ -137,7 +137,7 @@ print(knn.results)
 
 Write to file.
 ```{r}
-write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_", 
+write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_ttr", 
                                     paste(num.char, ".csv", sep =""), 
                                     sep =""), row.names = F)
 ```

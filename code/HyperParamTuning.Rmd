@@ -1,0 +1,92 @@
+---
+title: "Hyperparameter Tuning"
+author: "Chris Bentz"
+date: "27/06/2023"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load Packages
+If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
+```{r, message = F}
+library(ggplot2)
+library(gridExtra)
+```
+
+# Load Data
+Load data table with values per text file. 
+```{r}
+# load results from folder
+mlp.10chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_10chars_logistic_ce_rprop+.csv")
+mlp.100chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_100chars_logistic_ce_rprop+.csv")
+mlp.1000chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_1000chars_logistic_ce_rprop+.csv")
+mlp.all <- rbind(mlp.10chars.results, mlp.100chars.results, mlp.1000chars.results)
+# knn
+knn.10.chars.results <- read.csv("~/Github/NaLaFi/results/KNN/knn_results_10.csv")
+knn.10.chars.results$num.chars <- rep(10, nrow(knn.10.chars.results)) 
+knn.100.chars.results <- read.csv("~/Github/NaLaFi/results/KNN/knn_results_100.csv")
+knn.100.chars.results$num.chars <- rep(100, nrow(knn.100.chars.results)) 
+knn.1000.chars.results <- read.csv("~/Github/NaLaFi/results/KNN/knn_results_1000.csv")
+knn.1000.chars.results$num.chars <- rep(1000, nrow(knn.100.chars.results)) 
+# bind all together
+knn.all <- rbind(knn.10.chars.results, knn.100.chars.results, knn.1000.chars.results)
+#head(knn.results)
+```
+
+# Hyperparameter Plots
+
+# knn results
+```{r}
+knn.plot <- ggplot(knn.all, aes(x = k, y = f1, 
+                                color = as.factor(num.chars), 
+                                group = as.factor(num.chars))) + 
+    #geom_errorbar(aes(ymin=f1-sd(f1), ymax=f1+sd(f1)), width=.1) +
+    geom_line() + 
+    geom_point() +
+    theme_minimal() +
+    theme(legend.position = "bottom") +
+    labs(color = 'Num. Chars.')
+#knn.plot
+```
+
+# MLP results
+Plot depth, i.e. number of hidden layers, versus F1 score.
+```{r}
+mlp.plot.depth <- ggplot(mlp.all, aes(x = hidden.depth, y = f1,
+                                          group = as.factor(num.char), 
+                                          color = as.factor(num.char))) + 
+    geom_point() +
+    geom_smooth(method = "loess") +
+    theme_minimal() +
+    theme(legend.position = "bottom") +
+    labs(color = 'Num. Chars.') 
+#mlp.plot.depth
+```
+
+Plot number of hidden units versus F1 score.
+```{r}
+mlp.plot.units <- ggplot(mlp.all, aes(x = hidden.size, y = f1,
+                                          group = as.factor(num.char), 
+                                          color = as.factor(num.char))) +  
+    geom_point() +
+    geom_smooth(method = "loess") +
+    theme_minimal() +
+    theme(legend.position = "bottom") +
+    labs(color = 'Num. Chars.') 
+```
+
+# Combine plots
+```{r, fig.width = 12, fig.height = 4}
+plots.combined <- grid.arrange(knn.plot, mlp.plot.depth, mlp.plot.units, ncol = 3)
+print(plots.combined)
+```
+
+Safe to file.
+```{r}
+ggsave("~/Github/NaLaFi/figures/hyperParamPlot.pdf", plots.combined, width = 12, 
+       height = 4, dpi = 300, scale = 1, device = cairo_pdf)
+```
+
