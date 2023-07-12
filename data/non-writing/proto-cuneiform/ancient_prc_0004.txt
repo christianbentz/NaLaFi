@@ -4,22 +4,22 @@
 #source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P005381 (last access: 28.03.2019); Full sign list: https://cdli.ucla.edu/tools/SignLists/protocuneiform/archsigns.html (last access: 28.03.2019)
 #encoding:	utf-8
 #copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020). 
-#comments:	Cuneiform on a clay tablet of the late Uruk period (ca. 3200-3000 BC). A full sign list can be found on the above-mentioned link. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html  
+#comments:	Cuneiform on a clay tablet of the late Uruk period (ca. 3200-3000 BC). A full sign list can be found on the above-mentioned link. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html. Note that in the original transliteration, repetitive signs are given with multiplier numbers, e.g. 5(X) means that the sign with code X is repeated five times on the tablet. We here render this as <X X X X X>.
 
 <obverse>
 <column_1>
-<line_1a>	2(N14) SZE~a SAL TUR3~a NUN~a 
-<line_1b>	3(N19) |GISZ.TE| 
-<line_2>	1(N14) NAR NUN~a SIG7 
-<line_3>	2(N04)# PIRIG~b1 SIG7 URI3~a NUN~a 
+<line_1a>	N14 N14 SZE~a SAL TUR3~a NUN~a 
+<line_1b>	N19 N19 N19 |GISZ.TE| 
+<line_2>	N14 NAR NUN~a SIG7 
+<line_3>	N04 N04# PIRIG~b1 SIG7 URI3~a NUN~a 
 <column_2>
-<line_1>	3(N04) |GISZ.TE| GAR |SZU2.((HI+1(N57))+(HI+1(N57)))| GI4~a 
+<line_1>	N04 N04 N04 |GISZ.TE| GAR |SZU2.((HI+N57)+(HI+N57))| GI4~a 
 <line_2>	GU7 AZ SI4~f 
 
 <reverse>
 <column_1>
-<line_1>	3(N14) SZE~a 
-<line_2>	3(N19) 5(N04) 
+<line_1>	N14 N14 N14 SZE~a 
+<line_2>	N19 N19 N19 N04 N04 N04 N04 N04 
 <line_3>	GU7 
 <column_2>
 <line_1>	AZ SI4~f 

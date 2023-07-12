@@ -1,0 +1,55 @@
+﻿#type:		writing
+#specification:	Proto cuneiform of the Uruk III period (ca. 3200-3000 BC) (prc)
+#scriptcode:	Latn
+#source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P005151 (last access: 26.02.2021); Full sign list: https://github.com/cdli-gh/proto-cuneiform_signs/archsigns.html (last access: 12.07.2023)
+#encoding:	utf-8
+#copyright:	"Text in the pages of CDLI may be freely copied, aggregated and re-used according to common academic practice; we request, in the case of re-use of considerable textual data, that mention be made of the source of such material, with reference to CDLI and its URL <http://cdli.ucla.edu>." From https://cdli.ucla.edu/?q=terms-of-use (last accessed 27.02.2020).
+#comments:	Cuneiform on a clay tablet of the Uruk III period (ca. 3200-3000 BC). A full sign list can be found on the above-mentioned link. List of transliteration conventions: https://cdli.ucla.edu/methods/ednotes.html. Note that in the original transliteration, repetitive signs are given with multiplier numbers, e.g. 5(X) means that the sign with code X is repeated five times on the tablet. We here render this as <X X X X X>.  
+
+<obverse>
+<column_1>
+<line_1>	N01 N01 N01 N01 N01# ZATU659 
+<line_2>	N01 N08 N39~a 
+<line_3>	N01 N24 
+<line_4>	|ZATU651xGAR| N57 A IB~a |U4.N08| 
+<column_2>
+<line_1>	N01 N01 N01 N01 N01 ZATU659 
+<line_2>	N01 N24 
+<line_3>	N01 N01 N01 N01 N01 |N57 N57 N57 N57 N57.GAR| 
+<line_4>	|ZATU737xBUR~a|# EN~a UR~a BA NUN~a |U4.2(N08)| 
+<column_3>
+<line_1>	N01 N01 N01 N01 N01 ZATU659 
+<line_2>	N01 N01 N01 N01 N01 N01 N01 N01 ZATU726~d 
+<line_3>	|ZATU737xBUR~a| EN~a UR~a BA NUN~a |U4.3(N08)| 
+<column_4>
+<line_1>	N14 N01 N01 N01 N01 N01 ZATU659 
+<line_2>	N01 N01 N01 N39~a 
+<line_3>	N14 N01 N01 N01 N01 N01 N24 
+<line_4>	N14 N14 N14 N14 |N57 N57 N57 N57.GAR| 
+<line_5>	N01 N01 N01 N01 N01 GAR ZAG~a MUD NUN~a TE 
+<line_6>	SZITA~a1 U4 E2~a NUN~a |U4.4(N08)| 
+<column_5>
+<line_1>	N14 [ZATU659] 
+<line_2>	N01 N01 N39~a# 
+<line_3>	N01 N01 N01 N24 
+<line_4>	N14 N14 |N57 N57 N57 N57.GAR| 
+<line_5>	EN~a NUN~a UR~a BA |U4.5(N08)| 
+
+<reverse>
+<column_1>
+<line_1>	N14 ZATU659# 
+<line_2>	N01 N08 N39~a 
+<line_3>	N01 N01 N01 N01 N24 
+<line_4>	N01 N01 N01 ZATU726~d 
+<line_5>	N14 N14 N01 N01 N01 N01 N01 |N57.GAR| 
+<line_6>	N01 N01 TE ZAG~a MUD# AN# 
+<line_7>	BA |ZATU737xBUR~a| 
+<column_2>
+<line_1>	N14 N14 N14 N14 ZATU659 BA 
+<line_2a>	N34 N14 N01 N01 N01 N01 N01 N01 N01 N01 N01 N08 GAR BA 
+<line_2b1>	N01 N01 N01 N01 N01 N01 N08 N39~a 
+<line_2b2>	N01 N01 N01 N01 N01 N01 N01 N01 ZATU726~d 
+<line_2b3>	N34 N01 N01 N01 N01 N01 GAR 
+<line_3a>	N14# N01 N01 N01 N01 N01 N01 N01 N01 N01# N24 U4#? [...] 
+<line_3b1>	N01 N01 N01 N01 N01 U4 E2~a SZITA~a1 NUN~a GU7 
+<line_3b2>	N14 N01 N01 N01 N01 BA
