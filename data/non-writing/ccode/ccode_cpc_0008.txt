@@ -1,0 +1,29 @@
+#type:		ccode
+#specification:	C++ code (cpc)
+#scriptcode:	Latn
+#source:	https://www.programiz.com/cpp-programming/examples (last accessed 12.07.2023)
+#encoding:	utf-8
+#copyright:	NA
+#comments:	English comments after <//> are removed.
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    double n1, n2, n3;
+
+    cout << "Enter three numbers: ";
+    cin >> n1 >> n2 >> n3;
+
+    if(n1 >= n2 && n1 >= n3)
+        cout << "Largest number: " << n1;
+
+    else if(n2 >= n1 && n2 >= n3)
+        cout << "Largest number: " << n2;
+    
+    else 
+        cout << "Largest number: " << n3;
+  
+    return 0;
+}
