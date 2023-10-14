@@ -1,7 +1,7 @@
 ---
 title: "Classification K-Nearest-Neighbors"
 author: "Chris Bentz"
-date: "27/06/2023"
+date: "14/10/2023"
 output:
   pdf_document: default
   html_document: default
@@ -10,8 +10,10 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## Description
+k-nearest neighbor analyses of the feature vectors per character string (loaded from NaLaFi/results/features.csv). The results are stored in NaLaFi/results/KNN. Note that the number of characters has to be chosen manually (via num.char = ""), likewise, the features to be included can be chosen in the lines defining "estimations.subset" below. Also, subcorpora can be excluded via the "selected" object. 
 
-# Load Packages
+## Load Packages
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
 ```{r, message = F}
 library(ggplot2)
@@ -32,16 +34,16 @@ estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
 #head(features.csv)
 ```
 
-Exclude subcorpora (if needed).
+Exclude subcorpora (if needed). Choose the subcorpus to be excluded via "selected". 
 ```{r}
-#selected <- c("teddi")
-# estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
+#selected <- c("udhr")
+#estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
 ```
 
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 10
+num.char = 100
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 nrow(estimations.df)
@@ -52,8 +54,8 @@ Select relevant columns of the data frame, i.e. the measures to be included in c
 estimations.subset <- estimations.df[c("corpus", "subcorpus", 
                                        #"huni.chars", 
                                        #"hrate.chars", 
-                                       "ttr.chars" 
-                                       #"rm.chars"
+                                       #"ttr.chars", 
+                                       "rm.chars"
                                        )]
 ```
 
@@ -135,9 +137,9 @@ for (k in 1:n){
 print(knn.results)
 ```
 
-Write to file.
+Write to file. Note that the file names have to be changed manually here.
 ```{r}
-write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_ttr", 
+write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_rm", 
                                     paste(num.char, ".csv", sep =""), 
                                     sep =""), row.names = F)
 ```

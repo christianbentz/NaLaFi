@@ -1,4 +1,4 @@
-﻿#type:		writing
+﻿#type:		non-writing
 #specification:	Proto cuneiform from the Uruk III period (ca. 3200-3000 BC) (prc)
 #scriptcode:	Latn
 #source:	https://cdli.ucla.edu/search/archival_view.php?ObjectID=P005381 (last access: 28.03.2019); Full sign list: https://cdli.ucla.edu/tools/SignLists/protocuneiform/archsigns.html (last access: 28.03.2019)

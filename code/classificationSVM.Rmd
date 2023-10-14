@@ -1,7 +1,7 @@
 ---
 title: "Classification with linear SVM"
 author: "Chris Bentz"
-date: "23/06/2023"
+date: "14/10/2023"
 output:
   pdf_document: default
   html_document: default
@@ -10,6 +10,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## Description
+Support vector machine (SVM) analyses of the feature vectors per character string (loaded from NaLaFi/results/features.csv). The results are stored in NaLaFi/results/SVM. Note that the number of characters has to be chosen manually (via num.char = ``''). Note that the kernel (linear, polynomial, radial, sigmoid) has to be chosen manually below.
 
 # Load Packages
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
@@ -39,7 +41,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 10
+num.char = 1000
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
@@ -80,7 +82,7 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 The following code to build a linear SVM is adopted from https://rpubs.com/cliex159/865583 (last accessed 17.01.2023).
 ```{r}
 # choose kernel
-kernel = "sigmoid" # "linear", "polynomial", "radial", "sigmoid"
+kernel = "linear" # "linear", "polynomial", "radial", "sigmoid"
 
 # svm classification
 svm.model <- svm(as.factor(corpus) ~ ., 

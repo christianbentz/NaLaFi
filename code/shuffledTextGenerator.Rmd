@@ -1,7 +1,7 @@
 ---
 title: "Shuffled Text Generator"
 author: "Chris Bentz"
-date: "10/01/2023"
+date: "14/10/2023"
 output: pdf_document
 ---
 
@@ -28,7 +28,7 @@ length(file.list)
 # Shuffled text generator
 Create shuffled texts (based on natural language texts).
 ```{r}
-# set the maximal number of units (n) to be used for analysis
+# set the maximal number of units (n) to be used for shuffling
 n = 1000
 for (file in file.list)
   {

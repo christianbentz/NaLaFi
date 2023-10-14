@@ -1,7 +1,7 @@
 ---
 title: "Sampler for Character Strings"
 author: "Chris Bentz"
-date: "14/20/2023"
+date: "14/10/2023"
 output:
   pdf_document: default
   html_document: default
@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Description
 This file contains code to sample strings of predefined lengths from the respective corpora (i.e. the data in the NaLaFi/data folder as well as TeDDi_dumps).
-The file needs to be run with "char.num" set to 10, 100, 1000 (or any other number of characters) separately.
+The file needs to be run with "char.num" set to 10, 100, 1000 (or any other number of characters) separately. Note that all the data is in the github repository, except for the TeDDi sample. This needs to be downloaded from https://drive.switch.ch/index.php/s/MJv7xFkzqlzFn0y.
 
 ## Load libraries
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.

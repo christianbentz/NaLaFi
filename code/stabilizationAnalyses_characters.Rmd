@@ -1,13 +1,15 @@
 ---
 title: "Stabilization Analyses for Characters"
 author: "Chris Bentz"
-date: "14/06/2023"
+date: "14/10/2023"
 output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## Description
+This file enables stabilization analyses for the feature value estimations. In other words, feature values are not estimated for a single, pre-defined number of characters, but are estimated for discrete steps (defined with "stepsize"), and for a given maximum number of characters (defined as ``n'').
 
 ## Load libraries
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
@@ -30,6 +32,7 @@ Create list with all the files in the directory "corpus".
 file.list <- list.files(path = "~/Github/NaLaFi/data/", 
                         recursive = T, full.names = T)
 head(file.list)
+#file = "/home/chris/Github/NaLaFi/data//non-writing/animal/animal_cad_0002.txt"
 length(file.list)
 ```
 
@@ -95,27 +98,29 @@ for (file in file.list)
   for (i in 1:(k/stepsize))
   {  
     # unigram entropy estimation
+    # define substring of chars vector by stepsize
+    sub.chars <- chars[1:(i*stepsize)]
     # calculate unigram entropy for characters
-    chars.df <- as.data.frame(table(chars[1:(i*stepsize)]))
+    chars.df <- as.data.frame(table(sub.chars))
     # print(chars.df)
     huni.chars <- entropy(chars.df$Freq, method = "ML", unit = "log2")
     # entropy rate estimation
     # note: the values chosen for max.length and every.word will crucially 
     # impact processing time. max.length = NULL means all units in the file are     
     # considered.
-    hrate.chars <- get.estimate(text = chars[1:(i*stepsize)], every.word = 1, 
+    hrate.chars <- get.estimate(text = sub.chars, every.word = 1, 
                                 max.length = NULL)  
     # calculate type-token ratio (ttr)
     ttr.chars <- nrow(chars.df)/sum(chars.df$Freq)
     
     # calculate repetition measure according to Sproat (2014)
     # the overall number of repetitions is the sum of frequency counts minus 1. 
-    R <- sum(chars.df$Freq-1) 
+    R <- sum(chars.df$Freq)-1 
     # calculate the number of adjacent repetitions
     r = 0
-    if (length(chars) > 1){
-      for (j in 1:(length(chars)-1)){
-        if (chars[j] == chars[j+1]){
+    if (length(sub.chars) > 1){
+      for (j in 1:(length(sub.chars)-1)){
+        if (sub.chars[j] == sub.chars[j+1]){
           r = r + 1
         } else {
           r = r + 0

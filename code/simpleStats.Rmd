@@ -1,7 +1,7 @@
 ---
 title: "Simple Corpus Stats"
 author: "Chris Bentz"
-date: "12/07/2023"
+date: "14/10/2023"
 output:
   pdf_document: default
   html_document: default
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Description
-Code for simple statistics of the corpora and subcorpora used for the analyses (i.e. file counts, character counts per file, etc.)
+Code for simple statistics of the corpora and subcorpora used for the analyses (i.e. file counts, character counts per file, etc.). Data are loaded from NaLaFi/data. Note that this does not include the TeDDi files. These are sampled in the sampler.Rmd file. 
 
 ## Load libraries
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2").
@@ -69,9 +69,11 @@ Count how many files are in each of the highest level subfolders of "data", and 
 #number of "animal" files
 animal.count <- length(file.list[grepl("animal", file.list)])
 ancient.count <- length(file.list[grepl("ancient", file.list)])
+ccode.count <- length(file.list[grepl("ccode", file.list)])
 heraldics.count <- length(file.list[grepl("heraldics", file.list)])
 morse.count <- length(file.list[grepl("morse", file.list)])
 natural.count <- length(file.list[grepl("natural", file.list)])
+procunei.count <- length(file.list[grepl("proto-cuneiform", file.list)])
 pycode.count <- length(file.list[grepl("pycode", file.list)])
 random.count <- length(file.list[grepl("random", file.list)])
 signlang.count <- length(file.list[grepl("signlang", file.list)])
@@ -80,11 +82,11 @@ udhr.count <- length(file.list[grepl("udhr", file.list)])
 weather.count <- length(file.list[grepl("weather", file.list)])
 
 #create data frame
-df <- data.frame(subfolder = c("animal", "ancient", "heraldics", "morse",
-                               "natural", "pycode", "random", "signlang", 
-                               "shuffled", "udhr", "weather"),
-                 count = c(animal.count, ancient.count, heraldics.count, 
-                           morse.count, natural.count, pycode.count, 
+df <- data.frame(subfolder = c("animal", "ancient", "ccode", "heraldics", 
+                               "morse", "natural", "procunei", "pycode", "random", 
+                               "signlang", "shuffled", "udhr", "weather"),
+                 count = c(animal.count, ancient.count, ccode.count, heraldics.count, 
+                           morse.count, natural.count, procunei.count, pycode.count, 
                            random.count, signlang.count, shuffled.count, 
                            udhr.count, weather.count))
 ```
@@ -155,7 +157,7 @@ Density plot for numbers of characters per data file and subcorpus.
 # selection <- c("writing", "shuffled")
 # simpleStats.df <- simpleStats.df[simpleStats.df$subcorpus %in% selection, ]
 
-# plot densities with mean values as vertical lines
+# plot densities
 density.plot <- ggplot(simpleStats.df, aes(x = log(num.chars), 
                                            y = fct_reorder(subcorpus, log(num.chars), .fun = mean), 
                                            fill = subcorpus)) +

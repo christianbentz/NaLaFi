@@ -1,7 +1,7 @@
 ---
 title: "Classification with Logistic Regression"
 author: "Chris Bentz"
-date: "23/06/2023"
+date: "14/10/2023"
 output:
   pdf_document: default
   html_document: default
@@ -10,6 +10,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## Description
+Logistic regression analyses of the feature vectors per character string (loaded from NaLaFi/results/features.csv). The results are stored in NaLaFi/results/LR. Note that the number of characters has to be chosen manually (via num.char = ``'').
 
 # Load Packages
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
