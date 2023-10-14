@@ -1,10 +1,10 @@
-import osi
-mport time
-source = '
-/home/chri
-s/Calendar
-s'printsou
-rcetarget_
-dir = '/ho
-me/chris/b
-ackup'prin
+class Pers
+on:    pas
+s  p = Per
+sonprintpc
+lass Perso
+n:    def 
+say_hiself
+:        p
+rint'Hello
+, how are 

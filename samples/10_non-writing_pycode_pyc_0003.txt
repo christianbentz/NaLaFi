@@ -1,0 +1,10 @@
+a = 2a = a
+  3a = 2a 
+= 3length 
+= 5breadth
+ = 2area =
+ length  b
+readthprin
+t'Area is'
+, areaprin
+t'Perimete

@@ -1,0 +1,10 @@
+print'hello world'age = 20name = 'Swaroop'print'0 was 1 years old when he wrote this book'.formatnam
+e, ageprint'Why is 0 playing with that python?'.formatnameprint'0:.3f'.format1.0/3print'0:_^11'.form
+at'hello'print'name wrote book'.formatname='Swaroop', book='A Byte of Python'print'a', end=''print'b
+', end=''print'a', end=' 'print'b', end=' 'print'c'i = 5printii = i  1printis = '''This is a multi-l
+ine string.This is the second line.'''printsi = 5printii = 5 print'Value is', iprint'I repeat, the v
+
+
+
+
+

@@ -1,0 +1,10 @@
+number = 23guess = intinput'Enter an integer : 'if guess == number:    print'Congratulations, you gu
+essed it.'    print'but you do not win any prizes!'elif guess < number:    print'No, it is a little 
+higher than that'else:    print'No, it is a little lower than that'print'Done'if True:    print'Yes,
+ it is true'number = 23running = Truewhile running:    guess = intinput'Enter an integer : '    if g
+uess == number:        print'Congratulations, you guessed it.'    elif guess < number:        print'
+No, it is a little higher than that.'    else:        print'No, it is a little lower than that.'else
+:    print'The while loop is over.'print'Done'for i in range1, 5:    printielse:    print'The for lo
+op is over'while True:    s = input'Enter something : '    if s == 'quit':        break    print'Len
+gth of the string is', lensprint'Done'while True:    s = input'Enter something : '    if s == 'quit'
+:        break    if lens < 3:        print'Too small'        continue    print'Input is of sufficie

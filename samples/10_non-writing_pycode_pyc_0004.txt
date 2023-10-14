@@ -1,0 +1,10 @@
+number = 2
+3guess = i
+ntinput'En
+ter an int
+eger : 'if
+ guess == 
+number:   
+ print'Con
+gratulatio
+ns, you gu

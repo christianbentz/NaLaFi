@@ -1,10 +1,10 @@
-pp hh s hp
-pp p phh p
-ph ppp ppp
- h ppp p p
-p hp s ppp
- p pp hp p
- php s ppp
-h p php ph
- hp h phh 
-hhh php h 
+pp_hh_s_hp
+pp_p_phh_p
+ph_ppp_ppp
+_h_ppp_p_p
+p_hp_s_ppp
+_p_pp_hp_p
+_php_s_ppp
+h_p_php_ph
+_hp_h_phh_
+hhh_php_h_

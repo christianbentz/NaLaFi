@@ -1,0 +1,10 @@
+using name
+space std;
+int main  
+   int n, 
+sum = 0;  
+  cout << 
+"Enter a p
+ositive in
+teger: "; 
+   cin >> 

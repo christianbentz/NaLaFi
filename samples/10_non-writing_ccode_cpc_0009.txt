@@ -1,0 +1,10 @@
+using name
+space std;
+int main  
+   float a
+, b, c, x1
+, x2, disc
+riminant, 
+realPart, 
+imaginaryP
+art;    co

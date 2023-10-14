@@ -1,0 +1,10 @@
+using name
+space std;
+int main  
+   char c;
+    bool i
+sLowercase
+Vowel, isU
+ppercaseVo
+wel;    co
+ut << "Ent

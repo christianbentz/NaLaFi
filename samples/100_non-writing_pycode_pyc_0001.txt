@@ -1,10 +1,10 @@
-import osimport timesource = '/home/chris/Calendars'printsourcetarget_dir = '/home/chris/backup'prin
-ttarget_dirtarget = target_dir  os.sep  \         time.strftime'%Y%m%d%H%M%S'  '.zip'printtargetif n
-ot os.path.existstarget_dir:    os.mkdirtarget_dir  # make directoryzip_command = 'zip -r 0 1'.forma
-ttarget, ' '.joinsourceprintzip_commandprint'Zip command is:'printzip_commandprint'Running:'if os.sy
-
-
-
-
-
-
+class Person:    pass  p = Personprintpclass Person:    def say_hiself:        print'Hello, how are 
+you?'p = Personp.say_hiclass Person:    def __init__self, name:        self.name = name    def say_h
+iself:        print'Hello, my name is', self.nameclass Robot:    """Represents a robot, with a name.
+"""    population = 0    def __init__self, name:        """Initializes the data."""        self.name
+ = name        print"Initializing ".formatself.name        Robot.population = 1    def dieself:     
+   """I am dying."""        print" is being destroyed!".formatself.name        Robot.population -= 1
+        if Robot.population == 0:            print" was the last one.".formatself.name        else: 
+           print"There are still :d robots working.".format                Robot.population    def s
+ay_hiself:        """Greeting by the robot.        Yeah, they can do that."""        print"Greetings
+, my masters call me .".formatself.name    @classmethod    def how_manycls:        """Prints the cur

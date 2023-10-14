@@ -1,0 +1,10 @@
+import sys
+print'The 
+command li
+ne argumen
+ts are:'fo
+r i in sys
+.argv:    
+printiprin
+t'\n\nThe 
+PYTHONPATH

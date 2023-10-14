@@ -1,0 +1,10 @@
+using name
+space std;
+int main  
+       dou
+ble n1, n2
+, n3;    c
+out << "En
+ter three 
+numbers: "
+;    cin >

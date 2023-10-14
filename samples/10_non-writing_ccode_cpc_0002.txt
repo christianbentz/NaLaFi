@@ -1,0 +1,10 @@
+using name
+space std;
+int main  
+ int first
+_number, s
+econd_numb
+er, sum;  
+    cout <
+< "Enter t
+wo integer

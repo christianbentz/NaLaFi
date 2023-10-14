@@ -1,0 +1,10 @@
+print'hell
+o world'ag
+e = 20name
+ = 'Swaroo
+p'print'0 
+was 1 year
+s old when
+ he wrote 
+this book'
+.formatnam

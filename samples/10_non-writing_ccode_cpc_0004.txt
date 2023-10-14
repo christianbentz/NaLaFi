@@ -1,0 +1,10 @@
+using name
+space std;
+int main  
+       cou
+t << "Size
+ of char: 
+" << sizeo
+fchar << "
+ byte" << 
+endl;    c

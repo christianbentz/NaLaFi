@@ -1,0 +1,10 @@
+import sysprint'The command line arguments are:'for i in sys.argv:    printiprint'\n\nThe PYTHONPATH
+ is', sys.path, '\n'from math import sqrtprint"Square root of 16 is", sqrt16if __name__ == '__main__
+':    print'This program is being run by itself'else:    print'I am being imported from another modu
+le'def say_hi:    print'Hi, this is mymodule speaking.'__version__ = '0.1'import mymodulemymodule.sa
+y_hiprint'Version', mymodule.__version__from mymodule import say_hi, __version__say_hiprint'Version'
+, __version__>>> import sys>>> dirsys'__displayhook__', '__doc__','argv', 'builtin_module_names','ve
+rsion', 'version_info'>>> dir'__builtins__', '__doc__','__name__', '__package__', 'sys'>>> a = 5>>> 
+dir'__builtins__', '__doc__', '__name__', '__package__', 'sys', 'a'>>> del a>>> dir'__builtins__', '
+
+

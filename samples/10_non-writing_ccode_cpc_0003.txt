@@ -1,0 +1,10 @@
+using name
+space std;
+int main  
+      int 
+divisor, d
+ividend, q
+uotient, r
+emainder; 
+   cout <<
+ "Enter di
