@@ -1,7 +1,7 @@
 ---
 title: "Random String Generation"
 author: "Chris Bentz"
-date: "20/12/2022"
+date: "16/10/2023"
 output: pdf_document
 ---
 
@@ -18,7 +18,9 @@ library(stringi)
 # Random string generator
 Create random strings by drawing from the English alphabet (upper and lower case, including white space with uniform probability).
 ```{r}
-# add white space to the object "letters"
+# set seed for randon sampling to get reproducible result
+set.seed(09012020)
+# add whote space to the set of "letters"
 letters.plus.space <- append(" ", letters)
 for (i in 2:48){
   meta.info <- c("#type:\trandom", "#specification:\trandomly generated string (ran)",
@@ -31,7 +33,7 @@ for (i in 2:48){
   full.vec <- append(meta.info, random.string) # append string to meta.info vector
   # write to file
   filename <- paste("random_ran_", i, sep = "")
-  write(full.vec, file = paste("~/Github/NaLaFi/data/generated/random/", filename, sep = ""), 
+  write(full.vec, file = paste("~/Github/NaLaFi/data/non-writing/random/", filename, sep = ""), 
       append = FALSE, sep = "\n")
 }
 ```

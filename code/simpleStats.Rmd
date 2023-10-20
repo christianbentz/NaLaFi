@@ -37,7 +37,7 @@ length(file.list)
 Count how many files are in each of the highest level subfolders of "data", and create a dataframe with counts.
 
 ```{r}
-#number of "animal" files
+#number of files
 writing.count <- length(file.list[grepl("/writing", file.list)])
 nonwriting.count <- length(file.list[grepl("non-writing", file.list)])
 
@@ -69,7 +69,6 @@ Count how many files are in each of the highest level subfolders of "data", and 
 #number of "animal" files
 animal.count <- length(file.list[grepl("animal", file.list)])
 ancient.count <- length(file.list[grepl("ancient", file.list)])
-ccode.count <- length(file.list[grepl("ccode", file.list)])
 heraldics.count <- length(file.list[grepl("heraldics", file.list)])
 morse.count <- length(file.list[grepl("morse", file.list)])
 natural.count <- length(file.list[grepl("natural", file.list)])
@@ -82,10 +81,10 @@ udhr.count <- length(file.list[grepl("udhr", file.list)])
 weather.count <- length(file.list[grepl("weather", file.list)])
 
 #create data frame
-df <- data.frame(subfolder = c("animal", "ancient", "ccode", "heraldics", 
+df <- data.frame(subfolder = c("animal", "ancient", "heraldics", 
                                "morse", "natural", "procunei", "pycode", "random", 
                                "signlang", "shuffled", "udhr", "weather"),
-                 count = c(animal.count, ancient.count, ccode.count, heraldics.count, 
+                 count = c(animal.count, ancient.count, heraldics.count, 
                            morse.count, natural.count, procunei.count, pycode.count, 
                            random.count, signlang.count, shuffled.count, 
                            udhr.count, weather.count))

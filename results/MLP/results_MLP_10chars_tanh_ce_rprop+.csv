@@ -1,0 +1,2 @@
+"num.char","hidden.structure","hidden.size","hidden.depth","err.fct","act.fct.name","algorithm","accuracy","precision","recall","f1"
+10,"2,1,1,5",9,4,"ce","tanh","rprop+",0.72,0.8,0.63,0.71

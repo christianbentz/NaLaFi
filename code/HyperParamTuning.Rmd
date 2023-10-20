@@ -1,8 +1,10 @@
 ---
 title: "Hyperparameter Tuning"
 author: "Chris Bentz"
-date: "27/06/2023"
-output: html_document
+date: "19/10/2023"
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -20,9 +22,9 @@ library(gridExtra)
 Load data table with values per text file. 
 ```{r}
 # load results from folder
-mlp.10chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_10chars_logistic_ce_rprop+.csv")
-mlp.100chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_100chars_logistic_ce_rprop+.csv")
-mlp.1000chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_1000chars_logistic_ce_rprop+.csv")
+mlp.10chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_10chars_tanh_sse_rprop+.csv")
+mlp.100chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_100chars_tanh_sse_rprop+.csv")
+mlp.1000chars.results <- read.csv("~/Github/NaLaFi/results/MLP/results_MLP_1000chars_tanh_sse_rprop+.csv")
 mlp.all <- rbind(mlp.10chars.results, mlp.100chars.results, mlp.1000chars.results)
 # knn
 knn.10.chars.results <- read.csv("~/Github/NaLaFi/results/KNN/knn_results_10.csv")
@@ -39,7 +41,7 @@ knn.all <- rbind(knn.10.chars.results, knn.100.chars.results, knn.1000.chars.res
 # Hyperparameter Plots
 
 # knn results
-```{r}
+```{r, warning = F}
 knn.plot <- ggplot(knn.all, aes(x = k, y = f1, 
                                 color = as.factor(num.chars), 
                                 group = as.factor(num.chars))) + 
@@ -54,7 +56,7 @@ knn.plot <- ggplot(knn.all, aes(x = k, y = f1,
 
 # MLP results
 Plot depth, i.e. number of hidden layers, versus F1 score.
-```{r}
+```{r, warning = F}
 mlp.plot.depth <- ggplot(mlp.all, aes(x = hidden.depth, y = f1,
                                           group = as.factor(num.char), 
                                           color = as.factor(num.char))) + 
@@ -67,7 +69,7 @@ mlp.plot.depth <- ggplot(mlp.all, aes(x = hidden.depth, y = f1,
 ```
 
 Plot number of hidden units versus F1 score.
-```{r}
+```{r, warning = F}
 mlp.plot.units <- ggplot(mlp.all, aes(x = hidden.size, y = f1,
                                           group = as.factor(num.char), 
                                           color = as.factor(num.char))) +  
@@ -79,7 +81,7 @@ mlp.plot.units <- ggplot(mlp.all, aes(x = hidden.size, y = f1,
 ```
 
 # Combine plots
-```{r, fig.width = 12, fig.height = 4}
+```{r, fig.width = 12, fig.height = 4, warning = F}
 plots.combined <- grid.arrange(knn.plot, mlp.plot.depth, mlp.plot.units, ncol = 3)
 print(plots.combined)
 ```

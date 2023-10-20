@@ -82,7 +82,7 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 The following code to build a linear SVM is adopted from https://rpubs.com/cliex159/865583 (last accessed 17.01.2023).
 ```{r}
 # choose kernel
-kernel = "linear" # "linear", "polynomial", "radial", "sigmoid"
+kernel = "sigmoid" # "linear", "polynomial", "radial", "sigmoid"
 
 # svm classification
 svm.model <- svm(as.factor(corpus) ~ ., 

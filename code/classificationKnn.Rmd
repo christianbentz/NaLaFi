@@ -36,8 +36,17 @@ estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
 
 Exclude subcorpora (if needed). Choose the subcorpus to be excluded via "selected". 
 ```{r}
-#selected <- c("udhr")
-#estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
+selected <- c(#"heraldics",
+              #"procunei",
+              #"animal",
+              #"random",
+              #"morse",
+              #"shuffled",
+              #"weather",
+              #"natural",
+              #"pycode"
+              )
+estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
 ```
 
 Split into separate files by length of chunks in characters.
@@ -54,7 +63,7 @@ Select relevant columns of the data frame, i.e. the measures to be included in c
 estimations.subset <- estimations.df[c("corpus", "subcorpus", 
                                        #"huni.chars", 
                                        #"hrate.chars", 
-                                       #"ttr.chars", 
+                                       "ttr.chars", 
                                        "rm.chars"
                                        )]
 ```
@@ -121,7 +130,7 @@ for (k in 1:n){
   # get confusion matrix
   cm <- confusionMatrix(data = class.comparison$predicted, 
                       reference = as.factor(class.comparison$observed))
-  # print(cm)
+  print(cm)
   # get precision, recall, and f1 from the output list of confusionMatrix()
   accuracy <- cm$overall['Accuracy']
   f1 <- cm[["byClass"]]["F1"]
@@ -139,7 +148,7 @@ print(knn.results)
 
 Write to file. Note that the file names have to be changed manually here.
 ```{r}
-write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_rm", 
+write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_ttr_rm", 
                                     paste(num.char, ".csv", sep =""), 
                                     sep =""), row.names = F)
 ```

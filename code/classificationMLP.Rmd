@@ -1,7 +1,7 @@
 ---
 title: "Classification with Multilayer Perceptron (MLP)"
 author: "Chris Bentz"
-date: "23/06/2023"
+date: "16/10/2023"
 output: pdf_document
 ---
 
@@ -35,7 +35,7 @@ Exclude subcorpora (if needed).
 Split into separate files by length of chunks in characters.
 ```{r}
 # choose number of characters
-num.char = 1000
+num.char = 100
 # subset data frame
 estimations.df <- estimations.df[estimations.df$num.char == num.char, ]
 ```
@@ -74,22 +74,22 @@ test <- estimations.scaled[datasample == 2, 1:ncol(estimations.scaled)]
 
 # Implement MLP classifier
 This is partly based on code given at http://uc-r.github.io/ann_classification (last accessed 18.01.2023)
-```{r}
+```{r, message = F, warning = F}
 # Generate list of hidden unit architectures (number of layers and units)
 # Choose number of random architectures
-# arch.no <- 100
-# # initialize empty list of hidden unit architectures
-# hidden.list <- vector(mode = "list", length = arch.no)
-# set.seed(0915)
-# # run loop to generate number of layers and hidden units randomly
-# for (i in 1:arch.no) {
-#   layer.no <- round(runif(1, min = 1, max = 4), 0)
-#   hidden.units <- round(runif(layer.no, min = 1, max = 5), 0)
-#   hidden.list[[i]] <- hidden.units
-# }
+arch.no <- 100
+# initialize empty list of hidden unit architectures
+hidden.list <- vector(mode = "list", length = arch.no)
+set.seed(09012020)
+# run loop to generate number of layers and hidden units randomly
+for (i in 1:arch.no) {
+  layer.no <- round(runif(1, min = 1, max = 4), 0)
+  hidden.units <- round(runif(layer.no, min = 1, max = 5), 0)
+  hidden.list[[i]] <- hidden.units
+}
 
-# Manual list of hidden layer structures
-hidden.list <- list(c(4,2))
+# Manual list of hidden layer structures (for plotting and experimenting)
+# hidden.list <- list(c(4,4))
 
 # initialize dataframe to append results to
 results.df <- data.frame(num.char = numeric(0), hidden.structure = character(0), 
@@ -113,11 +113,12 @@ start_time <- Sys.time()
 for (hidden in hidden.list) {
   # Training
   # choose error function
-  err.fct = 'ce' # options: 'sse', 'ce'
+  err.fct = 'sse' # options: 'sse', 'ce'
   # choose activation function
-  act.fct = 'logistic' # options: 'logistic', 'tanh', softplus, relu
-  # note: softplus, relu, and tanh only work with sse as err.fct
-  act.fct.name = 'logistic' # make sure to give name as character string (for later storage)
+  act.fct = 'tanh' # options: 'logistic', 'tanh', softplus, relu, 
+  # beware: the last two options have to be written without quotes ''
+  # note: softplus, relu, and tanh only work properly with sse as err.fct
+  act.fct.name = 'tanh' # make sure to give name as character string (for later storage)
   # choose algorithm 
   algorithm = 'rprop+' # options: 'rprop+', 'rprop-', 'backprop', 'sag', 'slr' 
   # train classifier with neuralnet() function
@@ -127,7 +128,7 @@ for (hidden in hidden.list) {
                      data = train,
                      hidden = hidden,
                      threshold = 0.1, # defaults to 0.01
-                     rep = 3, # number of reps in which new initial values are used,
+                     rep = 1, # number of reps in which new initial values are used,
                      # (essentially the same as a for loop)
                      stepmax = 100000, # defaults to 100K
                      linear.output = FALSE,
@@ -138,9 +139,9 @@ for (hidden in hidden.list) {
                      act.fct = act.fct,
                      likelihood = TRUE,
                      lifesign = 'minimal')
-  #classifier.mlp
+  classifier.mlp
   # results matrix (each column represents one repetition)
-  # classifier.mlp$result.matrix
+  classifier.mlp$result.matrix
   
   # Prediction
   # Get prediction using the predict() function
@@ -198,20 +199,20 @@ print(proc.time)
 
 Write to file.
 ```{r}
-# write.csv(results.df, file = paste(c("~/Github/NaLaFi/results/MLP/results_MLP_", 
-#                                               num.char, "chars", "_",
-#                                               act.fct.name, "_",
-#                                               err.fct, "_",
-#                                               algorithm,
-#                                               ".csv"
-#                                               ), collapse = ""), 
-#                                       row.names = F)
+write.csv(results.df, file = paste(c("~/Github/NaLaFi/results/MLP/results_MLP_",
+                                              num.char, "chars", "_",
+                                              act.fct.name, "_",
+                                              err.fct, "_",
+                                              algorithm,
+                                              ".csv"
+                                              ), collapse = ""),
+                                      row.names = F)
 ```
 
 # Visualize the NN
 Visualize the nn with the best weights after training.
 ```{r}
-mlp.plot <- plot(classifier.mlp, rep = 'best', show.weights = F)
-mlp.plot
+#mlp.plot <- plot(classifier.mlp, rep = 'best', show.weights = F)
+#mlp.plot
 ```
 

@@ -1,0 +1,7 @@
+"num.char","hidden.structure","hidden.size","hidden.depth","err.fct","act.fct.name","algorithm","accuracy","precision","recall","f1"
+10,"3,1,1",5,3,"ce","relu","rprop+",0.53,0.53,1,0.7
+10,"3,3,1",7,3,"ce","relu","rprop+",0.53,0.53,1,0.7
+10,"2,1,1,5",9,4,"ce","relu","rprop+",0.53,0.53,1,0.7
+10,"1,2",3,2,"ce","relu","rprop+",0.53,0.53,1,0.7
+10,"2,4,2,3",11,4,"ce","relu","rprop+",0.53,0.53,1,0.7
+10,"2,3,2",7,3,"ce","relu","rprop+",0.53,0.53,1,0.7

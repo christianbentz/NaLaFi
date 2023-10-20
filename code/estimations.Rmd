@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Description
-This file contains the code for estimating the feature values (TTR, unigram entropy, entropy rate, repetition rate) per character chunk (one per line) for each file in the NaLaFi/samples folder. The estimations are saved one per line in a csv file in NaLaFi/results. 
+This file contains the code for estimating the feature values (TTR, unigram entropy, entropy rate, repetition rate) per character chunk (one per line) for each file in the NaLaFi/samples folder. The estimations are saved one per line in a csv file in NaLaFi/results/features.csv. 
 
 ## Load libraries
 If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
