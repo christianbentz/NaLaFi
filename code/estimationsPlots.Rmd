@@ -46,105 +46,99 @@ estimations1000.df <- estimations.df[estimations.df$num.char == 1000,]
 
 ## 10 Characters
 
-### Entropy rate vs. unigram entropy for characters 
+### Unigram entropy vs. TTR for characters 
 ```{r, fig.width = 5, fig.height = 5, warning = FALSE}
-huni.hrate.10chars.plot <- ggplot(estimations10.df, 
+huni.ttr.10chars.plot <- ggplot(estimations10.df, 
                                 aes(x = huni.chars, y = ttr.chars, 
                                     shape = subcorpus, colour = corpus)) +
   scale_shape_manual(values = 1:length(unique(estimations10.df$subcorpus))) +
   geom_point(alpha = 0.3, size  = 1) +
   labs(x = "Unigram entropy for 10 characters", y = "TTR for 10 characters") +
   theme(legend.position = "none") 
-huni.hrate.10chars.plot <- ggMarginal(huni.hrate.10chars.plot, 
+huni.hrate.10chars.plot <- ggMarginal(huni.ttr.10chars.plot, 
                                       groupFill = T, groupColour = T,
                                       type = "density")
-huni.hrate.10chars.plot
 ```
 
-### TTR vs. repetition rate for characters
+### Entropy rate vs. repetition rate for characters
 ```{r, fig.width = 6, fig.height = 4, warning = FALSE}
-ttr.rm.10chars.plot <- ggplot(estimations10.df, 
+hrate.rm.10chars.plot <- ggplot(estimations10.df, 
                    aes(x = hrate.chars, y = rm.chars, 
                    colour = corpus, shape = subcorpus)) +
   scale_shape_manual(values = 1:length(unique(estimations10.df$subcorpus))) +
   geom_point(alpha = 0.3, size  = 1) +
   theme(legend.position = "left") +
   labs(x = "Entropy rate for 10 characters", y = "Repetition rate for 10 characters") 
-ttr.rm.10chars.plot <- ggMarginal(ttr.rm.10chars.plot, 
+hrate.rm.10chars.plot <- ggMarginal(hrate.rm.10chars.plot, 
                                   groupFill = T, groupColour = T, 
                                   type = "density")
-#ttr.rm.10chars.plot
 ```
 
 ## 100 Characters
 
-### Entropy rate vs. unigram entropy for characters 
+### Unigram entropy vs. TTR for characters 
 ```{r, fig.width = 5, fig.height = 5, warning = FALSE}
-huni.hrate.100chars.plot <- ggplot(estimations100.df, 
+huni.ttr.100chars.plot <- ggplot(estimations100.df, 
                                 aes(x = huni.chars, y = ttr.chars, 
                                     colour = corpus, shape = subcorpus)) + 
   scale_shape_manual(values = 1:length(unique(estimations100.df$subcorpus))) +
   geom_point(aes(fill = corpus), alpha = 0.3, size  = 1) +
   labs(x = "Unigram entropy for 100 characters", y = "TTR for 100 characters") +
   theme(legend.position = "none")
-huni.hrate.100chars.plot <- ggMarginal(huni.hrate.100chars.plot, 
+huni.ttr.100chars.plot <- ggMarginal(huni.ttr.100chars.plot, 
                                        groupFill = T, groupColour = T, 
                                        type = "density")
-#huni.hrate.100chars.plot
 ```
 
-### TTR vs. repetition rate for characters
+### Entropy rate vs. repetition rate for characters
 ```{r, fig.width = 6, fig.height = 4, warning = FALSE}
-ttr.rm.100chars.plot <- ggplot(estimations100.df, 
+hrate.rm.100chars.plot <- ggplot(estimations100.df, 
                    aes(x = hrate.chars, y = rm.chars, 
                    colour = corpus, shape = subcorpus)) +
   scale_shape_manual(values = 1:length(unique(estimations100.df$subcorpus))) +
   geom_point(alpha = 0.3, size  = 1) +
   theme(legend.position = "left") +
   labs(x = "Entropy rate for 100 characters", y = "Repetition rate for 100 characters") 
-ttr.rm.100chars.plot <- ggMarginal(ttr.rm.100chars.plot, 
+hrate.rm.100chars.plot <- ggMarginal(hrate.rm.100chars.plot, 
                                    groupFill = T, groupColour = T, 
                                    type = "density")
-#ttr.rm.100chars.plot
 ```
 
 ## 1000 Characters
 
-### Entropy rate vs. unigram entropy for characters 
+### Unigram entropy vs. TTR for characters 
 ```{r, fig.width = 5, fig.height = 5, warning = FALSE}
-huni.hrate.1000chars.plot <- ggplot(estimations1000.df, 
+huni.ttr.1000chars.plot <- ggplot(estimations1000.df, 
                                 aes(x = huni.chars, y = ttr.chars, 
                                     colour = corpus, shape = subcorpus)) +
   scale_shape_manual(values = 1:length(unique(estimations1000.df$subcorpus))) +
   geom_point(alpha = 0.3, size  = 1) +
   labs(x = "Unigram entropy for 1000 characters", y = "TTR for 1000 characters") +
   theme(legend.position = "none")
-huni.hrate.1000chars.plot <- ggMarginal(huni.hrate.1000chars.plot,  
+huni.ttr.1000chars.plot <- ggMarginal(huni.ttr.1000chars.plot,  
                                    groupFill = T, groupColour = T, 
                                    type = "density")
-#huni.hrate.1000chars.plot
 ```
 
-### TTR vs. repetition rate for characters
+### Entropy rate vs. repetition rate for characters
 ```{r, fig.width = 6, fig.height = 4, warning = FALSE}
-ttr.rm.1000chars.plot <- ggplot(estimations1000.df, 
+hrate.rm.1000chars.plot <- ggplot(estimations1000.df, 
                    aes(x = hrate.chars, y = rm.chars, 
                    colour = corpus, shape = subcorpus)) + 
   scale_shape_manual(values = 1:length(unique(estimations1000.df$subcorpus))) +
   geom_point(alpha = 0.3, size  = 1) +
   theme(legend.position = "left") +
   labs(x = "Entropy rate for 1000 characters", y = "Repetition rate for 1000 characters") 
-ttr.rm.1000chars.plot <- ggMarginal(ttr.rm.1000chars.plot,  
+hrate.rm.1000chars.plot <- ggMarginal(hrate.rm.1000chars.plot,  
                                    groupFill = T, groupColour = T, 
                                    type = "density")
-#ttr.rm.1000chars.plot
 ```
 
 ## Combined Plots
 ```{r, fig.width = 10, fig.height = 12}
-plots.combined <- ggarrange(huni.hrate.10chars.plot, ttr.rm.10chars.plot,
-                            huni.hrate.100chars.plot, ttr.rm.100chars.plot,
-                            huni.hrate.1000chars.plot, ttr.rm.1000chars.plot,
+plots.combined <- ggarrange(huni.ttr.10chars.plot, hrate.rm.10chars.plot,
+                            huni.ttr.100chars.plot, hrate.rm.100chars.plot,
+                            huni.ttr.1000chars.plot, hrate.rm.1000chars.plot,
                     #labels = c("a)", "b)", "c)", "d)", 
                     #           "e)", "f)"),
                     ncol = 2, nrow = 3, widths = c(1, 1.3))
