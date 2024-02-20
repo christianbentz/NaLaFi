@@ -61,8 +61,8 @@ nrow(estimations.df)
 Select relevant columns of the data frame, i.e. the measures to be included in classification and the ''corpus'' or ''subcorpus'' column.
 ```{r}
 estimations.subset <- estimations.df[c("corpus", "subcorpus", 
-                                       #"huni.chars", 
-                                       #"hrate.chars", 
+                                       "huni.chars", 
+                                       "hrate.chars", 
                                        "ttr.chars", 
                                        "rm.chars"
                                        )]
