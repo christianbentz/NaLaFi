@@ -75,6 +75,12 @@ for (file in file.list){
     # split chunk into characters
     chars <- unlist(strsplit(chunk, ""))
     
+    # preprocess text with bag-of-words normalization
+    # note: this step was not taken in the original paper (Bentz 2023), 
+    # but it should be taken in future studies. Without it, entropy rate estimation will sometimes fail
+    # to yield realistic results due to issues with processing of special characters.
+    # chars <- PreprocessText(chars)
+    
     # unigram entropy estimation
     # calculate unigram entropy for characters
     chars.df <- as.data.frame(table(chars))
