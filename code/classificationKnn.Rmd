@@ -14,16 +14,12 @@ knitr::opts_chunk$set(echo = TRUE)
 k-nearest neighbor analyses of the feature vectors per character string (loaded from NaLaFi/results/features.csv). The results are stored in NaLaFi/results/KNN. Note that the number of characters has to be chosen manually (via num.char = ""), likewise, the features to be included can be chosen in the lines defining "estimations.subset" below. Also, subcorpora can be excluded via the "selected" object. 
 
 ## Load Packages
-If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2"). For the Hrate package this is different, since it comes from github. The devtools library needs to be installed, and then the install_github() function is used.
+If the libraries are not installed yet, you need to install them using, for example, the command: install.packages("ggplot2").
 ```{r, message = F}
-library(ggplot2)
 library(dplyr)
 library(class)
-library(gridExtra)
 library(gmodels)
 library(caret)
-library(ggExtra)
-library(ggpubr)
 ```
 
 # Load Data
@@ -36,14 +32,14 @@ estimations.df <- read.csv("~/Github/NaLaFi/results/features.csv")
 
 Exclude subcorpora (if needed). Choose the subcorpus to be excluded via "selected". 
 ```{r}
-selected <- c(#"heraldics",
-              #"procunei",
-              #"animal",
-              #"random",
-              #"morse",
-              #"shuffled",
-              #"weather",
-              #"natural",
+selected <- c("heraldics",
+              "procunei",
+              "animal",
+              "random",
+              "morse",
+              "shuffled",
+              "weather",
+              "natural"
               #"pycode"
               )
 estimations.df <- estimations.df[!(estimations.df$subcorpus %in% selected), ]
@@ -61,8 +57,8 @@ nrow(estimations.df)
 Select relevant columns of the data frame, i.e. the measures to be included in classification and the ''corpus'' or ''subcorpus'' column.
 ```{r}
 estimations.subset <- estimations.df[c("corpus", "subcorpus", 
-                                       #"huni.chars", 
-                                       #"hrate.chars", 
+                                       "huni.chars", 
+                                       "hrate.chars", 
                                        "ttr.chars", 
                                        "rm.chars"
                                        )]
@@ -148,7 +144,7 @@ print(knn.results)
 
 Write to file. Note that the file names have to be changed manually here.
 ```{r}
-write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_ttr_rm", 
+write.csv(knn.results, file = paste("~/Github/NaLaFi/results/KNN/knn_results_justPyCode100", 
                                     paste(num.char, ".csv", sep =""), 
                                     sep =""), row.names = F)
 ```
